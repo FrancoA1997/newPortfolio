@@ -3,21 +3,25 @@ import './profile.css'
 const Profile = () => {
   return (
     <>
-      <div className='top-bar'>
-        <div className='dummy-btn'> </div>
-        <div className='dummy-btn'> </div>
-        <div className='dummy-btn'> </div>
-        <div className='top-bar-links'>
-          <span className='p-tag'>About</span>
-          <span className='p-tag'>Projects</span>
-          <span className='p-tag'>Stack</span>
-          <span className='p-tag'>Contact</span>
+      <div className='profile-container'>
+        <div className='title'>
+          <h1>About me</h1>
         </div>
-
-      </div>
-      <div className='profile-info'>
-        Franco Alvarez
-
+        <img className='profile-img' src='../public/images/dummy-img.png' alt='profile_img' />
+        <div className='profile-info'>
+          <p className='info-title'>Name</p>
+          <p className='info-item'>Franco Alvarez </p>
+          <p className='info-title'>Location</p>
+          <p className='info-item'>Cordoba, Argentina 📍 </p>
+          <p className='info-title'>Status</p>
+          <p className='info-item'>Unemployed 😢 </p>
+          <p className='info-title'>Time Coding</p>
+          <p className='info-item'>2 Years 📅 </p>
+        </div>
+        <div className='profile-social'>
+          <img className='social-img' src='../public/images/github.png' alt='github-img' />
+          <img className='social-img' src='../public/images/linkedin.png' alt='linkedin-img' />
+        </div>
       </div>
     </>
   )
