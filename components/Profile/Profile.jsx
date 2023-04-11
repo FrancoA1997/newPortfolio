@@ -16,7 +16,7 @@ const Profile = () => {
             <p className='info-item'>Franco Alvarez </p>
             <p className='info-title'>Location</p>
             <p className='info-item'>Cordoba, Argentina 📍 </p>
-            <p className='info-title'>Rol</p>
+            <p className='info-title'>Role</p>
             <p className='info-item'>Full Stack Web Developer </p>
             <p className='info-title'>Time Coding</p>
             <p className='info-item'>2.5 Years 📅 </p>
@@ -42,7 +42,7 @@ const Profile = () => {
           {showMore
             ? <>
               <div className='description-more'>
-                <p className='ed-title'>Egg Coorporation Bootcamp <span style={{ fontSize: '16px', fontWeight: '500', marginLeft: '360px' }}>Degree: </span><span style={{ fontSize: '14px', fontWeight: '400', color: '#3E9F3D' }}>Full Stack Developer</span></p>
+                <p className='ed-title'>Egg Coorporation Bootcamp <span style={{ fontSize: '15px', fontWeight: '500', marginLeft: '325px' }}>Degree: </span><span style={{ marginLeft: '5px', fontSize: '14px', fontWeight: '600', color: '#3E9F3D' }}>Full Stack Web Developer</span></p>
                 <span className='date-title'>Duration: from Jul/2021 to Jul/2022</span>
                 <p style={{ marginTop: '10px' }}> By the end of this bootcamp, I was able to build my own website with Java (Spring-boot Framework)<br /> and MySQL as backend, and also learned the basics of HTML, CSS and Bootstrap as frontend.<br />
                 </p>
