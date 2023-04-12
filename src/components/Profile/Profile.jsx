@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './profile.css'
+import Resume from '../../public/Resume.pdf'
 const Profile = () => {
   const [showMore, setShowMore] = useState(false)
   const welcomeMessage = 'Welcome to my portfolio'
@@ -20,6 +21,7 @@ const Profile = () => {
             <p className='info-item'>Full Stack Web Developer </p>
             <p className='info-title'>Time Coding</p>
             <p className='info-item'>2.5 Years 📅 </p>
+            <a href={Resume} download='Resume'>a</a>
           </div>
           <div className='profile-social'>
             <div>
@@ -54,7 +56,7 @@ const Profile = () => {
                   I've switched from Java to Node.js and started to learn React.js along side good practices such as reusable components,<br /> Hooks, Virtual DOM, state/props & much more !
                 </p>
               </div>
-            </>
+              </>
 
             : <div />}
         </div>
