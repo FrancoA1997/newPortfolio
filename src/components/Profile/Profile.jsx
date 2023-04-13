@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-closing-tag-location */
 import React, { useState } from 'react'
 import './profile.css'
 import FileDownloadIcon from '@mui/icons-material/FileDownload'
@@ -57,7 +58,6 @@ const Profile = () => {
                 </p>
               </div>
             </>
-
             : <div />}
         </div>
       </div>

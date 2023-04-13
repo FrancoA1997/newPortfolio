@@ -13,37 +13,40 @@
     border: 1px solid rgba(29, 28, 28, 0.564);
     animation: top-bar-anim 0.5s ease-out 0s 1 normal forwards;
 }
-.top-bar
+.top-bar-icons
  div:nth-child(1){
     position: absolute;
     width: 11px;
     height: 11px;
     border-radius: 50%;
     background: rgb(216, 19, 19);
-    left: 20px;
+    left: 30px;
+    top: 15px;
     opacity: 0;
     animation: top-bar-dummy-btn 0.5s ease 0s 1 normal forwards;
 }
-.top-bar
+.top-bar-icons
  div:nth-child(2){
     position: absolute;
     width: 11px;
     height: 11px;
     border-radius: 50%;
     background: rgb(217, 240, 15);
-    left: 40px;
+    left: 50px;
+    top: 15px;
     opacity: 0;
     animation: top-bar-dummy-btn 0.5s ease 0.3s 1 normal forwards;
   
 }
-.top-bar
+.top-bar-icons
  div:nth-child(3){
     position: absolute;
     width: 11px;
     height: 11px;
     border-radius: 50%;
     background: rgb(37 211 102);
-    left: 60px;
+    left: 70px;
+    top: 15px;
     opacity: 0;
     animation: top-bar-dummy-btn 0.5s ease 0.6s 1 normal forwards;
 }
@@ -60,7 +63,44 @@
     margin-right: 25px;
     cursor: pointer;
 }
-
+.select-flag{
+   position: relative;
+   margin-right: 100px;
+   margin-top: 5px;
+  
+}
+.flag{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    z-index: 999;
+    cursor: pointer;
+    
+}
+.select-window-eng{
+    position: absolute;
+    top: -6px;
+    right: -6px; 
+    width: 32px;
+    height: 32px;
+    background-color: #1919192e;
+    border-radius: 5px;
+    border: 1px solid #4E9F3D;
+    z-index: 998;
+    transition: .3s ease;
+}
+.select-window-esp{
+    position: absolute;
+    top: -6px;
+    right: 34px; 
+    width: 32px;
+    height: 32px;
+    background-color: #1919192e;
+    border-radius: 5px;
+    border: 1px solid #4E9F3D;
+    z-index: 998;
+    transition: .3s ease;
+}
 @keyframes top-bar-anim {
 	0% {
 		opacity: 0;
