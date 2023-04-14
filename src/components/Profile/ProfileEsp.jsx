@@ -22,7 +22,7 @@ const ProfileEsp = () => {
             <p className='info-title'>Rol</p>
             <p className='info-item'>Full Stack Web Developer </p>
             <p className='info-title'>Tiempo programando</p>
-            <p className='info-item'>2.5 Años 📅 </p>
+            <p className='info-item'>2 Años 📅 </p>
           </div>
           <div className='profile-social'>
             <a href={Resume} download='Resume'><button className='download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Curriculum</button></a>
@@ -55,7 +55,7 @@ const ProfileEsp = () => {
               <div className='description-more-2'>
                 <p className='ed-title'>Auto-Didacta</p>
                 <span className='date-title'>Duracion: Desde July/2022 hasta la fecha</span>
-                <p style={{ marginTop: '10px' }}> As soon as the previous bootcamp ends, I started to learn on my own with online material.<br />
+                <p style={{ marginTop: '10px' }}>
                   Tan pronto como finalizó el bootcamp, comencé a aprender por mi cuenta
                   con material en online.<br /> Cambié de Java a Node.js y comencé a aprender
                   React.js junto a buenas prácticas como componentes reutilizables,<br /> Hooks,
