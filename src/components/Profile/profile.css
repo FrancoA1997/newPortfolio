@@ -67,7 +67,7 @@ margin-top: 20px;
 
 .profile-social{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
     margin-top: auto;
@@ -91,11 +91,7 @@ margin-top: 20px;
     rotate: 5deg;
     background-color: rgba(28, 28, 28, 0.626) ;
 }
-.social-img-container{
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-}
+
 
 .description-section{
     flex: 4;
@@ -206,34 +202,36 @@ margin-top: 20px;
 }
 
 .download-btn{
-    margin-top: 45px;
-    margin-right: 7px;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #4E9F3D;
+    color: rgb(51, 51, 51);
+    border-radius: 5px;
+    border: 1px solid rgba(28, 28, 28, 0.626) ;
+    margin-left: 7px;
+    margin-bottom: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 10px;
     padding-left: 5px;
-    background: #4E9F3D;
-    color: rgb(51, 51, 51);
     border: 0;
-    border-radius: 5px;
     font-size: 15px;
     font-weight: 400;
     cursor: pointer;
     transition: .2s ease;
-    border: 1px solid rgba(28, 28, 28, 0.626) ;
+    width: 280px;
+    align-self: center;
 }
 
 .download-btn:hover{
     background-color: rgba(28, 28, 28, 0.626) ;
     border: 1px solid #4E9F3D;
     color: white;
-    padding-top: 7px;
-    padding-bottom: 7px;
-    padding-right: 13px;
-    padding-left: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    padding-left: 5px;
 
 }
 

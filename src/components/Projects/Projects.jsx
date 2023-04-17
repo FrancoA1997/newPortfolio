@@ -42,8 +42,14 @@ const Projects = () => {
             width='75%'
             height='75%'
           />
-          <img src={arrow} alt='' className='arrow-next' />
-          <img src={arrow} alt='' className='arrow-prev' />
+          <div className='switch-btn arrow-next'>
+            <img src={arrow} alt='' />
+            <p style={{ rotate: '180deg' }}>Next</p>
+          </div>
+          <div className='switch-btn arrow-prev'>
+            <img src={arrow} alt='' />
+            <p>Prev</p>
+          </div>
         </div>
       </div>
     </div>

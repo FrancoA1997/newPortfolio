@@ -1,7 +1,11 @@
 import React, { useState } from 'react'
 import './mainInterface.css'
 // import Loader from '../../loader/Loader'
+// eslint-disable-next-line no-unused-vars
 import Profile from '../../Profile/Profile'
+// eslint-disable-next-line no-unused-vars
+import Contact from '../../Contact/Contact'
+// eslint-disable-next-line no-unused-vars
 import ProfileEsp from '../../Profile/ProfileEsp'
 import Projects from '../../Projects/Projects'
 import Topbar from '../../Topbar/Topbar'

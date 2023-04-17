@@ -26,10 +26,6 @@ const ProfileEsp = () => {
           </div>
           <div className='profile-social'>
             <a href={Resume} download='Resume'><button className='download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Curriculum</button></a>
-            <div className='social-img-container'>
-              <img className='social-img' src='../public/images/linkedin.png' alt='linkedin-img' />
-              <img className='social-img' src='../public/images/github.png' alt='github-img' />
-            </div>
           </div>
         </div>
         <div className='description-section'>
