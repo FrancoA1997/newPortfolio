@@ -1,6 +1,9 @@
 import React from 'react'
 import './projects.css'
+import ReactPlayer from 'react-player'
 import LaunchIcon from '@mui/icons-material/Launch'
+import video from '../../../public/videos/social-media.mp4'
+import arrow from '../../../public/images/arrow.png'
 const Projects = () => {
   return (
     <div className='profile'>
@@ -29,6 +32,18 @@ const Projects = () => {
           <img className='stack-img' src='../public/images/stackImgs/express.png' alt='express-img' />
           <img className='stack-img' src='../public/images/stackImgs/js.png' alt='js-img' />
           <img className='stack-img' src='../public/images/stackImgs/react.png' alt='react-img' />
+        </div>
+      </div>
+      <div className='show-container'>
+        <div className='video-player'>
+          <ReactPlayer
+            url={video}
+            controls
+            width='75%'
+            height='75%'
+          />
+          <img src={arrow} alt='' className='arrow-next' />
+          <img src={arrow} alt='' className='arrow-prev' />
         </div>
       </div>
     </div>
