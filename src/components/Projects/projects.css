@@ -69,7 +69,7 @@
     width: 85%;
     font-weight: 400;
     opacity: 0;
-    animation:  info-projects-anime 0.5s ease 1.6s 1 normal forwards;
+    animation:  info-projects-anime 0.5s ease 1.8s 1 normal forwards;
 }
 .project-desc{
     margin-bottom: 10px;
@@ -79,6 +79,8 @@
     font-weight: 300;
     flex-wrap: wrap;
     width: 80%;
+    opacity: 0;
+    animation:  info-projects-anime 0.5s ease 1.8s 1 normal forwards;
 }
 .info-project-git-title{
     margin-left: 10px;
@@ -87,6 +89,8 @@
     width: fit-content;
     font-weight: 400;
     text-transform: uppercase;
+    opacity: 0;
+    animation:  info-projects-anime 0.5s ease 1.4s 1 normal forwards;
 }
 .repo-links{
     display: flex;
@@ -94,6 +98,8 @@
     justify-content: flex-end;
     margin-right: 50px;
     align-items: end;
+    opacity: 0;
+    animation:  info-projects-anime 0.5s ease 1.8s 1 normal forwards;
 }
 
 
@@ -105,6 +111,8 @@
     margin-top: 20px;
     width: 90%;
     margin-bottom: 10px;
+    animation:  info-projects-anime 0.5s ease 1.8s 1 normal forwards;
+    opacity: 0;
 }
 .stack-img{
     width: 40px;
@@ -119,6 +127,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    animation: section-animation 0.5s ease 2s 1 normal forwards;
 }
 
 .video-player{
@@ -136,6 +146,8 @@
     height: 55px;
     cursor: pointer;
     transition: .5s ease;
+    opacity: 0;
+    animation:  arrow-projects-anime 1.5s ease 2.2s 1 normal forwards;
 }
 
 .arrow-prev{
@@ -146,6 +158,8 @@
     height: 55px;
     cursor: pointer;
     margin-bottom: 5px;
+    opacity: 0;
+    animation:  arrow-projects-anime 1.5s ease 2.2s 1 normal forwards;
 }
 
 .switch-btn{
@@ -153,6 +167,7 @@
     flex-direction: row;
     align-items: center;
     margin: auto;
+    opacity: 0;
 }
 
 .switch-btn p{
@@ -163,19 +178,30 @@
     font-size: 15px;
     text-transform: uppercase;
     opacity: 0;
-    transition: .5s ease;
+    transition: 0.4s ease-in-out;
 }
 
 .switch-btn:hover p{
     opacity: 1;
-    transform: translateX(2px);
+    transform: translateX(4px);
 }
 
 
 @keyframes info-projects-anime {
 	0% {
 		opacity: 0;
-		transform: translateY(-50px);
+		transform: translateY(-10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes arrow-projects-anime {
+	0% {
+		opacity: 0;
+		transform: translateY(-45px);
 	}
 
 	100% {

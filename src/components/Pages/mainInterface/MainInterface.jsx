@@ -3,10 +3,10 @@ import './mainInterface.css'
 // import Loader from '../../loader/Loader'
 // eslint-disable-next-line no-unused-vars
 import Profile from '../../Profile/Profile'
-// eslint-disable-next-line no-unused-vars
 import Contact from '../../Contact/Contact'
 // eslint-disable-next-line no-unused-vars
 import ProfileEsp from '../../Profile/ProfileEsp'
+// eslint-disable-next-line no-unused-vars
 import Projects from '../../Projects/Projects'
 import Topbar from '../../Topbar/Topbar'
 const MainInterface = () => {
@@ -19,8 +19,8 @@ const MainInterface = () => {
     <div className='main-interface-container'>
       <div className='interface-window'>
         <Topbar english={english} setEnglish={setEnglish} />
-        <Projects />
-        {/* {english ? <Profile /> : <ProfileEsp />} */}
+        {/* <Contact /> */}
+        {english ? <Profile /> : <ProfileEsp />}
       </div>
     </div>
   )

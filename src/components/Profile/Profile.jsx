@@ -1,10 +1,17 @@
 /* eslint-disable react/jsx-closing-tag-location */
 import React, { useState } from 'react'
-import './profile.css'
 import FileDownloadIcon from '@mui/icons-material/FileDownload'
+import LocationOnIcon from '@mui/icons-material/LocationOn'
+import ConstructionIcon from '@mui/icons-material/Construction'
+import MoreTimeIcon from '@mui/icons-material/MoreTime'
+import PanToolIcon from '@mui/icons-material/PanTool'
 import Resume from '../../../public/Resume.pdf'
+import './profile.css'
 const Profile = () => {
   const [showMore, setShowMore] = useState(false)
+  setTimeout(() => {
+    setShowMore(true)
+  }, 2000)
   const welcomeMessage = 'Welcome to my portfolio'
   return (
     <>
@@ -16,13 +23,13 @@ const Profile = () => {
           <img className='profile-img' src='../public/images/dummy-img.png' alt='profile_img' />
           <div className='profile-info'>
             <p className='info-title'>Name</p>
-            <p className='info-item'>Franco Alvarez </p>
-            <p className='info-title'>Location</p>
-            <p className='info-item'>Cordoba, Argentina 📍 </p>
+            <p className='info-item'>Franco Alvarez <PanToolIcon fontSize='small' className='info-icon' /> </p>
+            <p className='info-title'>Location </p>
+            <p className='info-item'>Cordoba, Argentina <LocationOnIcon fontSize='small' className='info-icon' /> </p>
             <p className='info-title'>Role</p>
-            <p className='info-item'>Full Stack Web Developer </p>
+            <p className='info-item'>Full Stack Web Developer <ConstructionIcon fontSize='small' className='info-icon' /></p>
             <p className='info-title'>Time Coding</p>
-            <p className='info-item'>2.5 Years 📅 </p>
+            <p className='info-item'>2+ Years <MoreTimeIcon fontSize='small' className='info-icon' /> </p>
           </div>
           <div className='profile-social'>
             <a href={Resume} download='Resume'><button className='download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Resume</button></a>

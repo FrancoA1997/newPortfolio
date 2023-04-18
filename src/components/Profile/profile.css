@@ -49,6 +49,8 @@ margin-top: 20px;
     justify-content: flex-end;
     width: 85%;
     font-weight: 300;
+    opacity: 0;
+    animation: info-items-animation 1s ease 1.8s 1 normal forwards;
 }
 
 .info-title{
@@ -63,6 +65,8 @@ margin-top: 20px;
     text-align: left;
     width: 85%;
     font-weight: 600;
+    opacity: 0;
+    animation: info-items-animation 1s ease 1.4s 1 normal forwards;
 }
 
 .profile-social{
@@ -234,6 +238,10 @@ margin-top: 20px;
     padding-left: 5px;
 
 }
+.info-icon{
+    color: #58f6a4;
+    margin-left: 5px;
+}
 
 a{
     text-decoration: none;
@@ -274,6 +282,19 @@ a{
 		opacity: 1;
 		transform: rotateY(0);
 		transform-origin: left;
+	}
+}
+@keyframes info-items-animation {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+
 	}
 }
 

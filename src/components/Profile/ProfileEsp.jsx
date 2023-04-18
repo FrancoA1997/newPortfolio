@@ -5,6 +5,9 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload'
 import Resume from '../../../public/Resume.pdf'
 const ProfileEsp = () => {
   const [showMore, setShowMore] = useState(false)
+  setTimeout(() => {
+    setShowMore(true)
+  }, 2000)
   const welcomeMessage = 'Bienvenido a mi portfolio!'
   return (
     <>
