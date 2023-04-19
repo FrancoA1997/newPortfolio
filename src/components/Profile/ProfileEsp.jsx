@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import './profile.css'
 import FileDownloadIcon from '@mui/icons-material/FileDownload'
-import Resume from '../../../public/Resume.pdf'
+import Curriculum from '../../../public/Resume.pdf'
 const ProfileEsp = () => {
   const [showMore, setShowMore] = useState(false)
   setTimeout(() => {
@@ -28,7 +28,7 @@ const ProfileEsp = () => {
             <p className='info-item'>2 Años 📅 </p>
           </div>
           <div className='profile-social'>
-            <a href={Resume} download='Resume'><button className='download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Curriculum</button></a>
+            <a href={Curriculum} download='Curriculum'><button className='download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Curriculum</button></a>
           </div>
         </div>
         <div className='description-section'>

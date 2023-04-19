@@ -4,6 +4,7 @@ import './mainInterface.css'
 // eslint-disable-next-line no-unused-vars
 import Profile from '../../Profile/Profile'
 import Contact from '../../Contact/Contact'
+import ContactEsp from '../../Contact/Contact-esp'
 // eslint-disable-next-line no-unused-vars
 import ProfileEsp from '../../Profile/ProfileEsp'
 // eslint-disable-next-line no-unused-vars
@@ -20,7 +21,8 @@ const MainInterface = () => {
       <div className='interface-window'>
         <Topbar english={english} setEnglish={setEnglish} />
         {/* <Contact /> */}
-        {english ? <Profile /> : <ProfileEsp />}
+        {english ? <Contact /> : <ContactEsp />}
+        {/* {english ? <Profile /> : <ProfileEsp />} */}
       </div>
     </div>
   )
