@@ -5,9 +5,6 @@ import Profile from '../../Profile/Profile'
 // eslint-disable-next-line no-unused-vars
 import Contact from '../../Contact/Contact'
 // eslint-disable-next-line no-unused-vars
-import ContactEsp from '../../Contact/Contact-esp'
-// eslint-disable-next-line no-unused-vars
-import ProfileEsp from '../../Profile/ProfileEsp'
 // eslint-disable-next-line no-unused-vars
 import Projects from '../../Projects/Projects'
 import Topbar from '../../Topbar/Topbar'
