@@ -4,7 +4,7 @@ import ReactPlayer from 'react-player'
 import LaunchIcon from '@mui/icons-material/Launch'
 import video from '../../../public/videos/social-media.mp4'
 import arrow from '../../../public/images/arrow.png'
-const Projects = () => {
+const Projects = ({ english }) => {
   return (
     <div className='profile'>
       <div className='profile-container'>
