@@ -4,6 +4,7 @@ import Loader from '../../loader/Loader'
 import Profile from '../../Profile/Profile'
 // eslint-disable-next-line no-unused-vars
 import Contact from '../../Contact/Contact'
+import Stack from '../../Stack/Stack'
 // eslint-disable-next-line no-unused-vars
 // eslint-disable-next-line no-unused-vars
 import Projects from '../../Projects/Projects'
@@ -26,7 +27,7 @@ const MainInterface = () => {
         {mounted === 'About' && isFetching === false ? <Profile english={english} /> : <div />}
         {mounted === 'Projects' && isFetching === false ? <Projects english={english} /> : <div />}
         {mounted === 'Contact' && isFetching === false ? <Contact english={english} /> : <div />}
-        {mounted === 'Stack' && isFetching === false ? <div /> : <div />}
+        {mounted === 'Stack' && isFetching === false ? <Stack english={english} /> : <div />}
       </div>
     </div>
   )

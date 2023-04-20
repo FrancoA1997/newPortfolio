@@ -1,0 +1,30 @@
+.stack-container{
+    background: rgba(128, 128, 128, 0.182);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    flex: 3;
+}
+.Stack{
+    height: 93%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: row;
+    opacity: 0;
+    animation: section-animation 0.5s ease 0s 1 normal forwards;
+}
+
+.title{
+    color: white;
+    display: flex;
+    justify-content: start;
+    border-bottom: 2px solid #4E9F3D;
+    padding-left: 15px;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 32px;
+    transition: .5 ease;
+
+}
