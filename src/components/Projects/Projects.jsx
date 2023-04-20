@@ -2,12 +2,16 @@ import React from 'react'
 import './projects.css'
 import ReactPlayer from 'react-player'
 import LaunchIcon from '@mui/icons-material/Launch'
+import GitHubIcon from '@mui/icons-material/GitHub'
+import DescriptionIcon from '@mui/icons-material/Description'
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
+import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark'
 import video from '../../../public/videos/social-media.mp4'
 import arrow from '../../../public/images/arrow.png'
 const Projects = ({ english }) => {
   return (
-    <div className='profile'>
-      <div className='profile-container'>
+    <div className='projects'>
+      <div className='projects-container'>
         <div className='section-title'>
           My Projects
         </div>
@@ -15,17 +19,17 @@ const Projects = ({ english }) => {
           Dev. Social Network
         </div>
         <div className='project-info-container'>
-          <p className='info-project-title'>Time invested  📅</p>
+          <p className='info-project-title'>Time invested  <CalendarMonthIcon className='tick-green' style={{ marginLeft: '10px', marginBottom: '5px' }} /> </p>
           <p className='info-project-item'>3 MONTHS</p>
-          <p className='info-project-title'>Description </p>
+          <p className='info-project-title'>Description <DescriptionIcon className='tick-green' style={{ marginLeft: '10px', marginBottom: '5px' }} /> </p>
           <p className='project-desc'>Social web application meant for developers to share their progress in recent projects and ideas.</p>
-          <p className='info-project-title'>GitHub Repository</p>
+          <p className='info-project-title'>Repository <GitHubIcon className='tick-green' style={{ marginLeft: '10px', marginBottom: '5px' }} /></p>
           <div className='repo-links'>
             <p className='info-project-git-title'>Backend</p>
-            <a style={{ textDecoration: 'none', cursor: 'pointer' }}><LaunchIcon style={{ color: '#4E9F3D', marginLeft: '10px' }} /></a>
+            <a style={{ textDecoration: 'none', cursor: 'pointer' }}><LaunchIcon className='tick-green' style={{ color: '#4E9F3D', marginLeft: '10px' }} /></a>
           </div>
         </div>
-        <p className='info-project-title'>Tech Stack</p>
+        <p className='info-project-title'>Tech Stack <CollectionsBookmarkIcon className='tick-green' style={{ marginLeft: '10px', marginBottom: '5px' }} /> </p>
         <div className='stack-wrapper'>
           <img className='stack-img' src='../public/images/stackImgs/mongo.png' alt='mongo-img' />
           <img className='stack-img' src='../public/images/stackImgs/node.png' alt='node-img' />

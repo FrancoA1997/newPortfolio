@@ -4,6 +4,7 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload'
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
+import LinkIcon from '@mui/icons-material/Link';
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import SendIcon from '@mui/icons-material/Send'
 import DoneIcon from '@mui/icons-material/Done'
@@ -49,7 +50,7 @@ const Contact = ({ english }) => {
               <button className='copy-btn'>{copied2 ? <DoneIcon className='copied tick-green' fontSize='small' /> : <ContentCopyIcon className='copied' fontSize='small' />} </button>
             </CopyToClipboard>
           </p>
-          <p className='info-contact-title'>Links</p>
+          <p className='info-contact-title'>Links <LinkIcon style={{ marginLeft: '10px' }} className='copied tick-green' /></p>
           <div className='social-img-container-contact'>
             <div className='social-img-contact'>
               <img src='../public/images/linkedin.png' alt='linkedin-img' />
@@ -63,10 +64,10 @@ const Contact = ({ english }) => {
         </div>
         {english === true
           ? <div className='contact-social'>
-            <a href={Resume} download='Resume'><button className='download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Resume</button></a>
+            <a href={Resume} download='Resume'><button className='contact-download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Resume</button></a>
           </div>
           : <div className='contact-social'>
-            <a href={Curriculum} download='Curriculum'><button className='download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Curriculum</button></a>
+            <a href={Curriculum} download='Curriculum'><button className='contact-download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Curriculum</button></a>
             </div>}
 
       </div>

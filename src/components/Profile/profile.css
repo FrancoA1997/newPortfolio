@@ -1,3 +1,10 @@
+.profile{
+    height: 93%;
+    min-height: 500px;
+    display: flex;
+    flex-direction: row;
+    animation: section-animation 0.5s ease 0s 1 normal forwards;
+}
 .profile-container{
     background: rgba(128, 128, 128, 0.182);
     border-radius: 5px;
@@ -5,14 +12,6 @@
     flex-direction: column;
     max-width: 300px;
     flex: 3;
-}
-.profile{
-    height: 93%;
-    min-height: 500px;
-    display: flex;
-    flex-direction: row;
-    opacity: 0;
-    animation: section-animation 0.5s ease 1s 1 normal forwards;
 }
 
 .title{
@@ -37,6 +36,8 @@
     height: 115px;
     object-fit: cover;
     border: 3px solid #4E9F3D ;
+    animation: info-items-animation 0.5s ease .5s 1 normal forwards;
+    opacity: 0;
 }
 .profile-info{
 margin-top: 20px;
@@ -50,7 +51,7 @@ margin-top: 20px;
     width: 85%;
     font-weight: 300;
     opacity: 0;
-    animation: info-items-animation 1s ease 1.8s 1 normal forwards;
+    animation: info-items-animation 0.5s ease 1s 1 normal forwards;
 }
 
 .info-title{
@@ -66,7 +67,7 @@ margin-top: 20px;
     width: 85%;
     font-weight: 600;
     opacity: 0;
-    animation: info-items-animation 1s ease 1.4s 1 normal forwards;
+    animation: info-items-animation 0.5s ease .5s 1 normal forwards;
 }
 
 .profile-social{
@@ -114,7 +115,7 @@ margin-top: 20px;
     padding-left: 0;
     max-width: 45%;
     opacity: 0;
-    animation: section-animation 1s ease 1.1s 1 normal forwards;
+    animation: section-animation 1s ease 1s 1 normal forwards;
 }
 
 .description{
@@ -132,7 +133,7 @@ margin-top: 20px;
     opacity: 0;
     z-index: 996;
     position: relative;
-    animation: moreInfo-animation 1s ease 1.3s 1 normal forwards; 
+    animation: moreInfo-animation 1s ease 1.5s 1 normal forwards; 
     
 }
 .show-more-btn{
@@ -150,7 +151,7 @@ margin-top: 20px;
     bottom: 0px;
     right: 0px;
     cursor: pointer;
-    animation: moreInfo-animation 1s ease 1.3s 1 normal forwards; 
+    animation: moreInfo-animation 1s ease 1.5s 1 normal forwards; 
     z-index: 995;
 }
 .description-more{
@@ -166,6 +167,7 @@ margin-top: 20px;
     margin-top: 20px;
     font-size: clamp(15px, 50%, 20px)  ;
     transition: 0.5s ease;
+    opacity: 0;
     animation: moreInfo-animation 1s ease 0s 1 normal forwards; 
     
 }
@@ -183,7 +185,8 @@ margin-top: 20px;
     margin-top: 20px;
     font-size: clamp(15px, 50%, 20px)  ;
     transition: 0.5s ease;
-    animation: moreInfo-animation 1s ease 0.4s 1 normal forwards; 
+    
+    animation: moreInfo-animation 1s ease 0.2s 1 normal forwards; 
     
 }
 .ed-title{
@@ -226,6 +229,8 @@ margin-top: 20px;
     transition: .2s ease;
     width: 280px;
     align-self: center;
+    opacity: 0;
+    animation: info-items-animation 0.5s ease 1s 1 normal forwards;
 }
 
 .download-btn:hover{

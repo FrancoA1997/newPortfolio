@@ -12,7 +12,7 @@ const Profile = ({ english }) => {
   const [showMore, setShowMore] = useState(false)
   setTimeout(() => {
     setShowMore(true)
-  }, 2000)
+  }, 2500)
   const welcomeMessage = 'Welcome to my portfolio'
   const mensajeBienvenida = 'Bienvenido a mi portfolio!'
   return (
