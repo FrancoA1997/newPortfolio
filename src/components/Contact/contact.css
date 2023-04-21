@@ -1,5 +1,5 @@
 .contact{
-    height: 93%;
+    height: calc(100vh - 10vh - 49px);
     min-height: 500px;
     display: flex;
     flex-direction: row;

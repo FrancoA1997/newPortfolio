@@ -1,6 +1,6 @@
 .top-bar{
     width: 100%;
-    height: 7%;
+    height: 44px;
     position: relative;
     display: flex;
     flex-direction: row;
@@ -65,7 +65,7 @@
     margin-right: 25px;
     padding-right: 10px;
     padding-top: 20px;
-    padding-bottom: 6px;
+    padding-bottom: 10px;
     padding-left: 15px;
     cursor: pointer;
     transition: 0.5s ease;
@@ -75,13 +75,14 @@
     border-top-right-radius: 3px;
     font-weight: 400;
     letter-spacing: 1px;
+    transition: .3s ease;
     color: rgba(218, 214, 214, 0.581);;
 }
 .p-tag-mounted{
     margin-right: 25px;
     padding-right: 10px;
     padding-top: 20px;
-    padding-bottom: 6px;
+    padding-bottom: 10px;
     padding-left: 15px;
     cursor: pointer;
     border-bottom: 2px solid #4E9F3D;
@@ -109,10 +110,10 @@
 }
 .select-window-eng{
     position: absolute;
-    top: -6px;
-    right: -6px; 
-    width: 32px;
-    height: 32px;
+    top: -5px;
+    right: -5px; 
+    width: 30px;
+    height: 30px;
     background-color: #1919192e;
     border-radius: 5px;
     border: 1px solid #4E9F3D;
@@ -122,10 +123,10 @@
 }
 .select-window-esp{
     position: absolute;
-    top: -6px;
-    right: 34px; 
-    width: 32px;
-    height: 32px;
+    top: -4px;
+    right: 35px; 
+    width: 30px;
+    height: 30px;
     background-color: #1919192e;
     border-radius: 5px;
     border: 1px solid #4E9F3D;
@@ -143,6 +144,11 @@ top: 25px;
 left: 0;
 width: 40px;
 border-bottom: 2px solid #4E9F3D;
+}
+.p-tag:hover{
+    border-bottom: 2px solid #4E9F3D;
+    color: #4E9F3D;
+    
 }
 @keyframes top-bar-anim {
 	0% {

@@ -4,7 +4,7 @@ import FileDownloadIcon from '@mui/icons-material/FileDownload'
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
-import LinkIcon from '@mui/icons-material/Link';
+import LinkIcon from '@mui/icons-material/Link'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 import SendIcon from '@mui/icons-material/Send'
 import DoneIcon from '@mui/icons-material/Done'

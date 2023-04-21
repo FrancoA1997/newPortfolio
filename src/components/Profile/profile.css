@@ -1,11 +1,12 @@
 .profile{
-    height: 93%;
+    height: calc(100vh - 10vh - 48.5px);
     min-height: 500px;
     display: flex;
     flex-direction: row;
     animation: section-animation 0.5s ease 0s 1 normal forwards;
 }
 .profile-container{
+    height: calc(100vh - 10vh - 48.5px);
     background: rgba(128, 128, 128, 0.182);
     border-radius: 5px;
     display: flex;
@@ -20,7 +21,6 @@
     justify-content: start;
     border-bottom: 2px solid #4E9F3D;
     padding-left: 15px;
-    margin-top: 10px;
     width: 100%;
     font-weight: 300;
     font-size: 32px;
@@ -31,7 +31,7 @@
 .profile-img{
     border-radius: 10px;
     margin-left: 80px;
-    margin-top: 20px;
+    margin-top: 10px;
     width: 115px;
     height: 115px;
     object-fit: cover;
@@ -43,9 +43,9 @@
 margin-top: 20px;
 }
 .info-item{
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     color: white;
-    font-size: clamp(17px, 40%, 20px);
+    font-size: clamp(13px, 40%, 20px);
     display: flex;
     justify-content: flex-end;
     width: 85%;
@@ -56,8 +56,8 @@ margin-top: 20px;
 
 .info-title{
     color: rgb(203, 203, 203);
-    font-size: 17px;
-    margin-bottom: 10px;
+    font-size: 15px;
+    margin-bottom: 5px;
     margin-right: 240px;
     padding-left: 10px;
     display: flex;
@@ -245,7 +245,7 @@ margin-top: 20px;
 }
 .info-icon{
     color: #58f6a4;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 a{
@@ -310,4 +310,31 @@ a{
         right: -130px;
         border-bottom-right-radius: 15px;
     } 
+    .info-title{
+        color: rgb(203, 203, 203);
+        font-size: 17px;
+        margin-bottom: 10px;
+        margin-right: 240px;
+        padding-left: 10px;
+        display: flex;
+        justify-content: start;
+        border-bottom: 2px solid #4E9F3D;
+        text-align: left;
+        width: 85%;
+        font-weight: 600;
+        opacity: 0;
+        animation: info-items-animation 0.5s ease .5s 1 normal forwards;
+    }
+    .info-item{
+        margin-bottom: 10px;
+        color: white;
+        font-size: clamp(17px, 40%, 20px);
+        display: flex;
+        justify-content: flex-end;
+        width: 85%;
+        font-weight: 300;
+        opacity: 0;
+        animation: info-items-animation 0.5s ease 1s 1 normal forwards;
+    }
+ 
 }

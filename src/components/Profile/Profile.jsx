@@ -6,6 +6,7 @@ import ConstructionIcon from '@mui/icons-material/Construction'
 import MoreTimeIcon from '@mui/icons-material/MoreTime'
 import PanToolIcon from '@mui/icons-material/PanTool'
 import Curriculum from '../../../public/Curriculum.pdf'
+import DoneIcon from '@mui/icons-material/Done'
 import Resume from '../../../public/Resume.pdf'
 import './profile.css'
 const Profile = ({ english }) => {
@@ -32,6 +33,9 @@ const Profile = ({ english }) => {
             <p className='info-item'>Full Stack Web Developer <ConstructionIcon fontSize='small' className='info-icon' /></p>
             <p className='info-title'>{english ? 'Time Coding' : 'Tiempo programando'}</p>
             <p className='info-item'>2+ {english ? 'Years' : 'Años'} <MoreTimeIcon fontSize='small' className='info-icon' /> </p>
+            <p className='info-title'>{english ? 'Languages' : 'Idiomas'}</p>
+            <p className='info-item'>{english ? 'English' : 'Ingles'}: FCE-B2<DoneIcon fontSize='small' className='info-icon' /> </p>
+            <p className='info-item'>{english ? 'Spanish: Native' : 'Español: Nativo'} <DoneIcon fontSize='small' className='info-icon' /> </p>
           </div>
           {english
             ? <div className='profile-social'>
@@ -87,7 +91,7 @@ const Profile = ({ english }) => {
                   </p>
                 </div><div className='description-more-2'>
                   <p className='ed-title'>Auto-Didacta</p>
-                  <span className='date-title'>Duracion: Desde July/2022 hasta la fecha</span>
+                  <span className='date-title'>Duracion: Desde Jul/2022 hasta la fecha</span>
                   <p style={{ marginTop: '10px' }}>
                     Tan pronto como finalizó el bootcamp, comencé a aprender por mi cuenta
                     con material en online.<br /> Cambié de Java a Node.js y comencé a aprender
