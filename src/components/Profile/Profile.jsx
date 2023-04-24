@@ -1,4 +1,6 @@
 /* eslint-disable react/jsx-closing-tag-location */
+import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
+import Infoitem from '../ReusableComponents/InfoItem/Infoitem'
 import React, { useState } from 'react'
 import FileDownloadIcon from '@mui/icons-material/FileDownload'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
@@ -20,22 +22,20 @@ const Profile = ({ english }) => {
     <>
       <div className='profile'>
         <div className='profile-container'>
-          <div className='title'>
-            {english === true ? 'About me' : 'Sobre mi'}
-          </div>
+          <SectionTitle styles='title-profile' text={english === true ? 'About me' : 'Sobre mi'} />
           <img className='profile-img' src='../public/images/dummy-img.png' alt='profile_img' />
           <div className='profile-info'>
-            <p className='info-title'>{english ? 'Name' : 'Nombre'}</p>
-            <p className='info-item'>Franco Alvarez <PanToolIcon fontSize='small' className='info-icon' /> </p>
-            <p className='info-title'>{english ? 'Location' : 'Locacion'} </p>
-            <p className='info-item'>Cordoba, Argentina <LocationOnIcon fontSize='small' className='info-icon' /> </p>
-            <p className='info-title'>{english ? 'Role' : 'Rol'}</p>
-            <p className='info-item'>Full Stack Web Developer <ConstructionIcon fontSize='small' className='info-icon' /></p>
-            <p className='info-title'>{english ? 'Time Coding' : 'Tiempo programando'}</p>
-            <p className='info-item'>2+ {english ? 'Years' : 'Años'} <MoreTimeIcon fontSize='small' className='info-icon' /> </p>
-            <p className='info-title'>{english ? 'Languages' : 'Idiomas'}</p>
-            <p className='info-item'>{english ? 'English' : 'Ingles'}: FCE-B2<DoneIcon fontSize='small' className='info-icon' /> </p>
-            <p className='info-item'>{english ? 'Spanish: Native' : 'Español: Nativo'} <DoneIcon fontSize='small' className='info-icon' /> </p>
+            <Title styles='info-title-profile' text={english ? 'Name' : 'Nombre'} />
+            <Infoitem english={english} text={english ? 'Franco' : 'Franco2'} icon={<PanToolIcon fontSize='small' className='info-icon' />} style='info-item-profile' />
+            <Title styles='info-title-profile' text={english ? 'Location' : 'Locacion'} />
+            <Infoitem english={english} text={english ? 'Cordoba, Argentina ' : 'Cordoba, Argentina'} icon={<LocationOnIcon fontSize='small' className='info-icon' />} style='info-item-profile' />
+            <Title styles='info-title-profile' text={english ? 'Role' : 'Rol'} />
+            <Infoitem english={english} text={english ? 'Full Stack Web Developer ' : 'Full Stack Web Developer'} icon={<ConstructionIcon fontSize='small' className='info-icon' />} style='info-item-profile' />
+            <Title styles='info-title-profile' text={english ? 'Time Coding' : 'Tiempo programando'} />
+            <Infoitem english={english} text={english ? '2+ Years' : '2+ Años'} icon={<MoreTimeIcon fontSize='small' className='info-icon' />} style='info-item-profile' />
+            <Title styles='info-title-profile' text={english ? 'Languages' : 'Idiomas'} />
+            <Infoitem english={english} text={english ? 'English: FCE-B2' : 'Ingles: FCE-B2'} icon={<DoneIcon fontSize='small' className='info-icon' />} style='info-item-profile' />
+            <Infoitem english={english} text={english ? 'Spanish: Native' : 'Español: Nativo'} icon={<DoneIcon fontSize='small' className='info-icon' />} style='info-item-profile' />
           </div>
           {english
             ? <div className='profile-social'>
@@ -46,9 +46,8 @@ const Profile = ({ english }) => {
             </div>}
         </div>
         <div className='description-section'>
-          <div className='head-title'> {english ? welcomeMessage : mensajeBienvenida}</div>
+          <Title styles='head-profile-title' text={english ? welcomeMessage : mensajeBienvenida} />
           <div className='description'>
-
             {english
               ? <p> I am a highly motivated, self-taught developer seeking to launch a career building web applications and services.
                 <br />I've been building and deploying web applications and web services for over 2 years.<br />

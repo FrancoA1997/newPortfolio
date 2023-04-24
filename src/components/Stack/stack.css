@@ -35,7 +35,7 @@
     flex: 4;
     display: flex;
     position: relative;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     opacity: 0;
@@ -66,8 +66,8 @@
 .stacks{
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    align-items: end;
+    margin-top: 120px;
 }
 
 .stacks
@@ -100,10 +100,10 @@ div:nth-child(4){
 }
 
 .stacks1-container{
+    margin: 0px 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 25px 15px;
     background: rgba(128, 128, 128, 0.182);
     height: fit-content;
     padding: 5px 15px;
@@ -113,10 +113,10 @@ div:nth-child(4){
 }
 
 .stacks2-container{
+    margin: 0px 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 25px 15px;
     background: rgba(128, 128, 128, 0.182);
     height: fit-content;
     padding: 5px 15px;
@@ -125,10 +125,10 @@ div:nth-child(4){
     position: relative;
 }
 .stacks3-container{
+    margin: 0px 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 25px 15px;
     background: rgba(128, 128, 128, 0.182);
     height: fit-content;
     padding: 5px 15px;
@@ -137,10 +137,10 @@ div:nth-child(4){
     position: relative;
 }
 .stacks4-container{
+    margin: 0px 10px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin: 25px 15px;
     background: rgba(128, 128, 128, 0.182);
     height: fit-content;
     padding: 5px 15px;
@@ -192,8 +192,8 @@ div:nth-child(4){
     width: 120px;  
 }
 .stacked-img{
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     margin-right: 35px;
     margin-top: 20px;
     object-fit: cover;  
@@ -354,4 +354,39 @@ div:nth-child(5){
 		opacity: 1;
 		transform: translateX(0);
 	}
+}
+
+@media (min-width: 1500px){
+    
+    .stacked-img{
+        width: 45px;
+        height: 45px;
+        margin-right: 35px;
+        margin-top: 20px;
+        object-fit: cover;  
+    }
+    .stacks2-container{
+        margin: 0px 40px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: rgba(128, 128, 128, 0.182);
+        height: fit-content;
+        padding: 5px 15px;
+        border-radius: 10px;
+        border: 1px solid #4E9F3D;
+        position: relative;
+    }
+    .stacks3-container{
+        margin: 0px 40px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: rgba(128, 128, 128, 0.182);
+        height: fit-content;
+        padding: 5px 15px;
+        border-radius: 10px;
+        border: 1px solid #4E9F3D;
+        position: relative;
+    }
 }
