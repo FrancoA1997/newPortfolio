@@ -9,4 +9,20 @@ const Infoitem = ({ text, icon, styles }) => {
   )
 }
 
-export default Infoitem
+const StackItem = ({ stackedText, styles, icon }) => {
+  return (
+    <div key={stackedText} className='skills-container'>
+      {stackedText.map((m, idx) => (
+        <div key={idx} className={styles}>
+          <p>{m}</p>
+          <span>{icon}</span>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+export {
+  Infoitem,
+  StackItem
+}

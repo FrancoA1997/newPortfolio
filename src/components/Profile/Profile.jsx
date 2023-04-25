@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-closing-tag-location */
 import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
-import Infoitem from '../ReusableComponents/InfoItem/Infoitem'
+import { Infoitem } from '../ReusableComponents/InfoItem/Infoitem'
 import { Description, Studies } from '../ReusableComponents/Description/Description'
 import { React, useState, useEffect } from 'react'
 import FileDownloadIcon from '@mui/icons-material/FileDownload'
@@ -9,7 +9,6 @@ import ConstructionIcon from '@mui/icons-material/Construction'
 import MoreTimeIcon from '@mui/icons-material/MoreTime'
 import PanToolIcon from '@mui/icons-material/PanTool'
 import Curriculum from '../../../public/Curriculum.pdf'
-import DoneIcon from '@mui/icons-material/Done'
 import Resume from '../../../public/Resume.pdf'
 import './profile.css'
 
@@ -50,9 +49,6 @@ const Profile = ({ english }) => {
             <Infoitem english={english} text={english ? 'Full Stack Web Developer ' : 'Full Stack Web Developer'} icon={<ConstructionIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
             <Title styles='info-title-profile' text={english ? 'Time Coding' : 'Tiempo programando'} />
             <Infoitem english={english} text={english ? '2+ Years' : '2+ Años'} icon={<MoreTimeIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
-            <Title styles='info-title-profile' text={english ? 'Languages' : 'Idiomas'} />
-            <Infoitem english={english} text={english ? 'English: FCE-B2' : 'Ingles: FCE-B2'} icon={<DoneIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
-            <Infoitem english={english} text={english ? 'Spanish: Native' : 'Español: Nativo'} icon={<DoneIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
           </div>
           {english
             ? <div className='profile-social'>

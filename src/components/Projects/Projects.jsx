@@ -1,7 +1,7 @@
 import React from 'react'
 import './projects.css'
 import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
-import Infoitem from '../ReusableComponents/InfoItem/Infoitem'
+import { Infoitem } from '../ReusableComponents/InfoItem/Infoitem'
 import ReactPlayer from 'react-player'
 import LaunchIcon from '@mui/icons-material/Launch'
 import GitHubIcon from '@mui/icons-material/GitHub'

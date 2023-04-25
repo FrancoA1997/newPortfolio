@@ -15,7 +15,17 @@ const SectionTitle = ({ text, styles }) => {
   )
 }
 
+const StackTitle = ({ text, styles }) => {
+  return (
+    <div key={text} className={styles}>
+      <p>{text[0]}</p>
+      <p style={{ color: '#4E9F3D', paddingLeft: '10px' }}>{text[1]}</p>
+    </div>
+  )
+}
+
 export {
   Title,
+  StackTitle,
   SectionTitle
 }

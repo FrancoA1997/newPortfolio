@@ -146,6 +146,8 @@
     animation:  info-projects-anime 0.5s ease 1s 1 normal forwards;
 }
 
+
+
 /* Contact Styles */
 
 .section-contact-title{
@@ -177,4 +179,58 @@
     font-weight: 600;
     animation:  info-contact-anime 0.5s ease 0.5s 1 normal forwards;
     opacity: 0;
+}
+
+
+/* Stack Styles */
+
+
+.section-stack-title{
+    color: white;
+    display: flex;
+    justify-content: start;
+    border-bottom: 2px solid #4E9F3D;
+    padding-left: 15px;
+    margin-top: 10px;
+    width: 100%;
+    font-weight: 300;
+    font-size: 32px;
+    transition: .5 ease;
+    opacity: 0;
+    animation: title-animation 0.5s ease 0s 1 normal forwards;
+}
+
+.stack-mainTitle{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    font-size: 35px;
+    border-bottom: 2px solid #4E9F3D;
+    border-left: 2px solid #4E9F3D;
+    padding-left: 40px;
+    padding-right: 30px;
+    height: fit-content;
+    width: 45%;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    opacity: 0;
+    transition: .5 ease;
+    animation: section-animation 1s ease .8s 1 normal forwards;
+}
+.info-stack-title{
+    display: flex;
+    justify-content: start;
+    color: rgb(203, 203, 203);
+    font-size: 19px;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    padding-left: 10px;
+    border-bottom: 2px solid #4E9F3D;
+    width: 85%;
+    font-weight: 400;
+    opacity: 0;
+    text-transform: uppercase;
+    animation:  info-projects-anime 0.5s ease .5s 1 normal forwards;
 }

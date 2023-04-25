@@ -1,17 +1,42 @@
 import React from 'react'
+import { Title, SectionTitle, StackTitle } from '../ReusableComponents/Title/Title'
+import { StackItem } from '../ReusableComponents/InfoItem/Infoitem'
+import DoneIcon from '@mui/icons-material/Done'
 import './stack.css'
-const Stack = () => {
+const Stack = ({ english }) => {
+  const SoftSkills = ['Adaptability', 'Problem solving', 'Teamwork', 'Quick Learner', 'Communication', 'Commitment', 'Critical thinking']
+  const HabilidadesBlandas = ['Adaptabilidad', 'Resolucion de problemas', 'Trabajo en equipo', 'Aprendizaje rapido', 'Buen comunicador', 'Compromiso', 'Pensamiento critico']
+  const languages = ['English: FCE-B2', 'Spanish: Native']
+  const idiomas = ['Ingles: FCE-B2', 'Español: Nativo']
   return (
     <div className='Stack'>
       <div className='stack-container'>
-        <div className='title'>
-          Stack
-        </div>
+        <SectionTitle
+          styles='section-stack-title'
+          text={english ? 'Stack' : 'Tecnologias'}
+        />
+        <Title
+          text={english ? 'Soft-Skills' : 'Habilidades blandas'}
+          styles='info-stack-title'
+        />
+        <StackItem
+          stackedText={english ? SoftSkills : HabilidadesBlandas}
+          styles='info-item-stack'
+          icon={<DoneIcon fontSize='small' className='info-icon' />}
+        />
+        <Title styles='info-stack-title' text={english ? 'Languages' : 'Idiomas'} />
+        <StackItem
+          english={english}
+          stackedText={english ? languages : idiomas}
+          icon={<DoneIcon fontSize='small' className='info-icon' />}
+          styles='info-item-stack'
+        />
       </div>
       <div className='show-stack'>
-        <div className='stack-mainTitle'>
-          Stack and <p style={{ color: '#4E9F3D', paddingLeft: '10px' }}>technologies</p>
-        </div>
+        <StackTitle
+          text={english ? ['Stack and', 'technologies'] : ['Stack y', 'tecnologias']}
+          styles='stack-mainTitle'
+        />
         <div className='stacks'>
           <div className='stacks1-container'>
             <label> Current <strong style={{ fontWeight: '400', color: '#4E9F3D' }}>Stack</strong></label>

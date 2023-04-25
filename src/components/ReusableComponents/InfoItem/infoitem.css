@@ -51,3 +51,57 @@
     opacity: 0;
     animation:  info-projects-anime 0.5s ease 1s 1 normal forwards;
 }
+
+/* Stack Styles */
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    margin-left: 40px;
+    width: max-content;
+}
+
+.info-item-stack{
+    display: flex;
+    color: white;
+    font-weight: 400;
+    font-size: clamp(16px, 40%, 20px);
+    margin-bottom: 0px;
+    margin-top: 10px;
+    position: relative;
+    border-bottom: 1px solid #4E9F3D;
+    padding-right: 10px;
+    opacity: 0;
+    animation: stack-item-slide 0.5s ease 1.3s 1 normal forwards;
+   
+}
+.info-item-stack span{
+    margin-left: auto;
+    opacity: 0;
+    animation: stack-item-slide 0.5s ease 1.3s 1 normal forwards;
+}
+
+.dot{
+    width: 9px ;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #4E9F3D;
+    margin-right: 10px;
+    align-self: center;
+    margin-right: auto;
+    opacity: 0;
+    animation: info-items-animation 0.2s ease 1s 1 normal forwards;
+}
+
+
+@keyframes stack-item-slide {
+	0% {
+		opacity: 0;
+		transform: translateX(-15px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

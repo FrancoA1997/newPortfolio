@@ -16,20 +16,6 @@
     animation: section-animation 0.5s ease 0s 1 normal forwards;
 }
 
-.title{
-    color: white;
-    display: flex;
-    justify-content: start;
-    border-bottom: 2px solid #4E9F3D;
-    padding-left: 15px;
-    margin-top: 10px;
-    width: 100%;
-    font-weight: 300;
-    font-size: 32px;
-    transition: .5 ease;
-    
-
-}
 
 .show-stack{
     flex: 4;
@@ -42,26 +28,7 @@
     animation: section-animation 0.5s ease .5s 1 normal forwards;
 }
 
-.stack-mainTitle{
-    color: white;
-    display: flex;
-    justify-content: end;
-    border-top: 2px solid #4E9F3D;
-    border-left: 2px solid #4E9F3D;
-    border-top-left-radius: 5px;
-    padding-top: 5px;
-    font-size: 35px;
-    padding-left: 40px;
-    padding-right: 30px;
-    height: fit-content;
-    width: 45%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    transition: .5 ease;
-    animation: mainTitle-animation 0.5s ease .5s 1 normal forwards;    
-}
+
 
 .stacks{
     display: flex;
@@ -390,3 +357,4 @@ div:nth-child(5){
         position: relative;
     }
 }
+
