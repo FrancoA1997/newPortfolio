@@ -1,0 +1,89 @@
+.description{
+    background: rgba(128, 128, 128, 0.182);
+    border-radius: 5px;
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.113);
+    border: 1px solid rgba(29, 28, 28, 0.564);
+    padding-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    color: white;
+    width: 850px;
+    height: max-content;
+    text-align: left;
+    margin-left: 35px;
+    margin-top: 35px;
+    font-size: clamp(16px, 50%, 20px)  ;
+    opacity: 0;
+    z-index: 996;
+    position: relative;
+    animation: moreInfo-animation 1s ease 1.5s 1 normal forwards; 
+    
+}
+.show-more-btn{
+    position: absolute;
+    opacity: 0;
+    width: 15%;
+    border-radius: 2px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 15px;
+    background: rgba(128, 128, 128, 0.092);
+    color: white;
+    border: 2px solid #4E9F3D;
+    border: 2px solid #4E9F3D;
+    padding:10px 5px;
+    bottom: 0px;
+    right: 0px;
+    cursor: pointer;
+    animation: moreInfo-animation 1s ease 1.5s 1 normal forwards; 
+    z-index: 995;
+}
+.studies{
+    background: rgba(128, 128, 128, 0.182);
+    border-radius: 5px;
+    box-shadow: 0 2px 0px rgba(0, 0, 0, 0.113);
+    border: 1px solid rgba(29, 28, 28, 0.564);
+    padding: 5px 10px;
+    color: white;
+    width: 850px;
+    text-align: left;
+    margin-left: 35px;
+    margin-top: 20px;
+    font-size: clamp(15px, 50%, 20px)  ;
+    transition: 0.5s ease;
+    opacity: 0;
+    animation: moreInfo-animation 1s ease 0s 1 normal forwards; 
+    
+}
+.desc-styles{
+    text-align: left;
+    word-spacing: 0px;
+}
+
+.company-title{
+    font-size: 20px;
+    margin-right: 5px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.date-title{
+    font-size: 13px;
+    color: #4E9F3D;
+    font-weight: 500;
+    
+}
+
+@keyframes moreInfo-animation {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+    
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+    }
+}
