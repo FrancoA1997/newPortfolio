@@ -1,10 +1,10 @@
 import React from 'react'
 import './infoitem.css'
 
-const Infoitem = ({ text, icon, style }) => {
+const Infoitem = ({ text, icon, styles }) => {
   return (
     <div key={text}>
-      <p className={style}>{text} {icon} </p>
+      <p className={styles}>{text} {icon} </p>
     </div>
   )
 }

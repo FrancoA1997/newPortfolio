@@ -1,3 +1,4 @@
+/* Profile Styles */
 .description{
     background: rgba(128, 128, 128, 0.182);
     border-radius: 5px;
@@ -87,3 +88,6 @@
 		transform: translateY(0);
     }
 }
+
+/* Project Styles */
+

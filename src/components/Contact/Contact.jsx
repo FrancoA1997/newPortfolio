@@ -11,11 +11,11 @@ import DoneIcon from '@mui/icons-material/Done'
 import Resume from '../../../public/Resume.pdf'
 import Curriculum from '../../../public/Curriculum.pdf'
 import Typewriter from 'typewriter-effect'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
 import './contact.css'
 
 const Contact = ({ english }) => {
-  const [contactEnglish, setContactEnglish] = useState(true)
   const [copied, setCopied] = React.useState(false)
   const [copied2, setCopied2] = React.useState(false)
   const email = 'francoalvarezn97@gmail.com'
@@ -33,29 +33,39 @@ const Contact = ({ english }) => {
     }, 2000)
   }, [])
 
-  useEffect(() => {
-    setContactEnglish(english)
-  }, [english])
   return (
     <div className='contact'>
       <div className='contact-container'>
-        <div className='section-contact-title'>
-          {english === true ? 'Contact me' : 'Contacto'}
-        </div>
-        <div className='project-info-container'>
-          <p className='info-contact-title'> {contactEnglish === true ? 'Email Address' : 'Direccion de correo'} <MailOutlineIcon style={{ marginLeft: '10px' }} className='copied tick-green' /></p>
+        <SectionTitle
+          text={english === true ? 'Contact me' : 'Contacto'}
+          styles='section-contact-title'
+        />
+        <div key={english} className='project-info-container'>
+          <Title
+            styles='info-contact-title'
+            text={english ? 'Email Address' : 'Direccion de correo'}
+            icon={<MailOutlineIcon style={{ marginLeft: '10px' }} className='copied tick-green' />}
+          />
           <p className='info-contact-item'>{email}
             <CopyToClipboard onCopy={onCopy} text={email}>
               <button className='copy-btn'>{copied ? <DoneIcon className='copied tick-green' fontSize='small' /> : <ContentCopyIcon className='copied' fontSize='small' />} </button>
             </CopyToClipboard>
           </p>
-          <p className='info-contact-title'> {contactEnglish === true ? 'Phone Number' : 'Numero de telefono'} <PhoneAndroidIcon style={{ marginLeft: '10px', paddingBottom: '2px' }} className='copied tick-green' /></p>
-          <p className='info-contact-item'>{phoneNumber}
+          <Title
+            styles='info-contact-title'
+            text={english ? 'Phone Number' : 'Numero de telefono'}
+            icon={<PhoneAndroidIcon style={{ marginLeft: '10px', paddingBottom: '2px' }} className='copied tick-green' />}
+          />
+          <p key={english} className='info-contact-item'>{phoneNumber}
             <CopyToClipboard onCopy={onCopy2} text={phoneNumber}>
               <button className='copy-btn'>{copied2 ? <DoneIcon className='copied tick-green' fontSize='small' /> : <ContentCopyIcon className='copied' fontSize='small' />} </button>
             </CopyToClipboard>
           </p>
-          <p className='info-contact-title'>Links <LinkIcon style={{ marginLeft: '10px' }} className='copied tick-green' /></p>
+          <Title
+            styles='info-contact-title'
+            text='Links'
+            icon={<LinkIcon style={{ marginLeft: '10px' }} className='copied tick-green' />}
+          />
           <div className='social-img-container-contact'>
             <div className='social-img-contact'>
               <img src='../public/images/linkedin.png' alt='linkedin-img' />
@@ -76,7 +86,7 @@ const Contact = ({ english }) => {
             </div>}
 
       </div>
-      <div className='form-section'>
+      <div key={english} className='form-section'>
         <div className='contact-mainTitle'>
           <p style={{ marginRight: '10px', color: 'white' }}>{english === true ? 'Leave me a' : 'Dejame un'} </p>
           <div className='writer'>
@@ -97,7 +107,6 @@ const Contact = ({ english }) => {
                     strings: ['mensaje...']
                   }}
                 />}
-
           </div>
         </div>
         <form action='' className='contact-form'>

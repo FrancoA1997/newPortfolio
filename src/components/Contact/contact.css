@@ -15,21 +15,6 @@
     flex: 3;
 }
 
-.section-contact-title{
-    color: white;
-    display: flex;
-    justify-content: start;
-    border-bottom: 2px solid #4E9F3D;
-    padding-left: 15px;
-    margin-top: 10px;
-    margin-bottom: 50px;
-    width: 100%;
-    font-weight: 300;
-    font-size: 32px;
-    transition: .5 ease;
-
-}
-
 .info-contact-item{
     font-size: clamp(15px, 40%, 20px);
     margin-left: 10px;
@@ -47,21 +32,7 @@
     animation: info-contact-anime 0.5s ease 1s 1 normal forwards;
 }
 
-.info-contact-title{
-    color: rgb(203, 203, 203);
-    font-size: 17px;
-    margin-bottom: 25px;
-    margin-right: 240px;
-    padding-left: 10px;
-    display: flex;
-    justify-content: start;
-    border-bottom: 2px solid #4E9F3D;
-    text-align: left;
-    width: 85%;
-    font-weight: 600;
-    animation:  info-contact-anime 0.5s ease 0.5s 1 normal forwards;
-    opacity: 0;
-}
+
 .social-img-container-contact{
     margin-right: 55px;
     display: flex;

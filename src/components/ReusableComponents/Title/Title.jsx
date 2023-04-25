@@ -9,7 +9,7 @@ const Title = ({ text, icon, styles }) => {
 }
 const SectionTitle = ({ text, styles }) => {
   return (
-    <div className={styles} key={text}>
+    <div key={text} className={styles}>
       <p>{text}</p>
     </div>
   )
