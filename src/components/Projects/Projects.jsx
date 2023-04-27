@@ -1,20 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './projects.css'
 import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
 import { Infoitem } from '../ReusableComponents/InfoItem/Infoitem'
-import ReactPlayer from 'react-player'
 import LaunchIcon from '@mui/icons-material/Launch'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import DescriptionIcon from '@mui/icons-material/Description'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark'
-import video from '../../../public/videos/social-media.mp4'
+import Video from '../videoPlayer/Video'
 import arrow from '../../../public/images/arrow.png'
-const Projects = ({ english }) => {
-  const pTitle = 'Dev. Social Network'
-  const pTitulo = 'Dev. Red Social'
-  const description = 'Social web application meant for developers to share their progress in recent projects and ideas.'
-  const descripcion = 'Una red social pensada para que los desarrolladores compartan su progreso en proyectos recientes y ideas.'
+import { urlFor } from '../../client'
+const Projects = ({ english, projects }) => {
+  const [projectDisplayed, setProjectDisplayed] = useState(projects[0])
+  console.log(projectDisplayed?.video.asset.url)
+
   return (
     <div className='projects'>
       <div className='projects-container'>
@@ -23,7 +22,7 @@ const Projects = ({ english }) => {
           text={english === true ? 'Projects' : 'Proyectos'}
         />
         <Title
-          text={english ? pTitle : pTitulo}
+          text={english ? projectDisplayed?.title : projectDisplayed?.titulo}
           styles='project-title'
         />
         <div className='project-info-container'>
@@ -33,7 +32,7 @@ const Projects = ({ english }) => {
             icon={<CalendarMonthIcon className='tick-green' style={{ marginLeft: '10px', marginBottom: '5px' }} />}
           />
           <Infoitem
-            text={english ? '3 MONTHS' : '3 MESES'}
+            text={english ? projectDisplayed?.time : projectDisplayed?.tiempo}
             styles='info-project-item'
           />
           <Title
@@ -42,7 +41,7 @@ const Projects = ({ english }) => {
             icon={<DescriptionIcon className='tick-green' style={{ marginLeft: '10px', marginBottom: '5px' }} />}
           />
           <Infoitem
-            text={english ? description : descripcion}
+            text={english ? projectDisplayed?.description : projectDisplayed?.descripcion}
             styles='project-description'
           />
           <Title
@@ -61,21 +60,14 @@ const Projects = ({ english }) => {
           icon={<CollectionsBookmarkIcon className='tick-green' style={{ marginLeft: '10px', marginBottom: '5px' }} />}
         />
         <div key={english} className='stack-wrapper'>
-          <img className='stack-img' src='../public/images/stackImgs/mongo.png' alt='mongo-img' />
-          <img className='stack-img' src='../public/images/stackImgs/node.png' alt='node-img' />
-          <img className='stack-img' src='../public/images/stackImgs/express.png' alt='express-img' />
-          <img className='stack-img' src='../public/images/stackImgs/js.png' alt='js-img' />
-          <img className='stack-img' src='../public/images/stackImgs/react.png' alt='react-img' />
+          {projectDisplayed.stack.map((img, idx) => (
+            <img key={idx} className='stack-img' src={urlFor(img)} />
+          ))}
         </div>
       </div>
       <div className='show-container'>
         <div className='video-player'>
-          <ReactPlayer
-            url={video}
-            controls
-            width='75%'
-            height='75%'
-          />
+          <Video video={projectDisplayed?.video?.asset} />
           <div className='switch-btn arrow-next'>
             <img src={arrow} alt='' />
             <p style={{ rotate: '180deg' }}>Next</p>
