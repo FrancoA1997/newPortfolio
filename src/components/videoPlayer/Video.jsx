@@ -6,7 +6,6 @@ const Video = ({ video }) => {
     <MuxPlayer
       streamType='on-demand'
       playbackId={video.playbackId}
-      autoPlay='true'
       maxResolution='720p'
     />
   )
