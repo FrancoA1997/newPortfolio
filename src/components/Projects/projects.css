@@ -89,6 +89,20 @@
     opacity: 0;
     animation:  arrow-projects-anime 2s ease 1.5s 1 normal forwards;
 }
+.arrow-next-disabled{
+    position: absolute;
+    align-self: center;
+    right: -100px;
+    rotate: 180deg;
+    width: 55px;
+    height: 55px;
+    cursor: no-drop;
+    filter: grayscale();
+    transition: .5s ease;
+    opacity: 0;
+    animation:  arrow-projects-anime 2s ease 1.5s 1 normal forwards;
+}
+
 
 .arrow-prev{
     position: absolute;
@@ -97,6 +111,18 @@
     width: 55px;
     height: 55px;
     cursor: pointer;
+    margin-bottom: 5px;
+    opacity: 0;
+    animation:  arrow-projects-anime 2s ease 1.7s 1 normal forwards;
+}
+.arrow-prev-disabled{
+    position: absolute;
+    align-self: center;
+    left: -100px;
+    width: 55px;
+    height: 55px;
+    cursor: no-drop;
+    filter: grayscale();
     margin-bottom: 5px;
     opacity: 0;
     animation:  arrow-projects-anime 2s ease 1.7s 1 normal forwards;

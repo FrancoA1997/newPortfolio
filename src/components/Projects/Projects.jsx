@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-// eslint-disable-next-line no-unused-vars
 import React, { useEffect, useState } from 'react'
 import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
 import { Infoitem } from '../ReusableComponents/InfoItem/Infoitem'
@@ -15,21 +13,28 @@ import './projects.css'
 
 const Projects = ({ english, projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  const [isLastSlide, setIsLastSlide] = useState(false)
+  const [isFirstSlide, setIsFirstSlide] = useState(true)
   const [projectDisplayed, setProjectDisplayed] = useState(projects[currentIndex])
-
-  const goToPrevious = () => {
-    const isFirstSlide = currentIndex === 0
-    const newIndex = isFirstSlide ? projects.length - 1 : currentIndex - 1
-    setCurrentIndex(newIndex)
+  useEffect(() => {
+    setIsLastSlide(currentIndex === projects.length - 1)
+    setIsFirstSlide(currentIndex === 0)
     setProjectDisplayed(projects[currentIndex])
-  }
+  }, [currentIndex])
   const goToNext = () => {
-    const isLastSlide = currentIndex === projects.length - 1
-    const newIndex = isLastSlide ? 0 : currentIndex + 1
-    setCurrentIndex(newIndex)
-    setProjectDisplayed(projects[currentIndex])
+    if (isLastSlide === false) {
+      setCurrentIndex(prev => { return prev + 1 })
+    } else {
+      setCurrentIndex(currentIndex)
+    }
   }
-
+  const goToPrevious = () => {
+    if (isFirstSlide === false) {
+      setCurrentIndex(prev => { return prev - 1 })
+    } else {
+      setCurrentIndex(currentIndex)
+    }
+  }
   return (
     <div className='projects'>
       <div className='projects-container'>
@@ -67,12 +72,16 @@ const Projects = ({ english, projects }) => {
             text={english ? 'Repository' : 'Repositorios'}
             icon={<GitHubIcon className='tick-green' style={{ marginLeft: '10px', marginBottom: '5px' }} />}
           />
-          <div key={english}>
-            <div key={currentIndex} className='repo-links'>
-              <p className='info-project-git-title'>Backend</p>
-              <a style={{ textDecoration: 'none', cursor: 'pointer' }}><LaunchIcon className='tick-green' style={{ color: '#4E9F3D', marginLeft: '10px' }} /></a>
+          {projectDisplayed.links.map((link, idx) => (
+            <div key={idx}>
+              <div key={english}>
+                <div className='repo-links'>
+                  <p className='info-project-git-title'>{link.tag}</p>
+                  <a target='_blank' href={link.url} style={{ textDecoration: 'none', cursor: 'pointer' }} rel='noreferrer'><LaunchIcon className='tick-green' style={{ color: '#4E9F3D', marginLeft: '10px' }} /></a>
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
         <Title
           styles='info-project-title'
@@ -92,11 +101,11 @@ const Projects = ({ english, projects }) => {
           <div className='video-fade' key={currentIndex}>
             <Video video={projectDisplayed?.video?.asset} />
           </div>
-          <div onClick={goToNext} className='switch-btn arrow-next'>
+          <div onClick={isLastSlide ? null : goToNext} className={isLastSlide ? 'switch-btn arrow-next-disabled' : 'switch-btn arrow-next'}>
             <img src={arrow} alt='' />
             <p style={{ rotate: '180deg' }}>Next</p>
           </div>
-          <div onClick={goToPrevious} className='switch-btn arrow-prev'>
+          <div onClick={isFirstSlide ? null : goToPrevious} className={isFirstSlide ? 'switch-btn arrow-prev-disabled' : 'switch-btn arrow-prev'}>
             <img src={arrow} alt='' />
             <p>Prev</p>
           </div>
