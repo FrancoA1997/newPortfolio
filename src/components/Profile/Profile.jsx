@@ -12,7 +12,7 @@ import Curriculum from '../../../public/Curriculum.pdf'
 import Resume from '../../../public/Resume.pdf'
 import './profile.css'
 
-const Profile = ({ english }) => {
+const Profile = ({ english, studies, profile }) => {
   const [showMore, setShowMore] = useState(false)
   useEffect(() => {
     setTimeout(() => {
@@ -25,15 +25,6 @@ const Profile = ({ english }) => {
       setShowMore(true)
     }, 2500)
   }, [english])
-
-  const description = ['I am a highly motivated, self-taught developer seeking to launch a career building web applications and services.', 'I\'ve been building and deploying web applications and web services for over 2 years.', 'My next goal is to find my first job and keep growing as a developer.However, this time along side a group of experienced developers']
-  const descripcion = ['Soy un desarrollador altamente motivado y autodidacta que busca iniciar una carrera construyendo aplicaciones y servicios web.', 'He estado construyendo y desplegando aplicaciones y servicios web durante más de 2 años.', 'Mi próximo objetivo es encontrar mi primer trabajo y seguir creciendo como desarrollador, <br /> pero esta vez junto a un grupo de desarrolladores experimentados']
-  const studio1 = ['Al final de este bootcamp, fui capaz de construir mi propio sitio web con Java (Spring-boot como framework),', 'y MySQL como backend, también aprendí los conceptos básicos de HTML, CSS y Bootstrap para el Frontend.']
-  const study1 = ['By the end of this bootcamp, I was able to build my own website with Java (Spring-boot Framework),', 'and MySQL as backend, and also learned the basics of HTML, CSS and Bootstrap as frontend.']
-  const studio2 = ['Tan pronto como finalizó el bootcamp, comencé a aprender por mi cuenta con material en online.', 'Cambié de Java a Node.js y comencé a aprender React.js junto a buenas prácticas como componentes reutilizables,', 'Hooks, Virtual DOM, State/props y más.']
-  const study2 = ['As soon as the previous bootcamp ends, I started to learn on my own with online material.', "I've switched from Java to Node.js and started to learn React.js along side good practices such as reusable components,", 'Hooks, Virtual DOM, state/props & much more !']
-  const welcomeMessage = 'Welcome to my portfolio'
-  const mensajeBienvenida = 'Bienvenido a mi portfolio!'
   return (
     <>
       <div className='profile'>
@@ -59,12 +50,12 @@ const Profile = ({ english }) => {
             </div>}
         </div>
         <div className='description-section'>
-          <Title styles='head-profile-title' text={english ? welcomeMessage : mensajeBienvenida} />
-          <Description english={english} setShowMore={setShowMore} showMore={showMore} text={english ? description : descripcion} styles='description' btnStyles='show-more-btn' />
+          <Title styles='head-profile-title' text={english ? profile[0]?.welcome : profile[0]?.bienvenido} />
+          <Description english={english} setShowMore={setShowMore} showMore={showMore} text={english ? profile[0]?.description : profile[0]?.descripcion} styles='description' btnStyles='show-more-btn' />
           {showMore
             ? <>
               <Studies
-                text={english ? study1 : studio1}
+                text={english ? studies[0].study1 : studies[0].estudio1}
                 date={english ? 'Duration: from Jul/2021 to Jul/2022' : 'Duracion: Desde Jul/2021 Hasta Jul/2022'}
                 title='Egg Coorporation Bootcamp'
                 titleStyles='company-title'
@@ -73,7 +64,7 @@ const Profile = ({ english }) => {
                 degree={<><span style={{ fontSize: '15px', fontWeight: '500', marginLeft: '325px' }}>Degree: </span><span style={{ marginLeft: '5px', fontSize: '14px', fontWeight: '600', color: '#3E9F3D' }}>Full Stack Web Developer</span></>}
               />
               <Studies
-                text={english ? study2 : studio2}
+                text={english ? studies[0].study2 : studies[0].estudio2}
                 date={english ? 'Duration: July/2022 till now' : 'Duracion: Desde Jul/2022 hasta la fecha'}
                 title={english ? 'Self-Taught' : 'Auto-Didacta'}
                 titleStyles='company-title'

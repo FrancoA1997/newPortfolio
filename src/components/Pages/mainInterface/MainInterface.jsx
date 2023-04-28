@@ -13,10 +13,27 @@ import Topbar from '../../Topbar/Topbar'
 
 const MainInterface = () => {
   const [projects, setProjects] = useState([])
-
+  const [stack, setStack] = useState([])
+  const [profile, setProfile] = useState([])
+  const [studies, setStudies] = useState([])
   const [english, setEnglish] = useState(true)
   const [mounted, setMounted] = useState('About')
   const [isFetching, setIsFetching] = useState(true)
+  useEffect(() => {
+    const query = '*[_type == "stacks"]'
+    client.fetch(query)
+      .then((data) => setStack(data))
+  }, [])
+  useEffect(() => {
+    const query = '*[_type == "profile"]'
+    client.fetch(query)
+      .then((data) => setProfile(data))
+  }, [])
+  useEffect(() => {
+    const query = '*[_type == "studies"]'
+    client.fetch(query)
+      .then((data) => setStudies(data))
+  }, [])
   useEffect(() => {
     const query = '*[_type == "projects"]{...,video{...,_type == "mux.video" =>{...,asset->{...,"url": "https://stream.mux.com/" + playbackId}}}}'
     client.fetch(query)
@@ -32,10 +49,10 @@ const MainInterface = () => {
       <div className={isFetching ? 'fetching' : 'interface-window'}>
         {isFetching ? <div /> : <Topbar setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
         {isFetching ? <Loader /> : <div />}
-        {mounted === 'About' && isFetching === false ? <Profile english={english} /> : <div />}
+        {mounted === 'About' && isFetching === false ? <Profile profile={profile} studies={studies} english={english} /> : <div />}
         {mounted === 'Projects' && isFetching === false ? <Projects projects={projects} english={english} /> : <div />}
         {mounted === 'Contact' && isFetching === false ? <Contact english={english} /> : <div />}
-        {mounted === 'Stack' && isFetching === false ? <Stack english={english} /> : <div />}
+        {mounted === 'Stack' && isFetching === false ? <Stack stack={stack} english={english} /> : <div />}
       </div>
     </div>
   )

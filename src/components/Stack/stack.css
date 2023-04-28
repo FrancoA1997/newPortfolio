@@ -75,7 +75,7 @@ div:nth-child(4){
     height: fit-content;
     padding: 5px 15px;
     border-radius: 10px;
-    border: 1px solid #4E9F3D;
+    border: 1px solid #176add;
     position: relative;
 }
 
@@ -100,7 +100,7 @@ div:nth-child(4){
     height: fit-content;
     padding: 5px 15px;
     border-radius: 10px;
-    border: 1px solid #4E9F3D;
+    border: 1px solid #5608a4;
     position: relative;
 }
 .stacks4-container{
@@ -112,7 +112,7 @@ div:nth-child(4){
     height: fit-content;
     padding: 5px 15px;
     border-radius: 10px;
-    border: 1px solid #4E9F3D;
+    border: 1px solid #c8772b;
     position: relative;
 }
 
@@ -153,10 +153,26 @@ div:nth-child(4){
 
 .stack-item span{
     color: white;
-    border-left: 2px solid #4E9F3D;
+    
     padding-left: 20px;
     padding-top: 20px;
     width: 120px;  
+}
+.stacks1-container span{
+    border-left: 2px solid #176add;
+    
+}
+.stacks2-container span{
+    border-left: 2px solid #4E9F3D;
+    
+}
+.stacks3-container span{
+    border-left: 2px solid #ae7ede;
+    
+}
+.stacks4-container span{
+    border-left: 2px solid #c8772b;
+    
 }
 .stacked-img{
     width: 35px;
@@ -353,7 +369,7 @@ div:nth-child(5){
         height: fit-content;
         padding: 5px 15px;
         border-radius: 10px;
-        border: 1px solid #4E9F3D;
+        border: 1px solid #ae7ede;
         position: relative;
     }
 }
