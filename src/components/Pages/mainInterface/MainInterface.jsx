@@ -35,7 +35,7 @@ const MainInterface = () => {
       .then((data) => setStudies(data))
   }, [])
   useEffect(() => {
-    const query = '*[_type == "projects"]{...,video{...,_type == "mux.video" =>{...,asset->{...,"url": "https://stream.mux.com/" + playbackId}}}}'
+    const query = '*[_type == "projects"]{...,video{...,_type == "mux.video" =>{...,asset->{...,"url": "https://stream.mux.com/" + playbackId, "thumbnail" : "https://image.mux.com/"+playbackId+"/thumbnail.png?width=214&height=121&fit_mode=pad&time=00"}}}}'
     client.fetch(query)
       .then((data) => setProjects(data))
   }, [])

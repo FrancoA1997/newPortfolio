@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
+import Carousel from '../ReusableComponents/Carousel/Carousel'
 import { Infoitem } from '../ReusableComponents/InfoItem/Infoitem'
 import { urlFor } from '../../client'
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import DescriptionIcon from '@mui/icons-material/Description'
-import arrow from '../../../public/images/arrow.png'
 import LaunchIcon from '@mui/icons-material/Launch'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import Video from '../videoPlayer/Video'
@@ -13,28 +13,7 @@ import './projects.css'
 
 const Projects = ({ english, projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [isLastSlide, setIsLastSlide] = useState(false)
-  const [isFirstSlide, setIsFirstSlide] = useState(true)
   const [projectDisplayed, setProjectDisplayed] = useState(projects[currentIndex])
-  useEffect(() => {
-    setIsLastSlide(currentIndex === projects.length - 1)
-    setIsFirstSlide(currentIndex === 0)
-    setProjectDisplayed(projects[currentIndex])
-  }, [currentIndex])
-  const goToNext = () => {
-    if (isLastSlide === false) {
-      setCurrentIndex(prev => { return prev + 1 })
-    } else {
-      setCurrentIndex(currentIndex)
-    }
-  }
-  const goToPrevious = () => {
-    if (isFirstSlide === false) {
-      setCurrentIndex(prev => { return prev - 1 })
-    } else {
-      setCurrentIndex(currentIndex)
-    }
-  }
   return (
     <div className='projects'>
       <div className='projects-container'>
@@ -101,15 +80,8 @@ const Projects = ({ english, projects }) => {
           <div className='video-fade' key={currentIndex}>
             <Video video={projectDisplayed?.video?.asset} />
           </div>
-          <div onClick={isLastSlide ? null : goToNext} className={isLastSlide ? 'switch-btn arrow-next-disabled' : 'switch-btn arrow-next'}>
-            <img src={arrow} alt='' />
-            <p style={{ rotate: '180deg' }}>Next</p>
-          </div>
-          <div onClick={isFirstSlide ? null : goToPrevious} className={isFirstSlide ? 'switch-btn arrow-prev-disabled' : 'switch-btn arrow-prev'}>
-            <img src={arrow} alt='' />
-            <p>Prev</p>
-          </div>
         </div>
+        <Carousel projects={projects} projectDisplayed={projectDisplayed} english={english} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} setProjectDisplayed={setProjectDisplayed} />
       </div>
     </div>
   )

@@ -1,18 +1,18 @@
 /* eslint-disable react/jsx-closing-tag-location */
 /* eslint-disable react/jsx-indent */
+import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+import React from 'react'
 import FileDownloadIcon from '@mui/icons-material/FileDownload'
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy'
 import MailOutlineIcon from '@mui/icons-material/MailOutline'
 import LinkIcon from '@mui/icons-material/Link'
-import { CopyToClipboard } from 'react-copy-to-clipboard'
 import SendIcon from '@mui/icons-material/Send'
 import DoneIcon from '@mui/icons-material/Done'
 import Resume from '../../../public/Resume.pdf'
 import Curriculum from '../../../public/Curriculum.pdf'
 import Typewriter from 'typewriter-effect'
-import React from 'react'
-import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
 import './contact.css'
 
 const Contact = ({ english }) => {
