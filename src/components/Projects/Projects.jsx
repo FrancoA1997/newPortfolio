@@ -84,7 +84,9 @@ const Projects = ({ english, projects }) => {
             <Video key={currentIndex} video={projectDisplayed?.video?.asset} />
           </div>
         </div>
-        <Carousel isSwitching={isSwitching} setIsSwitching={setIsSwitching} projects={projects} projectDisplayed={projectDisplayed} english={english} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} setProjectDisplayed={setProjectDisplayed} />
+        <div className='carousel-container'>
+          <Carousel isSwitching={isSwitching} setIsSwitching={setIsSwitching} projects={projects} projectDisplayed={projectDisplayed} english={english} currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} setProjectDisplayed={setProjectDisplayed} />
+        </div>
       </div>
     </div>
   )

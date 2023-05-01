@@ -30,6 +30,7 @@
     flex-direction: row;
     justify-content: flex-end;
     margin-right: 50px;
+    height: 30px;
     align-items: end;
 }
 .animation-off{
@@ -39,7 +40,7 @@
 
 .animation-on{
     opacity: 0;
-    animation:  info-projects-anime-on 0.5s ease 1.2s 1 forwards ;
+    animation:  info-projects-anime-on 0.2s ease .2s 1 forwards ;
 }
 
 
@@ -50,6 +51,7 @@
     flex-direction: row;
     margin-top: 5px;
     width: 90%;
+    height: 100px;
 }
 .stack-img{
     width: 40px;
@@ -61,7 +63,7 @@
 }
 
 .show-container{
-    flex: 4;
+  width: 700px;
     height: calc(100vh - 10vh - 49px);
     display: flex;
     justify-content: space-evenly;
@@ -77,6 +79,10 @@
     border: 2px solid #4E9F3D;
     border-radius: 5px;
     margin-left: 50px;
+    
+}
+.carousel-container{
+    margin-left: auto;
 }
 .video-fade{
     opacity: 0;
@@ -85,13 +91,34 @@
 
 .animation-video-on{
     opacity: 0;
-    animation: video-anime-on 1s ease 1s 1 normal forwards;
+    animation: video-anime-on 1.5s ease 0.2s 1 normal forwards;
 }
 .animation-video-off{
     opacity: 1;
     animation: fff 0.2s ease 0.2s 1 normal forwards;
 }
 
+@media (min-width: 1500px){
+    
+    .show-container{
+        width: 1000px;
+          height: calc(100vh - 10vh - 49px);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .video-player{
+        display: flex;
+        position: relative;
+        width: 730px;
+        height: 410px;
+        background-color: black;
+        border: 2px solid #4E9F3D;
+        border-radius: 5px;
+        margin-left: 100px;
+        
+    }
+}
 
 
 @keyframes video-anime{
