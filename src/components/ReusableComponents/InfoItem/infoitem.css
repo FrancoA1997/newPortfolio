@@ -50,7 +50,49 @@
     width: 90%;
     height: 80px;
     opacity: 0;
-    animation:  info-projects-anime 0.5s ease 1s 1 normal forwards;
+}
+.info-project-item{
+    margin-bottom: 10px;
+    color: white;
+    font-size: clamp(15px, 40%, 20px);
+    display: flex;
+    justify-content: flex-end;
+    width: 85%;
+    height: fit-content;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.animation-off{
+    opacity: 1;
+    animation:  info-projects-anime-off .2s ease 0s 1 normal forwards;
+}
+
+.animation-on{
+    opacity: 0;
+    animation:  info-projects-anime-on 0.5s ease 1.2s 1 forwards ;
+}
+
+@keyframes info-projects-anime-on {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+@keyframes info-projects-anime-off {
+	0% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateY(10px);
+	}
 }
 
 /* Stack Styles */

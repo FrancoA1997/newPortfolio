@@ -31,8 +31,15 @@
     justify-content: flex-end;
     margin-right: 50px;
     align-items: end;
+}
+.animation-off{
+    opacity: 1;
+    animation:  info-projects-anime-off .2s ease 0s 1 normal forwards;
+}
+
+.animation-on{
     opacity: 0;
-    animation:  info-projects-anime 0.5s ease 1s 1 normal forwards;
+    animation:  info-projects-anime-on 0.5s ease 1.2s 1 forwards ;
 }
 
 
@@ -43,8 +50,6 @@
     flex-direction: row;
     margin-top: 5px;
     width: 90%;
-    animation:  info-projects-anime 0.5s ease 1s 1 normal forwards;
-    opacity: 0;
 }
 .stack-img{
     width: 40px;
@@ -75,20 +80,65 @@
 }
 .video-fade{
     opacity: 0;
-    animation: section-animation 0.2s ease 1.5s 1 normal forwards;
+    animation: video-anime 0.2s ease 1.5s 1 normal forwards;
+}
+
+.animation-video-on{
+    opacity: 0;
+    animation: video-anime-on 1s ease 1s 1 normal forwards;
+}
+.animation-video-off{
+    opacity: 1;
+    animation: fff 0.2s ease 0.2s 1 normal forwards;
 }
 
 
-@keyframes info-projects-anime {
+
+@keyframes video-anime{
 	0% {
 		opacity: 0;
-		transform: translateY(-10px);
+        transform: translateX(-20px);
 	}
 
 	100% {
 		opacity: 1;
-		transform: translateY(0);
+		transform: translateX(0);
 	}
 }
+@keyframes video-anime-on{
+	0% {
+		opacity: 0;
+        scale: .96;
+	}
 
+	100% {
+		opacity: 1;
+		scale: 1;
+    }
 
+}
+@keyframes fff{
+	0% {
+		
+        opacity: 1;
+		scale: 1;
+	}
+
+	100% {
+        opacity: 0;
+        	
+    }
+
+}
+
+@keyframes video-anime-off {
+	0% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+}

@@ -8,6 +8,13 @@ const Infoitem = ({ text, icon, styles }) => {
     </div>
   )
 }
+const InfoProjectitem = ({ text, isSwitching, styles }) => {
+  return (
+    <div>
+      <p className={isSwitching ? `${styles} animation-off` : `${styles} project-description animation-on`}>{text}</p>
+    </div>
+  )
+}
 
 const StackItem = ({ stackedText, styles, icon }) => {
   return (
@@ -24,5 +31,6 @@ const StackItem = ({ stackedText, styles, icon }) => {
 
 export {
   Infoitem,
-  StackItem
+  StackItem,
+  InfoProjectitem
 }

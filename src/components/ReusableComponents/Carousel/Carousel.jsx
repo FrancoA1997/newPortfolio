@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './carousel.css'
 import arrow from '../../../../public/images/arrow.png'
-const Carousel = ({ projectDisplayed, english, projects, currentIndex, setCurrentIndex, setProjectDisplayed }) => {
+const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex, setCurrentIndex, setProjectDisplayed }) => {
   const [isLastSlide, setIsLastSlide] = useState(false)
   const [isFirstSlide, setIsFirstSlide] = useState(true)
-  const [isSwitching, setIsSwitching] = useState(false)
   const projectArrayLength = projects.length - 1
   useEffect(() => {
     setIsLastSlide(currentIndex === projects.length - 1)
@@ -56,7 +55,7 @@ const Carousel = ({ projectDisplayed, english, projects, currentIndex, setCurren
         />
         <img
           src={projects[currentIndex]?.video.asset.thumbnail}
-          alt='thumbnail-img' className={isSwitching ? 'thumbnail thumb-anim-showned-off ' : 'thumbnail thumb-anim-showned'}
+          alt='thumbnail-img' className={isSwitching ? 'thumbnail ' : 'thumbnail thumb-anim-showned'}
         />
         <img
           src={isLastSlide ? projects[0]?.video.asset.thumbnail : projects[currentIndex + 1]?.video.asset.thumbnail}

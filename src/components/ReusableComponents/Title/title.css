@@ -134,18 +134,19 @@
     animation:  info-projects-anime 0.5s ease .5s 1 normal forwards;
 }
 
-.info-project-item{
-    margin-bottom: 10px;
-    color: white;
-    font-size: clamp(15px, 40%, 20px);
-    display: flex;
-    justify-content: flex-end;
-    width: 85%;
-    font-weight: 400;
-    opacity: 0;
-    animation:  info-projects-anime 0.5s ease 1s 1 normal forwards;
-}
 
+
+@keyframes info-projects-anime {
+	0% {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
 
 
 /* Contact Styles */
