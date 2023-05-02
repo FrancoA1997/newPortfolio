@@ -9,9 +9,6 @@
     font-weight: 300;
     font-size: 32px;
     transition: .5 ease;
-    opacity: 0;
-    animation: title-animation 0.5s ease 0s 1 normal forwards;
-    
 }
 .info-title-profile{
     color: rgb(203, 203, 203);
@@ -57,17 +54,6 @@
 
 	}
 }
-@keyframes title-animation {
-	0% {
-		opacity: 0;
-		transform: translateX(-20px);
-	}
-
-	100% {
-		opacity: 1;
-		transform: translateX(0);
-	}
-}
 
 @media (min-width: 1500px){
     .info-title-profile{
@@ -105,7 +91,7 @@
     display: flex;
     justify-content: start;
     text-align: left;
-    width: 85%;
+    width: 100%;
     font-weight: 500;
     background-color: rgba(23, 23, 23, 0.508); ;
     text-transform: uppercase;
@@ -115,7 +101,7 @@
         padding: 5px 10px;
         border-right: 2px solid #4E9F3D;
         border-bottom: 2px solid #4E9F3D;
-
+        
 }
 .info-project-title{
     color: rgb(203, 203, 203);
@@ -123,7 +109,6 @@
     margin-bottom: 10px;
     margin-top: 20px;
     margin-right: 240px;
-    padding-left: 10px;
     display: flex;
     justify-content: start;
     border-bottom: 2px solid #4E9F3D;
@@ -131,9 +116,38 @@
     width: 85%;
     font-weight: 600;
     opacity: 0;
-    animation:  info-projects-anime 0.5s ease .5s 1 normal forwards;
+    padding-left: 10px;
+    animation:  info-projects-anime 0.5s ease .2s 1 normal forwards;
 }
+.project-title-animation-on{
+    opacity: 0;
+    animation: title-animation-on .2s ease .5s 1 normal forwards;
+}
+.project-title-animation-off{
+    animation: title-animation-off .5s ease 0s 1 normal forwards;
+}
+@keyframes title-animation-on {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
 
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes title-animation-off {
+    0% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+
+	100% {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+}
 
 
 @keyframes info-projects-anime {
@@ -197,7 +211,7 @@
     font-weight: 300;
     font-size: 32px;
     transition: .5 ease;
-    opacity: 0;
+  
     animation: title-animation 0.5s ease 0s 1 normal forwards;
 }
 

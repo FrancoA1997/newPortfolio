@@ -14,6 +14,13 @@ const SectionTitle = ({ text, styles }) => {
     </div>
   )
 }
+const ProjectTitle = ({ text, styles, isSwitching }) => {
+  return (
+    <div className={styles}>
+      <p className={isSwitching ? 'project-title-animation-off' : 'project-title-animation-on'}>{text}</p>
+    </div>
+  )
+}
 
 const StackTitle = ({ text, styles }) => {
   return (
@@ -27,5 +34,6 @@ const StackTitle = ({ text, styles }) => {
 export {
   Title,
   StackTitle,
-  SectionTitle
+  SectionTitle,
+  ProjectTitle
 }

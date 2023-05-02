@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
+import { Title, SectionTitle, ProjectTitle } from '../ReusableComponents/Title/Title'
 import Carousel from '../ReusableComponents/Carousel/Carousel'
 import { InfoProjectitem } from '../ReusableComponents/InfoItem/Infoitem'
 import { urlFor } from '../../client'
@@ -22,7 +22,8 @@ const Projects = ({ english, projects }) => {
           styles='section-project-title'
           text={english === true ? 'Projects' : 'Proyectos'}
         />
-        <Title
+        <ProjectTitle
+          isSwitching={isSwitching}
           text={english ? projectDisplayed?.title : projectDisplayed?.titulo}
           styles='project-title'
         />

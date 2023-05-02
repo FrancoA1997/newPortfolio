@@ -68,18 +68,20 @@ const Contact = ({ english }) => {
           />
           <div className='social-img-container-contact'>
             <div className='social-img-contact'>
-              <img src='../public/images/linkedin.png' alt='linkedin-img' />
-              <p>LinkedIn</p>
+            <a href='https://www.linkedin.com/in/franco-alvarez-nahuel/' target='_blank' rel='noreferrer'>
+              <img src='../public/images/linkedin.png' alt='linkedin-img' className='social-image' />
+              <p>LinkedIn</p></a>
             </div>
             <div className='social-img-contact'>
-              <img src='../public/images/github.png' alt='github-img' />
-              <p>GitHub</p>
+            <a href='https://github.com/FrancoA1997' target='_blank' rel='noreferrer'>
+              <img src='../public/images/github.png' alt='github-img' className='social-image' />
+              <p>GitHub</p></a>
             </div>
           </div>
         </div>
         {english === true
           ? <div className='contact-social'>
-            <a href={Resume} download='Resume'><button className='contact-download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Resume</button></a>
+            <a target='_blank' href={Resume} download='Resume' rel='noreferrer'><button className='contact-download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Resume</button></a>
           </div>
           : <div className='contact-social'>
             <a href={Curriculum} download='Curriculum'><button className='contact-download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Curriculum</button></a>

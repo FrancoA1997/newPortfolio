@@ -23,7 +23,7 @@
     font-weight: 400;
     text-transform: uppercase;
     opacity: 0;
-    animation:  info-projects-anime 0.5s ease .5s 1 normal forwards;
+    animation:  info-projects-anime 0.5s ease .2s 1 normal forwards;
 }
 .repo-links{
     display: flex;
@@ -35,12 +35,12 @@
 }
 .animation-off{
     opacity: 1;
-    animation:  info-projects-anime-off .2s ease 0s 1 normal forwards;
+    animation:  info-projects-anime-off .0s ease 0s 1 normal forwards;
 }
 
 .animation-on{
     opacity: 0;
-    animation:  info-projects-anime-on 0.2s ease .2s 1 forwards ;
+    animation:  info-projects-anime-on 0.4s ease .4s 1 forwards ;
 }
 
 

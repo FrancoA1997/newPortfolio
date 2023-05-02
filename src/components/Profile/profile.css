@@ -3,7 +3,8 @@
     min-height: 500px;
     display: flex;
     flex-direction: row;
-    animation: section-animation 0.5s ease 0s 1 normal forwards;
+    opacity: 0;
+    animation: section-animation 0.5s ease .3s 1 normal forwards;
 }
 .profile-container{
     height: calc(100vh - 10vh - 48.5px);
@@ -39,34 +40,12 @@ margin-top: 20px;
     justify-content: flex-start;
     margin-top: auto;
 }
-
-.social-img{
-    width: 45x;
-    height: 45px;
-    object-fit: cover;
-    margin-bottom: 5px;
-    margin-left: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s ease;
-    
-}
-
-.social-img:hover{
-    padding: 3px 3px;
-    border: 1px solid #4E9F3D;
-    rotate: 5deg;
-    background-color: rgba(28, 28, 28, 0.626) ;
-}
-
-
 .description-section{
     flex: 4;
     width: max-content;
     display: flex;
     flex-direction: column;
 }
-
 
 
 .description-more{

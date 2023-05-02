@@ -24,7 +24,7 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
     }
     setTimeout(() => {
       setIsSwitching(false)
-    }, 600)
+    }, 800)
   }
   const goToPrevious = () => {
     setIsSwitching(true)
@@ -39,7 +39,7 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
     }
     setTimeout(() => {
       setIsSwitching(false)
-    }, 600)
+    }, 800)
   }
   return (
 
