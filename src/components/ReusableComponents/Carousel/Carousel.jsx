@@ -55,7 +55,7 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
         />
         <img
           src={projects[currentIndex]?.video.asset.thumbnail}
-          alt='thumbnail-img' className={isSwitching ? 'thumbnail ' : 'thumbnail thumb-anim-showned'}
+          alt='thumbnail-img' className={isSwitching ? 'thumbnail thumb-anim-showned-off' : 'thumbnail thumb-anim-showned'}
         />
         <img
           src={isLastSlide ? projects[0]?.video.asset.thumbnail : projects[currentIndex + 1]?.video.asset.thumbnail}

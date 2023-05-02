@@ -63,10 +63,10 @@
 }
 
 .show-container{
-  width: 700px;
+    width: 100%;
     height: calc(100vh - 10vh - 49px);
     display: flex;
-    justify-content: space-evenly;
+    overflow-x: hidden;
     align-items: center;
 }
 
@@ -83,6 +83,7 @@
 }
 .carousel-container{
     margin-left: auto;
+    margin-right: 25%;
 }
 .video-fade{
     opacity: 0;
@@ -98,15 +99,9 @@
     animation: fff 0.2s ease 0.2s 1 normal forwards;
 }
 
-@media (min-width: 1500px){
+@media (min-width: 1650px){
     
-    .show-container{
-        width: 1000px;
-          height: calc(100vh - 10vh - 49px);
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
+  
       .video-player{
         display: flex;
         position: relative;
