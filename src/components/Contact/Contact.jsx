@@ -99,12 +99,12 @@ const Contact = ({ english }) => {
           <div className='social-img-container-contact'>
             <div className='social-img-contact'>
             <a href='https://www.linkedin.com/in/franco-alvarez-nahuel/' target='_blank' rel='noreferrer'>
-              <img src='../public/images/linkedin.png' alt='linkedin-img' className='social-image' />
+              <img src='/images/linkedin.png' alt='linkedin-img' className='social-image' />
               <p>LinkedIn</p></a>
             </div>
             <div className='social-img-contact'>
             <a href='https://github.com/FrancoA1997' target='_blank' rel='noreferrer'>
-              <img src='../public/images/github.png' alt='github-img' className='social-image' />
+              <img src='/images/github.png' alt='github-img' className='social-image' />
               <p>GitHub</p></a>
             </div>
           </div>

@@ -20,8 +20,8 @@ const Topbar = ({ setEnglish, english, setMounted, mounted }) => {
       </div>
       <div className='top-bar-languague'>
         <div className='select-flag' onClick={handleChange}>
-          <img className='flag' src='../public/images/es.svg' alt='' />
-          <img className='flag' src='../public/images/gb.svg' alt='' />
+          <img className='flag' src='/images/es.svg' alt='' />
+          <img className='flag' src='/images/gb.svg' alt='' />
           <div className={english ? 'select-window-eng' : 'select-window-esp'} />
         </div>
         <div className='nav-links-container'>
