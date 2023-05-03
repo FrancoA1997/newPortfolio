@@ -4,6 +4,7 @@ import Carousel from '../ReusableComponents/Carousel/Carousel'
 import { InfoProjectitem } from '../ReusableComponents/InfoItem/Infoitem'
 import { urlFor } from '../../client'
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark'
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import DescriptionIcon from '@mui/icons-material/Description'
 import LaunchIcon from '@mui/icons-material/Launch'
@@ -14,7 +15,7 @@ const Projects = ({ english, projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [projectDisplayed, setProjectDisplayed] = useState(projects[currentIndex])
   const [isSwitching, setIsSwitching] = useState(false)
-
+  console.log(projectDisplayed.stack)
   return (
     <div className='projects'>
       <div className='projects-container'>
@@ -73,11 +74,22 @@ const Projects = ({ english, projects }) => {
           text={english ? 'Tech Stack ' : 'Tecnologias'}
           icon={<CollectionsBookmarkIcon className='tick-green' style={{ marginLeft: '10px', marginBottom: '5px' }} />}
         />
-        <div key={english} className={isSwitching ? 'stack-wrapper animation-off' : 'stack-wrapper animation-on'}>
+        <div key={english} className={isSwitching ? ' stack-wrapper animation-off' : 'stack-wrapper animation-on'}>
           {projectDisplayed.stack.map((img, idx) => (
-            <img key={idx} className='stack-img' src={urlFor(img)} />
+            <div key={idx} className='stack-items'>
+              <img className='stack-img' src={urlFor(img)} />
+              <div className='text-field-name'>
+                <span className='item-name'>{img.name}</span>
+              </div>
+            </div>
           ))}
+          <div className='text-field'>
+            <DoubleArrowIcon fontSize='' style={{ color: '#4E9F3D', rotate: '90deg', marginRight: '10px' }} />
+            <span className='item-name-below'>Hover over</span>
+          </div>
+
         </div>
+
       </div>
       <div className='show-container'>
         <div className='video-player'>

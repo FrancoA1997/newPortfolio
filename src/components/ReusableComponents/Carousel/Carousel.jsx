@@ -19,7 +19,7 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
       }, 500)
     } else {
       setTimeout(() => {
-        setCurrentIndex(currentIndex)
+        setCurrentIndex(0)
       }, 500)
     }
     setTimeout(() => {
@@ -34,7 +34,7 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
       }, 500)
     } else {
       setTimeout(() => {
-        setCurrentIndex(currentIndex)
+        setCurrentIndex(projectArrayLength)
       }, 500)
     }
     setTimeout(() => {
@@ -44,7 +44,7 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
   return (
 
     <div className='carousel'>
-      <div onClick={isLastSlide ? null : goToNext} className={isLastSlide ? 'switch-btn arrow-next-disabled' : 'switch-btn arrow-next'}>
+      <div onClick={goToNext} className='switch-btn arrow-next'>
         <img src={arrow} alt='' />
         <p style={{ rotate: '90deg' }}>{english ? 'Next' : 'Siguiente'}</p>
       </div>
@@ -62,7 +62,7 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
           alt='thumbnail-img' className={isSwitching ? 'thumbnail-notShown-bottom thumb-anim-bottom-off ' : 'thumbnail-notShown-bottom thumb-anim-bottom '}
         />
       </div>
-      <div onClick={isFirstSlide ? null : goToPrevious} className={isFirstSlide ? 'switch-btn arrow-prev-disabled' : 'switch-btn arrow-prev'}>
+      <div onClick={goToPrevious} className='switch-btn arrow-prev'>
         <img src={arrow} alt='' />
         <p style={{ rotate: '270deg' }}>{english ? 'Prev' : 'Anterior'}</p>
       </div>

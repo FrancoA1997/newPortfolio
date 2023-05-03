@@ -2,7 +2,7 @@
 /* eslint-disable react/jsx-indent */
 import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
-import React from 'react'
+import React, { useState } from 'react'
 import FileDownloadIcon from '@mui/icons-material/FileDownload'
 import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid'
 import ContentCopyIcon from '@mui/icons-material/ContentCopy'
@@ -13,13 +13,20 @@ import DoneIcon from '@mui/icons-material/Done'
 import Resume from '../../../public/Resume.pdf'
 import Curriculum from '../../../public/Curriculum.pdf'
 import Typewriter from 'typewriter-effect'
+import CircularProgress from '@mui/material/CircularProgress'
+import { client } from '../../client'
 import './contact.css'
 
 const Contact = ({ english }) => {
+  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const { username, email, message } = formData
   const [copied, setCopied] = React.useState(false)
   const [copied2, setCopied2] = React.useState(false)
-  const email = 'francoalvarezn97@gmail.com'
-  const phoneNumber = '+54 341347-8824'
+  const emailCopy = 'francoalvarezn97@gmail.com'
+  const phoneNumberCopy = '+54 341347-8824'
+
   const onCopy = React.useCallback(() => {
     setCopied(true)
     setTimeout(() => {
@@ -32,6 +39,29 @@ const Contact = ({ english }) => {
       setCopied2(false)
     }, 2000)
   }, [])
+  const handleChangeInput = (e) => {
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setLoading(true)
+
+    const contact = {
+      _type: 'contact',
+      name: formData.username,
+      email: formData.email,
+      message: formData.message
+    }
+
+    client.create(contact)
+      .then(() => {
+        setLoading(false)
+        setIsFormSubmitted(true)
+      })
+      .catch((err) => console.log(err))
+  }
 
   return (
     <div className='contact'>
@@ -46,8 +76,8 @@ const Contact = ({ english }) => {
             text={english ? 'Email Address' : 'Direccion de correo'}
             icon={<MailOutlineIcon style={{ marginLeft: '10px' }} className='copied tick-green' />}
           />
-          <p className='info-contact-item'>{email}
-            <CopyToClipboard onCopy={onCopy} text={email}>
+          <p className='info-contact-item'>{emailCopy}
+            <CopyToClipboard onCopy={onCopy} text={emailCopy}>
               <button className='copy-btn'>{copied ? <DoneIcon className='copied tick-green' fontSize='small' /> : <ContentCopyIcon className='copied' fontSize='small' />} </button>
             </CopyToClipboard>
           </p>
@@ -56,8 +86,8 @@ const Contact = ({ english }) => {
             text={english ? 'Phone Number' : 'Numero de telefono'}
             icon={<PhoneAndroidIcon style={{ marginLeft: '10px', paddingBottom: '2px' }} className='copied tick-green' />}
           />
-          <p key={english} className='info-contact-item'>{phoneNumber}
-            <CopyToClipboard onCopy={onCopy2} text={phoneNumber}>
+          <p key={english} className='info-contact-item'>{phoneNumberCopy}
+            <CopyToClipboard onCopy={onCopy2} text={phoneNumberCopy}>
               <button className='copy-btn'>{copied2 ? <DoneIcon className='copied tick-green' fontSize='small' /> : <ContentCopyIcon className='copied' fontSize='small' />} </button>
             </CopyToClipboard>
           </p>
@@ -86,9 +116,34 @@ const Contact = ({ english }) => {
           : <div className='contact-social'>
             <a href={Curriculum} download='Curriculum'><button className='contact-download-btn'><FileDownloadIcon fontSize='medium' color='white' style={{ marginRight: '5px' }} />Curriculum</button></a>
             </div>}
-
       </div>
-      <div key={english} className='form-section'>
+      {isFormSubmitted
+        ? <div className='title-success'>
+       <p style={{ marginRight: '10px', color: 'white' }}>{english === true ? 'Thanks for getting in touch with me!' : 'Gracias por ponerte en contacto conmigo!'} </p>
+        <div className='writer-text'>
+       <p style={{ marginRight: '10px', color: 'white' }}>{english === true ? "I'll write you back" : 'Te estare escribiendo'} </p>
+       <div className='writer'>
+         {english === true
+           ? <Typewriter
+               options={{
+                 autoStart: true,
+                 loop: true,
+                 delay: 150,
+                 strings: [' as soon as possible ❤️']
+               }}
+             />
+           : <Typewriter
+               options={{
+                 autoStart: true,
+                 loop: true,
+                 delay: 150,
+                 strings: ['lo antes posible ❤️']
+               }}
+             />}
+        </div>
+       </div>
+     </div>
+        : <div key={english} className='form-section'>
         <div className='contact-mainTitle'>
           <p style={{ marginRight: '10px', color: 'white' }}>{english === true ? 'Leave me a' : 'Dejame un'} </p>
           <div className='writer'>
@@ -112,12 +167,48 @@ const Contact = ({ english }) => {
           </div>
         </div>
         <form action='' className='contact-form'>
-          <input type='text' className='input-form' placeholder={english === true ? 'Full name*' : 'Nombre completo*'} />
-          <input type='text' className='input-form' placeholder={english === true ? 'Email Address' : 'Direccion de correo'} />
-          <textarea name='' id='' cols='30' rows='10' placeholder={english === true ? 'Your message...' : 'Tu mensaje...'} />
-          <button className='submit-btn'><SendIcon fontSize='small' style={{ marginLeft: '10px' }} /></button>
+          <input
+            onChange={handleChangeInput}
+            type='text'
+            className='input-form'
+            name='username'
+            value={username}
+            placeholder={english === true ? 'Full name*' : 'Nombre completo*'}
+          />
+          <input
+            onChange={handleChangeInput}
+            type='text'
+            className='input-form'
+            name='email'
+            value={email}
+            placeholder={english === true ? 'Email Address' : 'Direccion de correo'}
+          />
+          <textarea
+            onChange={handleChangeInput}
+            cols='30'
+            rows='10'
+            value={message}
+            name='message'
+            placeholder={english === true ? 'Your message...' : 'Tu mensaje...'}
+          />
+          <button
+            onClick={handleSubmit}
+            className='submit-btn'
+          >
+            {loading
+              ? <CircularProgress
+                  fontSize='small'
+                  color='success'
+                />
+              : <SendIcon
+                  fontSize='small'
+                  style={{ marginLeft: '10px' }}
+                />}
+
+            </button>
         </form>
-      </div>
+      </div>}
+
     </div>
 
   )
