@@ -30,7 +30,7 @@ const Profile = ({ english, studies, profile }) => {
       <div className='profile'>
         <div className='profile-container'>
           <SectionTitle styles='title-profile' text={english === true ? 'About me' : 'Sobre mi'} />
-          <img className='profile-img' src='../public/images/dummy-img.png' alt='profile_img' />
+          <img className='profile-img' src='/images/dummy-img.png' alt='profile_img' />
           <div className='profile-info'>
             <Title styles='info-title-profile' text={english ? 'Name' : 'Nombre'} />
             <Infoitem english={english} text={english ? 'Franco' : 'Franco2'} icon={<PanToolIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
