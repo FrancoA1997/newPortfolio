@@ -61,7 +61,7 @@ const Profile = ({ english, studies, profile }) => {
                 titleStyles='company-title'
                 dateStyles='date-title'
                 styles='studies'
-                degree={<><span style={{ fontSize: '15px', fontWeight: '500', marginLeft: '325px' }}>Degree: </span><span style={{ marginLeft: '5px', fontSize: '14px', fontWeight: '600', color: '#3E9F3D' }}>Full Stack Web Developer</span></>}
+                degree={<><span style={{ fontSize: 'clamp(9px, 1.7vh, 15px)', fontWeight: '500' }}>Degree: </span><span style={{ marginLeft: '5px', fontSize: 'clamp(9px, 1.7vh, 14px)', fontWeight: '600', color: '#3E9F3D' }}>Full Stack Web Developer</span></>}
               />
               <Studies
                 text={english ? studies[0].study2 : studies[0].estudio2}

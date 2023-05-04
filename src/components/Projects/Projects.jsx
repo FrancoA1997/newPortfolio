@@ -58,16 +58,18 @@ const Projects = ({ english, projects }) => {
             text={english ? 'Repository' : 'Repositorios'}
             icon={<GitHubIcon className='tick-green' style={{ marginLeft: '10px', marginBottom: '5px' }} />}
           />
-          {projectDisplayed.links.map((link, idx) => (
-            <div key={idx}>
-              <div key={english}>
-                <div className={isSwitching ? 'repo-links animation-off' : 'repo-links animation-on'}>
-                  <p className='info-project-git-title'>{link.tag}</p>
-                  <a target='_blank' href={link.url} style={{ textDecoration: 'none', cursor: 'pointer' }} rel='noreferrer'><LaunchIcon className='tick-green' style={{ color: '#4E9F3D', marginLeft: '10px' }} /></a>
+          <div className='repo-rows'>
+            {projectDisplayed.links.map((link, idx) => (
+              <div key={idx}>
+                <div key={english}>
+                  <div className={isSwitching ? 'repo-links animation-off' : 'repo-links animation-on'}>
+                    <p className='info-project-git-title'>{link.tag}</p>
+                    <a target='_blank' href={link.url} style={{ textDecoration: 'none', cursor: 'pointer', border: '0', width: '20px', height: '20px' }} rel='noreferrer'><LaunchIcon className='tick-green' fontSize='small' style={{ color: '#4E9F3D', marginLeft: '10px' }} /></a>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
         <Title
           styles='info-project-title'

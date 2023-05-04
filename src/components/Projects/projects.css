@@ -18,7 +18,7 @@
 .info-project-git-title{
     margin-left: 10px;
     color: white;
-    font-size: clamp(15px, 40%, 20px);
+    font-size: clamp(10px, 1.5vh, 20px);
     width: fit-content;
     font-weight: 400;
     text-transform: uppercase;
@@ -29,8 +29,15 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-right: 50px;
-    height: 30px;
+    height: 15px;
+    margin-top: 5px;
+    margin-right: 15px;
+    align-items: end;
+}
+.repo-rows{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     align-items: end;
 }
 .animation-off{
@@ -55,11 +62,11 @@
     position: relative;
 }
 .stack-img{
-    width: 40px;
-    height: 40px;
+    width: clamp(20px, 3.5vh, 45px);
+    height: clamp(20px, 3.5vh, 45px);
     margin-left: 10px;
     margin-right: 5px;
-    margin-top: 5px;
+    
     object-fit: cover;  
     transition: .2s ease;
     cursor: pointer;
@@ -67,6 +74,9 @@
 .stack-items{
     display: flex;
     flex-direction: column;
+    width: clamp(20px, 3.5vh, 45px);
+    height: clamp(20px, 3.5vh, 45px);
+    margin-left: 10px;
 }
 .item-name{
     transition: .3s ease;

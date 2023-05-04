@@ -7,12 +7,12 @@
     padding-left: 15px;
     width: 100%;
     font-weight: 300;
-    font-size: 32px;
+    font-size: clamp(25px, 3vh, 32px);
     transition: .5 ease;
 }
 .info-title-profile{
     color: rgb(203, 203, 203);
-    font-size: 17px;
+    font-size: clamp(15px, 2vh, 17px);
     margin-bottom: 5px;
     margin-right: 240px;
     padding-left: 10px;
@@ -33,10 +33,10 @@
     justify-content: end;
     border-left: 2px solid #4E9F3D;
     border-bottom: 2px solid #4E9F3D;
-    margin-top: 48px;
-    font-size: 35px;
+    font-size:  clamp(30px, 4.5vh, 35px);
     padding-left: 0;
-    max-width: 45%;
+    margin-top: clamp(37px, 4.5vh, 48px);
+    max-width: clamp(45%, 2vh, 60%);
     opacity: 0;
     animation: section-animation 1s ease 1s 1 normal forwards;
 }
@@ -55,23 +55,7 @@
 	}
 }
 
-@media (min-width: 1500px){
-    .info-title-profile{
-        color: rgb(203, 203, 203);
-        font-size: 17px;
-        margin-bottom: 10px;
-        margin-right: 240px;
-        padding-left: 10px;
-        display: flex;
-        justify-content: start;
-        border-bottom: 2px solid #4E9F3D;
-        text-align: left;
-        width: 85%;
-        font-weight: 600;
-        opacity: 0;
-        animation: info-items-animation 0.5s ease .5s 1 normal forwards;
-    }
- }
+
 
  /* Project Styles */
  .section-project-title{
@@ -80,10 +64,10 @@
     justify-content: start;
     border-bottom: 2px solid #4E9F3D;
     padding-left: 15px;
-    margin-top: 10px;
+    margin-top: clamp(5px, 1vh, 10px);
     width: 100%;
     font-weight: 300;
-    font-size: 32px;
+    font-size: clamp(25px, 3vh, 32px);
     transition: .5 ease;
     animation: title-animation 0.5s ease 0s 1 normal forwards;
 }
@@ -96,7 +80,7 @@
     background-color: rgba(23, 23, 23, 0.508); ;
     text-transform: uppercase;
         color: rgb(203, 203, 203);
-        font-size: 20px;
+        font-size: clamp(15px, 2vh, 20px);
         margin-bottom: 10px;
         padding: 5px 10px;
         border-right: 2px solid #4E9F3D;
@@ -105,9 +89,9 @@
 }
 .info-project-title{
     color: rgb(203, 203, 203);
-    font-size: 17px;
-    margin-bottom: 10px;
-    margin-top: 20px;
+    font-size: clamp(13px, 2vh, 17px);
+    margin-bottom: clamp(5px, 2vh, 10px);
+    margin-top: clamp(10px, 2vh, 20px);
     margin-right: 240px;
     display: flex;
     justify-content: start;
@@ -172,17 +156,17 @@
     border-bottom: 2px solid #4E9F3D;
     padding-left: 15px;
     margin-top: 10px;
-    margin-bottom: 50px;
+    margin-bottom:clamp(25px, 4vh, 50px);
     width: 100%;
     font-weight: 300;
-    font-size: 32px;
+    font-size: clamp(25px, 3vh, 32px);
     transition: .5 ease;
     animation: title-animation 0.5s ease 0s 1 normal forwards;
 
 }
 .info-contact-title{
     color: rgb(203, 203, 203);
-    font-size: 17px;
+    font-size: clamp(10px, 3vh, 17px);
     margin-bottom: 25px;
     margin-right: 240px;
     padding-left: 10px;
@@ -209,7 +193,7 @@
     margin-top: 10px;
     width: 100%;
     font-weight: 300;
-    font-size: 32px;
+    font-size: clamp(25px, 3vh, 32px);
     transition: .5 ease;
   
     animation: title-animation 0.5s ease 0s 1 normal forwards;
@@ -220,15 +204,15 @@
     display: flex;
     flex-direction: row;
     justify-content: end;
-    font-size: 35px;
     border-bottom: 2px solid #4E9F3D;
     border-left: 2px solid #4E9F3D;
     padding-left: 40px;
     padding-right: 30px;
     height: fit-content;
     width: 45%;
+    font-size: clamp(30px, 4.5vh, 35px);
     position: absolute;
-    top: 58px;
+    top: clamp(48px, 5.5vh, 58px);
     left: 0;
     opacity: 0;
     transition: .5 ease;
@@ -238,9 +222,9 @@
     display: flex;
     justify-content: start;
     color: rgb(203, 203, 203);
-    font-size: 19px;
-    margin-bottom: 10px;
-    margin-top: 50px;
+    font-size: clamp(15px, 2vh, 19px);
+    margin-bottom: clamp(5px, 1vh, 10px);
+    margin-top: clamp(20px, 5vh, 50px);
     padding-left: 10px;
     border-bottom: 2px solid #4E9F3D;
     width: 85%;

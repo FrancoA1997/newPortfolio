@@ -1,6 +1,6 @@
 .contact{
     height: calc(100vh - 10vh - 49px);
-    min-height: 500px;
+    min-height: fit-content;
     display: flex;
     flex-direction: row;
     opacity: 0;
@@ -16,7 +16,7 @@
 }
 
 .info-contact-item{
-    font-size: clamp(15px, 40%, 20px);
+    font-size: 15px;
     margin-left: 10px;
     color: white;
     display: flex;
@@ -26,7 +26,7 @@
     padding: 8px 10px;
     width: 85%;
     font-weight: 300;
-    margin-bottom: 50px;
+    margin-bottom: clamp(10px, 3vh, 20px);
     opacity: 0;
     background-color: rgb(30, 30, 30);
     animation: info-contact-anime 0.5s ease 1s 1 normal forwards;
@@ -57,8 +57,8 @@
 .social-image{
   padding: 5px 5px;
   border-radius: 5px;
-  width: 60px;
-  height: 60px; 
+  width: clamp(35px, 5vh, 60px);
+  height: clamp(35px, 5vh, 60px);
   transition: .5s ease;
 }
 .social-image:hover{
@@ -71,7 +71,7 @@
 }
 
 .social-img-contact p{
-    font-size: 13px;
+    font-size: clamp(10px, 2vh, 15px);
     color: white;
     margin-top: 5px;
     text-align: center;
@@ -84,7 +84,6 @@
     background: #4E9F3D;
     color: rgb(51, 51, 51);
     border-radius: 5px;
-    border: 1px solid rgba(28, 28, 28, 0.626) ;
     margin-left: 7px;
     margin-bottom: 10px;
     padding-top: 5px;
@@ -92,7 +91,6 @@
     padding-right: 10px;
     padding-left: 5px;
     border: 0;
-    font-size: 15px;
     font-weight: 400;
     cursor: pointer;
     transition: .2s ease;
@@ -109,7 +107,7 @@
     padding-bottom: 5px;
     padding-right: 10px;
     padding-left: 5px;
-
+  
 }
 
 .copy-btn{
@@ -134,6 +132,7 @@
     align-items: center;
     justify-content: flex-start;
     margin-top: auto;
+   
 }
 
 .form-section{
@@ -149,15 +148,13 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    font-size: 40px;
+    font-size: clamp(25px, 5vh, 40px);
     opacity: 0;
     animation: mainTitle-animation 0.5s ease 1.5s 1 normal forwards;    
 }
 .writer-text{
     display: flex;
     flex-direction: row;
-    font-size: 40px;
-    margin-top: 40px;
     opacity: 0;
     animation: mainTitle-animation 0.5s ease 0.6s 1 normal forwards; 
 }
@@ -186,14 +183,14 @@
 .contact-form{
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
+    margin-top: clamp(10px, 2vh, 50px);
     margin-left: 70px;
     position: relative;
 }
 .input-form{
     width: 60%;
     padding: 10px 10px;
-    margin-bottom: 35px;
+    margin-bottom: clamp(10px, 3vh, 35px);
     background-color: rgba(128, 128, 128, 0.182);
     border: 0;
     border-radius: 5px;
@@ -209,6 +206,7 @@ textarea{
     padding: 10px 10px;
     background-color: rgba(128, 128, 128, 0.182);
     border: 0;
+    height: clamp(200px, 35vh, 350px);
     border-radius: 5px;
     color: white;
     font-size: 20px;

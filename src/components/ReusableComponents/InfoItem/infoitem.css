@@ -1,8 +1,9 @@
 /* Profile Styles */
 .info-item-profile{
-    margin-bottom: 5px;
+    margin-bottom: clamp(5px, 1.5vh, 25px);
+    margin-top: clamp(5px, 1.5vh, 10px);
     color: white;
-    font-size: clamp(15px, 40%, 20px);
+    font-size: clamp(12px, 2vh, 15px);
     display: flex;
     justify-content: flex-end;
     width: 85%;
@@ -25,40 +26,23 @@
 	}
 }
 
-@media (min-width: 1500px){
-    
-    .info-item-profile{
-        margin-bottom: 10px;
-        color: white;
-        font-size: clamp(17px, 40%, 20px);
-        display: flex;
-        justify-content: flex-end;
-        width: 85%;
-        font-weight: 300;
-        opacity: 0;
-        animation: info-items-animation 0.5s ease 1s 1 normal forwards;
-    }
-}
+
 /* Project Styles */
 .project-description{
-    margin-bottom: 10px;
     margin-left: 10px;
     color: white;
-    font-size: clamp(14px, 40%, 18px);
+    font-size: clamp(13px, 3vh, 15px);
     font-weight: 400;
     flex-wrap: wrap;
     width: 90%;
-    height: 80px;
     opacity: 0;
 }
 .info-project-item{
-    margin-bottom: 10px;
     color: white;
-    font-size: clamp(15px, 40%, 20px);
+    font-size: clamp(12px, 2vh, 15px);
     display: flex;
     justify-content: flex-end;
     width: 85%;
-    height: fit-content;
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -108,9 +92,8 @@
     display: flex;
     color: white;
     font-weight: 400;
-    font-size: clamp(16px, 40%, 20px);
-    margin-bottom: 0px;
-    margin-top: 10px;
+    font-size: clamp(12px, 1.5vh, 15px);
+    margin-top: clamp(5px, 1vh, 10px);
     position: relative;
     border-bottom: 1px solid #4E9F3D;
     padding-right: 10px;
@@ -124,17 +107,7 @@
     animation: stack-item-slide 0.5s ease 1.3s 1 normal forwards;
 }
 
-.dot{
-    width: 9px ;
-    height: 9px;
-    border-radius: 50%;
-    background-color: #4E9F3D;
-    margin-right: 10px;
-    align-self: center;
-    margin-right: auto;
-    opacity: 0;
-    animation: info-items-animation 0.2s ease 1s 1 normal forwards;
-}
+
 
 
 @keyframes stack-item-slide {

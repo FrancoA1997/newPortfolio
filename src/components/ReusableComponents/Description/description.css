@@ -4,17 +4,17 @@
     border-radius: 5px;
     box-shadow: 0 2px 0px rgba(0, 0, 0, 0.113);
     border: 1px solid rgba(29, 28, 28, 0.564);
-    padding-bottom: 25px;
+    padding-bottom: clamp(12px, 2vh, 25px);
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 10px;
     color: white;
-    width: 850px;
-    height: max-content;
+    width: fit-content;
+    height: fit-content;
     text-align: left;
     margin-left: 35px;
-    margin-top: 35px;
-    font-size: clamp(16px, 50%, 20px)  ;
+    margin-top: clamp(20px, 2vh, 35px);
+    font-size: clamp(12px, 2vh, 20px);
     opacity: 0;
     z-index: 996;
     position: relative;
@@ -22,6 +22,7 @@
     
 }
 .show-more-btn{
+    font-size: clamp(10px, 1.5vh, 17px);;
     position: absolute;
     opacity: 0;
     width: 15%;
@@ -32,25 +33,33 @@
     color: white;
     border: 2px solid #4E9F3D;
     border: 2px solid #4E9F3D;
-    padding:10px 5px;
+    padding-top: clamp(2px, .5vh, 10px);;
+    padding-bottom: clamp(2px, .5vh, 10px);;
+    padding-left: clamp(2px, .5vh, 10px);;
+    padding-right: clamp(2px, .5vh, 10px);;
     bottom: 0px;
     right: 0px;
-    cursor: pointer;
     animation: moreInfo-animation 1s ease 1.5s 1 normal forwards; 
+    cursor: pointer;
     z-index: 995;
+}
+.show-more-btn:focus{
+    text-decoration: none;
+    
 }
 .studies{
     background: rgba(128, 128, 128, 0.182);
-    border-radius: 5px;
     box-shadow: 0 2px 0px rgba(0, 0, 0, 0.113);
     border: 1px solid rgba(29, 28, 28, 0.564);
+    border-radius: 5px;
     padding: 5px 10px;
     color: white;
-    width: 850px;
+    width: fit-content;
+    height: fit-content;
     text-align: left;
     margin-left: 35px;
     margin-top: 20px;
-    font-size: clamp(15px, 50%, 20px)  ;
+    font-size: clamp(10px, 1.8vh, 17px)  ;
     transition: 0.5s ease;
     opacity: 0;
     animation: moreInfo-animation 1s ease 0s 1 normal forwards; 
@@ -62,19 +71,27 @@
 }
 
 .company-title{
-    font-size: 20px;
+    font-size: clamp(13px, 2.5vh, 22px) ;
     margin-right: 5px;
     font-weight: 600;
     margin-bottom: 0px;
 }
 
 .date-title{
-    font-size: 13px;
+    font-size: clamp(10px, 1.5vh, 13px) ;
     color: #4E9F3D;
     font-weight: 500;
     
 }
-
+@media (min-width: 1340px){
+    .show-more-btn{
+        position: absolute;
+        bottom: -35px;
+        right: -0px;
+        border-bottom-right-radius: 15px;
+    } 
+ 
+}
 @keyframes moreInfo-animation {
 	0% {
 		opacity: 0;

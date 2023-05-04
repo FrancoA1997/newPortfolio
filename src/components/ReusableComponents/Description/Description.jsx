@@ -11,7 +11,7 @@ const Description = ({ showMore, setShowMore, text, english, styles, btnStyles }
 
       {english
         ? <button className={btnStyles} onClick={() => setShowMore(!showMore)}> {showMore ? 'Hide' : 'Show'}  Studies</button>
-        : <button className={btnStyles} onClick={() => setShowMore(!showMore)}> {showMore ? 'Esconder' : 'Mostrar'} Estudios</button>}
+        : <button className={btnStyles} onClick={() => setShowMore(!showMore)}> {showMore ? 'Ocultar' : 'Mostrar'} Estudios</button>}
 
     </div>
   )
@@ -20,7 +20,8 @@ const Description = ({ showMore, setShowMore, text, english, styles, btnStyles }
 const Studies = ({ date, title, text, styles, titleStyles, dateStyles, degree }) => {
   return (
     <div key={text} className={styles}>
-      <p className={titleStyles}>{title} {degree}</p>
+      <p className={titleStyles}>{title}</p>
+      <p className={titleStyles}>{degree}</p>
       <span className={dateStyles}>{date}</span>
       {text.map((m, idx) => (
         <p key={idx} style={{ marginTop: '3px' }}>
