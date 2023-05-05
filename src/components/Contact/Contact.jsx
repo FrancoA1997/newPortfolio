@@ -118,7 +118,7 @@ const Contact = ({ english }) => {
             </div>}
       </div>
       {isFormSubmitted
-        ? <div className='title-success'>
+        ? <div key={english} className='title-success'>
        <p style={{ marginRight: '10px', color: 'white' }}>{english === true ? 'Thanks for getting in touch with me!' : 'Gracias por ponerte en contacto conmigo!'} </p>
         <div className='writer-text'>
        <p style={{ marginRight: '10px', color: 'white' }}>{english === true ? "I'll write you back" : 'Te estare escribiendo'} </p>
@@ -129,7 +129,7 @@ const Contact = ({ english }) => {
                  autoStart: true,
                  loop: true,
                  delay: 150,
-                 strings: [' as soon as possible ❤️']
+                 strings: [' as soon as possible !']
                }}
              />
            : <Typewriter
@@ -137,7 +137,7 @@ const Contact = ({ english }) => {
                  autoStart: true,
                  loop: true,
                  delay: 150,
-                 strings: ['lo antes posible ❤️']
+                 strings: ['lo antes posible !']
                }}
              />}
         </div>
