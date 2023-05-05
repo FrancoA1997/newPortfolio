@@ -4,12 +4,9 @@
     border-radius: 5px;
     box-shadow: 0 2px 0px rgba(0, 0, 0, 0.113);
     border: 1px solid rgba(29, 28, 28, 0.564);
-    padding-bottom: clamp(12px, 2vh, 25px);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
+    padding: 10px 10px;
     color: white;
-    width: fit-content;
+    width: clamp(450px, 60vw, 1050px);
     height: fit-content;
     text-align: left;
     margin-left: 35px;
@@ -22,29 +19,31 @@
     
 }
 .show-more-btn{
-    font-size: clamp(10px, 1.5vh, 17px);;
+    font-size: clamp(5px, 1.2vw, 17px);;
     position: absolute;
     opacity: 0;
     width: 15%;
-    border-radius: 2px;
-    border-bottom-right-radius: 0px;
-    border-top-left-radius: 15px;
+    border-radius: 5px;
     background: rgba(128, 128, 128, 0.092);
     color: white;
     border: 2px solid #4E9F3D;
-    border: 2px solid #4E9F3D;
-    padding-top: clamp(2px, .5vh, 10px);;
-    padding-bottom: clamp(2px, .5vh, 10px);;
-    padding-left: clamp(2px, .5vh, 10px);;
-    padding-right: clamp(2px, .5vh, 10px);;
-    bottom: 0px;
-    right: 0px;
+    padding: 5px;
+    bottom: -45px;
+    right: 0;
     animation: moreInfo-animation 1s ease 1.5s 1 normal forwards; 
     cursor: pointer;
     z-index: 995;
+    transition: .3s ease;
 }
 .show-more-btn:focus{
     text-decoration: none;
+    
+}
+.show-more-btn:hover{
+    background-color: #4E9F3D;
+    border: 2px solid rgb(170, 170, 170);
+    color: rgb(9, 9, 9);;
+
     
 }
 .studies{
@@ -54,16 +53,20 @@
     border-radius: 5px;
     padding: 5px 10px;
     color: white;
-    width: fit-content;
+    width: clamp(525px, 50vw, 850px);
     height: fit-content;
     text-align: left;
     margin-left: 35px;
     margin-top: 20px;
     font-size: clamp(10px, 1.8vh, 17px)  ;
-    transition: 0.5s ease;
+}
+.studies-animation-on{
     opacity: 0;
-    animation: moreInfo-animation 1s ease 0s 1 normal forwards; 
-    
+    animation: moreInfo-animation .8s ease 0s 1 normal forwards; 
+}
+.studies-animation-off{
+    opacity: 1;
+    animation: moreInfo-animation-off .3s ease 0s 1 normal forwards; 
 }
 .desc-styles{
     text-align: left;
@@ -83,15 +86,7 @@
     font-weight: 500;
     
 }
-@media (min-width: 1340px){
-    .show-more-btn{
-        position: absolute;
-        bottom: -35px;
-        right: -0px;
-        border-bottom-right-radius: 15px;
-    } 
- 
-}
+
 @keyframes moreInfo-animation {
 	0% {
 		opacity: 0;
@@ -103,6 +98,19 @@
 	100% {
 		opacity: 1;
 		transform: translateY(0);
+    }
+}
+@keyframes moreInfo-animation-off {
+	0% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+
+    
+
+	100% {
+		opacity: 0;
+		transform: translateY(-20px);
     }
 }
 

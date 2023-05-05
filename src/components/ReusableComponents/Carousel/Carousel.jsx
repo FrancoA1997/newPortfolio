@@ -50,17 +50,21 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
       </div>
       <div className='images'>
         <img
+          onClick={goToPrevious}
           src={isFirstSlide ? projects[projectArrayLength]?.video.asset.thumbnail : projects[currentIndex - 1]?.video.asset.thumbnail}
           alt='thumbnail-img' className={isSwitching ? 'thumbnail-notShown-top thumb-anim-top-off ' : 'thumbnail-notShown-top thumb-anim-top '}
         />
+        <span className='thumbnail-top-text'>{english ? 'Select project' : 'Ir al proyecto'}</span>
         <img
           src={projects[currentIndex]?.video.asset.thumbnail}
           alt='thumbnail-img' className={isSwitching ? 'thumbnail thumb-anim-showned-off' : 'thumbnail thumb-anim-showned'}
         />
         <img
+          onClick={goToNext}
           src={isLastSlide ? projects[0]?.video.asset.thumbnail : projects[currentIndex + 1]?.video.asset.thumbnail}
           alt='thumbnail-img' className={isSwitching ? 'thumbnail-notShown-bottom thumb-anim-bottom-off ' : 'thumbnail-notShown-bottom thumb-anim-bottom '}
         />
+        <span className='thumbnail-bottom-text'>{english ? 'Select project' : 'Ir al proyecto'}</span>
       </div>
       <div onClick={goToPrevious} className='switch-btn arrow-prev'>
         <img src={arrow} alt='' />

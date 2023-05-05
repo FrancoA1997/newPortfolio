@@ -4,7 +4,6 @@ import Carousel from '../ReusableComponents/Carousel/Carousel'
 import { InfoProjectitem } from '../ReusableComponents/InfoItem/Infoitem'
 import { urlFor } from '../../client'
 import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark'
-import DoubleArrowIcon from '@mui/icons-material/DoubleArrow'
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth'
 import DescriptionIcon from '@mui/icons-material/Description'
 import LaunchIcon from '@mui/icons-material/Launch'
@@ -80,16 +79,9 @@ const Projects = ({ english, projects }) => {
           {projectDisplayed.stack.map((img, idx) => (
             <div key={idx} className='stack-items'>
               <img className='stack-img' src={urlFor(img)} />
-              <div className='text-field-name'>
-                <span className='item-name'>{img.name}</span>
-              </div>
+              <span className='text-field-name item-name'>{img.name}</span>
             </div>
           ))}
-          <div className='text-field'>
-            <DoubleArrowIcon fontSize='' style={{ color: '#4E9F3D', rotate: '90deg', marginRight: '10px' }} />
-            <span className='item-name-below'>Hover over</span>
-          </div>
-
         </div>
 
       </div>

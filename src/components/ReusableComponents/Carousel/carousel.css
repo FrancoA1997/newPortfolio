@@ -76,6 +76,8 @@ justify-content: space-evenly;
     border: 3px solid #2e946d;
     top: 50px;
     left: 0;
+    cursor: pointer;
+    transition: .3s ease;
 }
 .thumbnail-notShown-top{
     width: 170px;
@@ -85,10 +87,53 @@ justify-content: space-evenly;
     z-index: 998;
     transition: 0.2s ease;
     border-radius: 5px;
-        border: 3px solid #2e946d;
+    border: 3px solid #2e946d;
+    cursor: pointer;
     left: 0;
     position: absolute;
     top: -120px;
+}
+.thumbnail-notShown-bottom:hover{
+    padding-bottom: 30px;
+    background-color: #2e946d;
+    
+}
+.thumbnail-notShown-bottom:hover + .thumbnail-bottom-text{
+    display: block;
+}
+.thumbnail-notShown-top:hover{
+    padding-top: 30px;
+    background-color: #2e946d;
+    
+}
+.thumbnail-notShown-top:hover + .thumbnail-top-text{
+    display: block;
+}
+
+
+.thumbnail-top-text{
+    transition: .5s ease;
+    position: absolute;
+    left: 55px;
+    top: -135px;
+    display: none;
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(18, 18, 18, 0.765);
+    z-index: 999;
+    width: max-content;
+}
+.thumbnail-bottom-text{
+    transition: .5s ease;
+    position: absolute;
+    left: 55px;
+    bottom: -155px;
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(18, 18, 18, 0.765);
+    display: none;
+    z-index: 999;
+    width: max-content;
 }
 .thumb-anim-top{
     opacity: 0;
@@ -121,6 +166,7 @@ justify-content: space-evenly;
     
 }
 .images{
+    position: relative;
     opacity: 0;
     animation: thumbnail 1s ease .5s 1 normal forwards;
 }

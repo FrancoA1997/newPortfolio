@@ -10,9 +10,11 @@ import MoreTimeIcon from '@mui/icons-material/MoreTime'
 import PanToolIcon from '@mui/icons-material/PanTool'
 import Curriculum from '../../../public/Curriculum.pdf'
 import Resume from '../../../public/Resume.pdf'
+import { urlFor } from '../../client'
 import './profile.css'
 
 const Profile = ({ english, studies, profile }) => {
+  console.log(profile)
   const [showMore, setShowMore] = useState(false)
   useEffect(() => {
     setTimeout(() => {
@@ -30,10 +32,10 @@ const Profile = ({ english, studies, profile }) => {
       <div className='profile'>
         <div className='profile-container'>
           <SectionTitle styles='title-profile' text={english === true ? 'About me' : 'Sobre mi'} />
-          <img className='profile-img' src='/images/dummy-img.png' alt='profile_img' />
+          <img className='profile-img' src={urlFor(profile[0]?.image)} alt='profile_img' />
           <div className='profile-info'>
             <Title styles='info-title-profile' text={english ? 'Name' : 'Nombre'} />
-            <Infoitem english={english} text={english ? 'Franco' : 'Franco2'} icon={<PanToolIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
+            <Infoitem english={english} text={english ? 'Franco Alvarez' : 'Franco Alvarez'} icon={<PanToolIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
             <Title styles='info-title-profile' text={english ? 'Location' : 'Locacion'} />
             <Infoitem english={english} text={english ? 'Cordoba, Argentina ' : 'Cordoba, Argentina'} icon={<LocationOnIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
             <Title styles='info-title-profile' text={english ? 'Role' : 'Rol'} />
@@ -52,27 +54,25 @@ const Profile = ({ english, studies, profile }) => {
         <div className='description-section'>
           <Title styles='head-profile-title' text={english ? profile[0]?.welcome : profile[0]?.bienvenido} />
           <Description english={english} setShowMore={setShowMore} showMore={showMore} text={english ? profile[0]?.description : profile[0]?.descripcion} styles='description' btnStyles='show-more-btn' />
-          {showMore
-            ? <>
-              <Studies
-                text={english ? studies[0].study1 : studies[0].estudio1}
-                date={english ? 'Duration: from Jul/2021 to Jul/2022' : 'Duracion: Desde Jul/2021 Hasta Jul/2022'}
-                title='Egg Coorporation Bootcamp'
-                titleStyles='company-title'
-                dateStyles='date-title'
-                styles='studies'
-                degree={<><span style={{ fontSize: 'clamp(9px, 1.7vh, 15px)', fontWeight: '500' }}>Degree: </span><span style={{ marginLeft: '5px', fontSize: 'clamp(9px, 1.7vh, 14px)', fontWeight: '600', color: '#3E9F3D' }}>Full Stack Web Developer</span></>}
-              />
-              <Studies
-                text={english ? studies[0].study2 : studies[0].estudio2}
-                date={english ? 'Duration: July/2022 till now' : 'Duracion: Desde Jul/2022 hasta la fecha'}
-                title={english ? 'Self-Taught' : 'Auto-Didacta'}
-                titleStyles='company-title'
-                dateStyles='date-title'
-                styles='studies'
-              />
-            </>
-            : <div />}
+
+          <Studies
+            text={english ? studies[0].study1 : studies[0].estudio1}
+            date={english ? 'Duration: from Jul/2021 to Jul/2022' : 'Duracion: Desde Jul/2021 Hasta Jul/2022'}
+            showMore={showMore}
+            title='Egg Coorporation Bootcamp'
+            titleStyles='company-title'
+            dateStyles='date-title'
+            degree={<><span style={{ fontSize: 'clamp(9px, 1.7vh, 15px)', fontWeight: '500' }}>{english ? 'Degree:' : 'Titulo'} </span><span style={{ marginLeft: '5px', fontSize: 'clamp(9px, 1.7vh, 14px)', fontWeight: '600', color: '#3E9F3D' }}>Full Stack Web Developer</span></>}
+          />
+          <Studies
+            text={english ? studies[0].study2 : studies[0].estudio2}
+            date={english ? 'Duration: July/2022 till now' : 'Duracion: Desde Jul/2022 hasta la fecha'}
+            title={english ? 'Self-Taught' : 'Auto-Didacta'}
+            showMore={showMore}
+            titleStyles='company-title'
+            dateStyles='date-title'
+          />
+
         </div>
       </div>
     </>
