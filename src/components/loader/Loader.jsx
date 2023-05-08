@@ -3,12 +3,12 @@ import Typography from '@mui/material/Typography'
 import './loader.css'
 import CircularStatic from './LoaderAnimation'
 const Loader = () => {
-  const messages = ['¡ Welcome !', 'Fetching projects...', 'Loading animations..', 'Waiting personal information...', '¡ Here we go !']
+  const messages = ['¡ Welcome !', 'Loading content..', '¡ Here we go !']
   const [index, setIndex] = useState(0)
   useEffect(() => {
     const timer = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex >= 5 ? 0 : prevIndex + 1))
-    }, 2000)
+      setIndex((prevIndex) => (prevIndex >= 4 ? 0 : prevIndex + 1))
+    }, 1500)
     return () => {
       clearInterval(timer)
     }

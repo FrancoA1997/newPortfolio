@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import './mainInterface.css'
-import Loader from '../../loader/Loader'
-import Profile from '../../Profile/Profile'
+import Loader from '../../components/loader/Loader'
+import Profile from '../../components/Profile/Profile'
 // eslint-disable-next-line no-unused-vars
-import Contact from '../../Contact/Contact'
-import Stack from '../../Stack/Stack'
+import Contact from '../../components/Contact/Contact'
+import Stack from '../../components/Stack/Stack'
 // eslint-disable-next-line no-unused-vars
 // eslint-disable-next-line no-unused-vars
-import { client } from '../../../client'
-import Projects from '../../Projects/Projects'
-import Topbar from '../../Topbar/Topbar'
+import { client } from '../../client'
+import Projects from '../../components/Projects/Projects'
+import Topbar from '../../components/Topbar/Topbar'
 
 const MainInterface = () => {
   const [projects, setProjects] = useState([])
@@ -41,7 +41,7 @@ const MainInterface = () => {
   }, [])
   setTimeout(() => {
     setIsFetching(false)
-  }, 10500)
+  }, 4500)
 
   return (
     <div className='main-interface-container'>
