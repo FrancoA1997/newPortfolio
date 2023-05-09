@@ -24,12 +24,12 @@ const Topbar = ({ setEnglish, english, setMounted, mounted }) => {
           <img className='flag' src='/images/gb.svg' alt='' />
           <div className={english ? 'select-window-eng' : 'select-window-esp'} />
         </div>
-        <div className='nav-links-container'>
-          <span className={highlighted === 'About' ? 'p-tag-mounted' : 'p-tag'} onClick={() => handleMount('About')}>{english === true ? 'Profile' : 'Perfil'}</span>
-          <span className={highlighted === 'Projects' ? 'p-tag-mounted' : 'p-tag'} onClick={() => handleMount('Projects')}>{english === true ? 'Projects' : 'Proyectos'}</span>
-          <span className={highlighted === 'Stack' ? 'p-tag-mounted' : 'p-tag'} onClick={() => handleMount('Stack')}>Stack</span>
-          <span className={highlighted === 'Contact' ? 'p-tag-mounted' : 'p-tag'} onClick={() => handleMount('Contact')}>{english === true ? 'Contact me' : 'Contact'}</span>
-        </div>
+      </div>
+      <div className='nav-links-container'>
+        <span className={highlighted === 'About' ? 'p-tag-mounted' : 'p-tag'} onClick={() => handleMount('About')}>{english === true ? 'Profile' : 'Perfil'}</span>
+        <span className={highlighted === 'Projects' ? 'p-tag-mounted' : 'p-tag'} onClick={() => handleMount('Projects')}>{english === true ? 'Projects' : 'Proyectos'}</span>
+        <span className={highlighted === 'Stack' ? 'p-tag-mounted' : 'p-tag'} onClick={() => handleMount('Stack')}>Stack</span>
+        <span className={highlighted === 'Contact' ? 'p-tag-mounted' : 'p-tag'} onClick={() => handleMount('Contact')}>{english === true ? 'Contact me' : 'Contact'}</span>
       </div>
     </div>
   )

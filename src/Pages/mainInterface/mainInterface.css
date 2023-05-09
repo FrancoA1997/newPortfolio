@@ -9,6 +9,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    z-index: 999;
 }
 
 .interface-window{
@@ -17,7 +18,7 @@ height: calc(100vh - 10vh);
 border-radius: 10px;
 border: 2px solid #4E9F3D;
 overflow-y: auto;
-
+position: relative;
 }
 .fetching{
 width: 90%;

@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react'
 import './mainInterface.css'
 import Loader from '../../components/loader/Loader'
 import Profile from '../../components/Profile/Profile'
-// eslint-disable-next-line no-unused-vars
 import Contact from '../../components/Contact/Contact'
 import Stack from '../../components/Stack/Stack'
-// eslint-disable-next-line no-unused-vars
-// eslint-disable-next-line no-unused-vars
+import NavbarMobile from '../../components/Topbar/NavbarMobile'
 import { client } from '../../client'
 import Projects from '../../components/Projects/Projects'
 import Topbar from '../../components/Topbar/Topbar'
@@ -52,6 +50,7 @@ const MainInterface = () => {
         {mounted === 'Projects' && isFetching === false ? <Projects projects={projects} english={english} /> : <div />}
         {mounted === 'Contact' && isFetching === false ? <Contact english={english} /> : <div />}
         {mounted === 'Stack' && isFetching === false ? <Stack stack={stack} english={english} /> : <div />}
+        {isFetching ? <div /> : <NavbarMobile setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
       </div>
     </div>
   )

@@ -176,3 +176,9 @@ border-bottom: 2px solid #4E9F3D;
 	}
 }
 
+@media (max-width: 1150px){
+
+    .top-bar{
+        display: none;
+    }
+}
