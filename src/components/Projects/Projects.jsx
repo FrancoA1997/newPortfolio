@@ -14,7 +14,6 @@ const Projects = ({ english, projects }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [projectDisplayed, setProjectDisplayed] = useState(projects[currentIndex])
   const [isSwitching, setIsSwitching] = useState(false)
-  console.log(projectDisplayed.stack)
   return (
     <div className='projects'>
       <div className='projects-container'>

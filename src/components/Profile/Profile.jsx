@@ -14,7 +14,6 @@ import { urlFor } from '../../client'
 import './profile.css'
 
 const Profile = ({ english, studies, profile }) => {
-  console.log(profile)
   const [showMore, setShowMore] = useState(false)
   useEffect(() => {
     setTimeout(() => {
