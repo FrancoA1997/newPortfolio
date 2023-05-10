@@ -17,6 +17,7 @@ const MainInterface = () => {
   const [english, setEnglish] = useState(true)
   const [mounted, setMounted] = useState('About')
   const [isFetching, setIsFetching] = useState(true)
+  const [mobileAboutOn, setMobileAboutOn] = useState(true)
   useEffect(() => {
     const query = '*[_type == "stacks"]'
     client.fetch(query)
@@ -44,13 +45,14 @@ const MainInterface = () => {
   return (
     <div className='main-interface-container'>
       <div className={isFetching ? 'fetching' : 'interface-window'}>
-        {isFetching ? <div /> : <Topbar setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
-        {isFetching ? <Loader /> : <div />}
-        {mounted === 'About' && isFetching === false ? <Profile profile={profile} studies={studies} english={english} /> : <div />}
-        {mounted === 'Projects' && isFetching === false ? <Projects projects={projects} english={english} /> : <div />}
-        {mounted === 'Contact' && isFetching === false ? <Contact english={english} /> : <div />}
-        {mounted === 'Stack' && isFetching === false ? <Stack stack={stack} english={english} /> : <div />}
-        {isFetching ? <div /> : <NavbarMobile setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
+        {isFetching ? null : <Topbar setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
+        {isFetching ? <Loader /> : null}
+        {mounted === 'About' && isFetching === false ? <Profile mobileAboutOn={mobileAboutOn} profile={profile} studies={studies} english={english} /> : null}
+        {mounted === 'Projects' && isFetching === false ? <Projects projects={projects} english={english} /> : null}
+        {mounted === 'Contact' && isFetching === false ? <Contact english={english} /> : null}
+        {mounted === 'Stack' && isFetching === false ? <Stack stack={stack} english={english} /> : null}
+        {isFetching ? null : <NavbarMobile setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
+        <button onClick={() => setMobileAboutOn(!mobileAboutOn)} className='btn-toggle-view'>toggle</button>
       </div>
     </div>
   )

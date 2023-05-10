@@ -14,9 +14,8 @@
     flex-direction: column;
     max-width: 300px;
     flex: 3;
+  
 }
-
-
 
 .profile-img{
     border-radius: 10px;
@@ -142,3 +141,104 @@ a{
 	}
 }
 
+@media (max-width: 1150px){
+    .profile{
+        height: calc(100vh - 10vh);
+        flex-direction: row;
+        position: relative;
+    }
+    .profile-container{
+        background: rgba(128, 128, 128, 0.182);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+    }
+    .profile-img{
+        border-radius: 10px;
+        margin-top: 10px;
+        align-self: center;
+        margin-left: 0px;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 3px solid #4E9F3D ;
+        opacity: 0;
+        animation: info-items-animation 0.5s ease .5s 1 normal forwards;
+    }
+    .profile-social{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+    }
+    
+    .download-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #4E9F3D;
+        color: rgb(51, 51, 51);
+        border-radius: 5px;
+        border: 1px solid rgba(28, 28, 28, 0.626) ;
+        align-self: center;
+        margin-bottom: 30px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-right: 10px;
+        padding-left: 5px;
+        border: 0;
+        font-size: 15px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: .2s ease;
+        width: 280px;
+        align-self: center;
+        opacity: 0;
+        animation: info-items-animation 0.5s ease 1s 1 normal forwards;
+    }
+    .description-section{
+        flex: 1;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: start;
+    }
+    @keyframes mobile-section-on {
+        0% {
+            opacity: 0; 
+            transform: translateX(-20px);     
+        }
+       
+    
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes mobile-section-off {
+        0% {
+            opacity: 1;
+        }
+    
+        90% {
+            opacity: 0;
+            
+        }
+        100%{
+            display: none;
+        }
+    }
+    .unmountedProfile{
+        display: none;
+        opacity: 0;
+        animation: mobile-section-off .2s ease 0s 1 normal forwards;
+    }
+    .mountedProfile{
+        opacity: 1;
+        animation: mobile-section-on 1s ease 0s 1 normal forwards;
+    }
+
+}

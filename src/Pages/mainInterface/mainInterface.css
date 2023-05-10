@@ -29,3 +29,21 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
+
+@media (max-width: 1150px){
+    .interface-window{
+        width: 90%;
+        height: 90%;
+        border-radius: 10px;
+        border: 2px solid #4E9F3D;
+        overflow-y: hidden;
+        position: relative;
+        }
+
+        .btn-toggle-view{
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            width: 50px;
+        }
+}

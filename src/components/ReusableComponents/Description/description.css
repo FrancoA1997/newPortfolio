@@ -114,5 +114,57 @@
     }
 }
 
-/* Project Styles */
+@media (max-width: 1150px){
+
+    .description{
+        background: rgba(128, 128, 128, 0.182);
+        border-radius: 5px;
+        box-shadow: 0 2px 0px rgba(0, 0, 0, 0.113);
+        border: 1px solid rgba(29, 28, 28, 0.564);
+        padding: 5px 10px;
+        color: white;
+        width: clamp(200px, 80vw, 1000px);
+        height: fit-content;
+        text-align: center;
+        margin-left: 0px;
+        margin-top: clamp(10px, 2vw, 13px);
+        font-size: clamp(10px, 2vw, 15px);
+        opacity: 0;
+        z-index: 996;
+        position: relative;
+        animation: moreInfo-animation 1s ease 1.5s 1 normal forwards; 
+        
+    }
+    .studies{
+        background: rgba(128, 128, 128, 0.182);
+        box-shadow: 0 2px 0px rgba(0, 0, 0, 0.113);
+        border: 1px solid rgba(29, 28, 28, 0.564);
+        border-radius: 5px;
+        padding: 5px 10px;
+        color: white;
+        width: 90%;
+        height: fit-content;
+        text-align: left;
+        margin-left: 0px;
+        margin-top: 20px;
+        font-size: clamp(10px, 1.75vw, 15px);
+    }
+    .company-title{
+        font-size: clamp(13px, 2vw, 18px);
+        margin-right: 5px;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+    
+    .date-title{
+        font-size: clamp(8px, 2vw, 13px);
+        color: #4E9F3D;
+        font-weight: 500;
+        
+    }
+    .show-more-btn{
+      display: none;
+    }
+}
+
 
