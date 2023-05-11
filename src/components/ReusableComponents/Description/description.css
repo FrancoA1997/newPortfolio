@@ -124,15 +124,15 @@
         padding: 5px 10px;
         color: white;
         width: clamp(200px, 80vw, 1000px);
-        height: fit-content;
+        height: max-content;
         text-align: center;
         margin-left: 0px;
-        margin-top: clamp(10px, 2vw, 13px);
-        font-size: clamp(10px, 2vw, 15px);
+        margin-top: 40px;
+        font-size: clamp(10px, 2.5vw, 17px);
         opacity: 0;
         z-index: 996;
         position: relative;
-        animation: moreInfo-animation 1s ease 1.5s 1 normal forwards; 
+        animation: moreInfo-animation 1s ease 0s 1 normal forwards; 
         
     }
     .studies{
@@ -147,7 +147,7 @@
         text-align: left;
         margin-left: 0px;
         margin-top: 20px;
-        font-size: clamp(10px, 1.75vw, 15px);
+        font-size: clamp(10px, 2.5vw, 17px);
     }
     .company-title{
         font-size: clamp(13px, 2vw, 18px);
