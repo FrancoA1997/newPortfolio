@@ -33,7 +33,7 @@ justify-content: center;
 @media (max-width: 1150px){
     .interface-window{
         width: 90%;
-        height: 90%;
+        height: 85%;
         border-radius: 10px;
         border: 2px solid #4E9F3D;
         overflow-y: hidden;
