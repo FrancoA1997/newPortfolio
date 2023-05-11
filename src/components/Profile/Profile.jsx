@@ -34,13 +34,13 @@ const Profile = ({ english, studies, profile, mobileAboutOn }) => {
           <img className='profile-img' src={urlFor(profile[0]?.image)} alt='profile_img' />
           <div className='profile-info'>
             <Title styles='info-title-profile' text={english ? 'Name' : 'Nombre'} />
-            <Infoitem english={english} text={english ? 'Alvarez Franco' : 'Franco Alvarez'} icon={<PanToolIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
+            <Infoitem english={english} text={english ? 'Alvarez Franco' : 'Franco Alvarez'} icon={<PanToolIcon fontSize='medium' className='info-icon' />} styles='info-item-profile' />
             <Title styles='info-title-profile' text={english ? 'Location' : 'Locacion'} />
-            <Infoitem english={english} text={english ? 'Cordoba, Argentina ' : 'Cordoba, Argentina'} icon={<LocationOnIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
+            <Infoitem english={english} text={english ? 'Cordoba, Argentina ' : 'Cordoba, Argentina'} icon={<LocationOnIcon fontSize='medium' className='info-icon' />} styles='info-item-profile' />
             <Title styles='info-title-profile' text={english ? 'Role' : 'Rol'} />
-            <Infoitem english={english} text={english ? 'Full Stack Web Developer ' : 'Full Stack Web Developer'} icon={<ConstructionIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
+            <Infoitem english={english} text={english ? 'Full Stack Web Developer ' : 'Full Stack Web Developer'} icon={<ConstructionIcon fontSize='medium' className='info-icon' />} styles='info-item-profile' />
             <Title styles='info-title-profile' text={english ? 'Time Coding' : 'Tiempo programando'} />
-            <Infoitem english={english} text={english ? '2+ Years' : '2+ Años'} icon={<MoreTimeIcon fontSize='small' className='info-icon' />} styles='info-item-profile' />
+            <Infoitem english={english} text={english ? '2+ Years' : '2+ Años'} icon={<MoreTimeIcon fontSize='medium' className='info-icon' />} styles='info-item-profile' />
           </div>
           {english
             ? <div className='profile-social'>

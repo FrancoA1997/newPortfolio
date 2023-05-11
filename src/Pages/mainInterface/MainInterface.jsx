@@ -5,6 +5,7 @@ import Profile from '../../components/Profile/Profile'
 import Contact from '../../components/Contact/Contact'
 import Stack from '../../components/Stack/Stack'
 import NavbarMobile from '../../components/Topbar/NavbarMobile'
+import DoubleArrowIcon from '@mui/icons-material/DoubleArrow'
 import { client } from '../../client'
 import Projects from '../../components/Projects/Projects'
 import Topbar from '../../components/Topbar/Topbar'
@@ -52,7 +53,10 @@ const MainInterface = () => {
         {mounted === 'Contact' && isFetching === false ? <Contact english={english} /> : null}
         {mounted === 'Stack' && isFetching === false ? <Stack stack={stack} english={english} /> : null}
         {isFetching ? null : <NavbarMobile setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
-        <button onClick={() => setMobileAboutOn(!mobileAboutOn)} className='btn-toggle-view'>toggle</button>
+        <button onClick={() => setMobileAboutOn(!mobileAboutOn)} className='btn-toggle-view'>
+          {mobileAboutOn ? 'More info' : `Go back to ${mounted}`}
+          <DoubleArrowIcon fontSize='large' style={{ color: '#4E9F3D', transition: '.5s ease', marginLeft: '10px' }} className={mobileAboutOn ? ' on' : 'off'} />
+        </button>
       </div>
     </div>
   )

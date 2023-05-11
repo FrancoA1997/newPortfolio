@@ -146,6 +146,7 @@ a{
         height: calc(100vh - 10vh);
         flex-direction: row;
         position: relative;
+        display: flex;
     }
     .profile-container{
         background: rgba(128, 128, 128, 0.182);
@@ -156,11 +157,11 @@ a{
     }
     .profile-img{
         border-radius: 10px;
-        margin-top: 10px;
+        margin-top: 80px;
         align-self: center;
         margin-left: 0px;
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         object-fit: cover;
         border: 3px solid #4E9F3D ;
         opacity: 0;
@@ -173,6 +174,9 @@ a{
         justify-content: center;
         margin-top: auto;
     }
+    .profile-info{
+        margin-top: 80px;
+        }
     
     .download-btn{
         display: flex;
