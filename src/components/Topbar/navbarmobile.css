@@ -21,12 +21,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    transition: 1s ease;
 }
 .nav-item-selected{
     display: flex;
     align-items: center;
     flex-direction: column;
     color: #4E9F3D;
+    transition: .3s ease;
+    
 }
 .nav-item-selected span{
     font-size: 12px;

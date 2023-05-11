@@ -52,7 +52,7 @@ const MainInterface = () => {
         {mounted === 'Projects' && isFetching === false ? <Projects projects={projects} english={english} /> : null}
         {mounted === 'Contact' && isFetching === false ? <Contact english={english} /> : null}
         {mounted === 'Stack' && isFetching === false ? <Stack stack={stack} english={english} /> : null}
-        {isFetching ? null : <NavbarMobile setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
+        {isFetching ? null : <NavbarMobile setMounted={setMounted} />}
         {isFetching === false &&
           <button onClick={() => setMobileAboutOn(!mobileAboutOn)} className='btn-toggle-view'>
             {mobileAboutOn ? 'More info' : 'Go back'}

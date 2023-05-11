@@ -1,7 +1,7 @@
 import { React, useState } from 'react'
 import './topbar.css'
 
-const Topbar = ({ setEnglish, english, setMounted, mounted }) => {
+const Topbar = ({ setEnglish, english, setMounted }) => {
   const [highlighted, setHighlighted] = useState('About')
   // eslint-disable-next-line react/jsx-key
   const handleChange = () => {
