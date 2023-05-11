@@ -157,11 +157,11 @@ a{
     }
     .profile-img{
         border-radius: 10px;
-        margin-top: 30px;
+        margin-top: clamp(10px, 1vh, 30px);
         align-self: center;
         margin-left: 0px;
-        width: 150px;
-        height: 150px;
+        width: clamp(100px,  15vh, 200px);
+        height: clamp(100px, 15vh, 200px);
         object-fit: cover;
         border: 3px solid #4E9F3D ;
         opacity: 0;

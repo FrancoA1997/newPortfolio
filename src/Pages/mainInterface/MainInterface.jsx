@@ -53,10 +53,11 @@ const MainInterface = () => {
         {mounted === 'Contact' && isFetching === false ? <Contact english={english} /> : null}
         {mounted === 'Stack' && isFetching === false ? <Stack stack={stack} english={english} /> : null}
         {isFetching ? null : <NavbarMobile setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
-        <button onClick={() => setMobileAboutOn(!mobileAboutOn)} className='btn-toggle-view'>
-          {mobileAboutOn ? 'More info' : `Go back to ${mounted}`}
-          <DoubleArrowIcon fontSize='large' style={{ color: '#4E9F3D', transition: '.5s ease', marginLeft: '10px' }} className={mobileAboutOn ? ' on' : 'off'} />
-        </button>
+        {isFetching === false &&
+          <button onClick={() => setMobileAboutOn(!mobileAboutOn)} className='btn-toggle-view'>
+            {mobileAboutOn ? 'More info' : 'Go back'}
+            <DoubleArrowIcon fontSize='medium' style={{ color: '#4E9F3D', transition: '.5s ease', marginLeft: '10px' }} className={mobileAboutOn ? ' on' : 'off'} />
+          </button>}
       </div>
     </div>
   )
