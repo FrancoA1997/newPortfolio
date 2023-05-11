@@ -157,11 +157,11 @@ a{
     }
     .profile-img{
         border-radius: 10px;
-        margin-top: 80px;
+        margin-top: 30px;
         align-self: center;
         margin-left: 0px;
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         object-fit: cover;
         border: 3px solid #4E9F3D ;
         opacity: 0;
@@ -175,7 +175,7 @@ a{
         margin-top: auto;
     }
     .profile-info{
-        margin-top: 80px;
+        margin-top: 30px;
         }
     
     .download-btn{

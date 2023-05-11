@@ -15,6 +15,7 @@
     .info-item-profile{
         padding-right: 30px;
         color: white;
+        margin-top: clamp(2px, 5vh, 5px);
         font-size: clamp(12px, 4vw, 22px);
         display: flex;
         justify-content: flex-end;
