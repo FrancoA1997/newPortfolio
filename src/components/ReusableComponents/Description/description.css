@@ -132,7 +132,7 @@
         opacity: 0;
         z-index: 996;
         position: relative;
-        animation: moreInfo-animation 1s ease 0s 1 normal forwards; 
+        animation: moreInfo-animation 1s ease .5s 1 normal forwards; 
         
     }
     .studies{
@@ -148,6 +148,7 @@
         margin-left: 0px;
         margin-top: 20px;
         font-size: clamp(10px, 2.5vw, 17px);
+        animation: moreInfo-animation 1s ease .8s 1 normal forwards; 
     }
     .company-title{
         font-size: clamp(13px, 2vw, 18px);
