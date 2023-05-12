@@ -31,7 +31,7 @@ const Profile = ({ english, studies, profile, mobileAboutOn }) => {
       <div className='profile'>
         <div className={mobileAboutOn ? 'mountedProfile profile-container' : 'unmountedProfile profile-container'}>
           <SectionTitle styles='title-profile' text={english === true ? 'About me' : 'Sobre mi'} />
-          <img className='profile-img' src='pepe' alt='profile_img' />
+          <img className='profile-img' src={urlFor(profile[0]?.image)} alt='profile_img' />
           <div className='profile-info'>
             <Title styles='info-title-profile' text={english ? 'Name' : 'Nombre'} />
             <Infoitem english={english} text={english ? 'Alvarez Franco' : 'Franco Alvarez'} icon={<PanToolIcon fontSize='medium' className='info-icon' />} styles='info-item-profile' />
