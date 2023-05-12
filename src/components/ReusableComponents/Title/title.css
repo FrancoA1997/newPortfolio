@@ -151,6 +151,53 @@
 .project-title-animation-off{
     animation: title-animation-off .5s ease 0s 1 normal forwards;
 }
+@media (max-width: 1150px){
+    .section-project-title{
+        color: white;
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid #4E9F3D;
+        padding: 10px;
+        background-color: rgba(23, 23, 23, 0.508); ;
+        margin-top: 0px;
+        width: 100%;
+        font-weight: 300;
+        font-size: clamp(25px, 3vh, 32px);
+        transition: .5 ease;
+        animation: title-animation 0.5s ease 0s 1 normal forwards;
+    }
+     .project-title{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        font-weight: 500;
+        text-transform: uppercase;
+        background-color: rgba(23, 23, 23, 0.787); ;
+            color: rgb(203, 203, 203);
+            font-size: clamp(15px, 2vh, 20px);
+            margin-bottom: 10px;
+            padding: 5px 10px;
+            border-right: 2px solid #4E9F3D;
+            border-bottom: 2px solid #4E9F3D;
+            
+    }
+    .info-project-title{
+        color: rgb(203, 203, 203);
+        font-size: clamp(13px, 2vh, 17px);
+        margin-bottom: clamp(5px, 2vh, 10px);
+        margin-top: clamp(10px, 2vh, 20px);
+        margin-right: 240px;
+        display: flex;
+        justify-content: start;
+        border-bottom: 2px solid #4E9F3D;
+        text-align: left;
+        width: 100%;
+        font-weight: 600;
+        opacity: 0;
+        padding-left: 10px;
+        animation:  info-projects-anime 0.5s ease .2s 1 normal forwards;
+    }
+}
 @keyframes title-animation-on {
 	0% {
 		opacity: 0;

@@ -11,6 +11,12 @@ import Projects from '../../components/Projects/Projects'
 import Topbar from '../../components/Topbar/Topbar'
 
 const MainInterface = () => {
+  const mobileButtonMessage = {
+    About: 'More info',
+    Projects: 'Switch Projects',
+    Stack: 'See Stack',
+    Contact: 'Contact me'
+  }
   const [projects, setProjects] = useState([])
   const [stack, setStack] = useState([])
   const [profile, setProfile] = useState([])
@@ -49,13 +55,13 @@ const MainInterface = () => {
         {isFetching ? null : <Topbar setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
         {isFetching ? <Loader /> : null}
         {mounted === 'About' && isFetching === false ? <Profile mobileAboutOn={mobileAboutOn} profile={profile} studies={studies} english={english} /> : null}
-        {mounted === 'Projects' && isFetching === false ? <Projects projects={projects} english={english} /> : null}
+        {mounted === 'Projects' && isFetching === false ? <Projects mobileAboutOn={mobileAboutOn} projects={projects} english={english} /> : null}
         {mounted === 'Contact' && isFetching === false ? <Contact english={english} /> : null}
         {mounted === 'Stack' && isFetching === false ? <Stack stack={stack} english={english} /> : null}
         {isFetching ? null : <NavbarMobile setMounted={setMounted} />}
         {isFetching === false &&
           <button onClick={() => setMobileAboutOn(!mobileAboutOn)} className='btn-toggle-view'>
-            {mobileAboutOn ? 'More info' : 'Go back'}
+            {mobileAboutOn ? mobileButtonMessage[mounted] : 'Go back'}
             <DoubleArrowIcon fontSize='medium' style={{ color: '#4E9F3D', transition: '.5s ease', marginLeft: '10px' }} className={mobileAboutOn ? ' on' : 'off'} />
           </button>}
       </div>

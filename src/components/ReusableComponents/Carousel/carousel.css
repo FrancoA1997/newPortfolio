@@ -1,3 +1,8 @@
+.carousel{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
 .arrow-next{
     position: absolute;
     align-self: center;
@@ -48,11 +53,6 @@ justify-content: space-evenly;
 .switch-btn:hover p{
     opacity: 1;
     transform: translateY(-5px);
-}
-.carousel{
-    display: flex;
-    flex-direction: column;
-    position: relative;
 }
 .thumbnail{
     width: 214px;
@@ -269,4 +269,51 @@ justify-content: space-evenly;
 		opacity: 1;
 		transform: translateY(0);
 	}
+}
+@media (max-width: 1150px){
+    .carousel{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+    .thumbnail{
+        width: 214px;
+        height: 121px;
+        object-fit: cover;
+        z-index: 999;
+        position: absolute;
+        bottom: -60px;
+        left: 0px;
+        border-radius: 5px;
+        border: 3px solid #34e3a0;
+    }
+    .thumbnail-notShown-bottom{
+        width: 170px;
+        height: 80px;
+        object-fit: cover;
+        opacity: 70%;
+        z-index: 998;
+        position: absolute;
+        border-radius: 5px;
+        border: 3px solid #2e946d;
+        top: 50px;
+        left: 0;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+    .thumbnail-notShown-top{
+        width: 170px;
+        height: 80px;
+        object-fit: cover;
+        opacity: 30%;
+        z-index: 998;
+        transition: 0.2s ease;
+        border-radius: 5px;
+        border: 3px solid #2e946d;
+        cursor: pointer;
+        left: 0;
+        position: absolute;
+        top: -120px;
+    }
+
 }

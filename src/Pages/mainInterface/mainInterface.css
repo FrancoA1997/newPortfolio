@@ -29,7 +29,9 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-
+.btn-toggle-view{
+display: none;
+}
 @media (max-width: 1150px){
     .interface-window{
         width: 90%;
@@ -42,7 +44,7 @@ justify-content: center;
 
         .btn-toggle-view{
             position: absolute;
-            top: 10px;
+            top: 17px;
             right: 10px;
             color: white;
             width: 50px;
