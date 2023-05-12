@@ -364,4 +364,20 @@ justify-content: space-evenly;
     .arrow-next p{
         display: none;
     }
+    .thumbnail-notShown-bottom:hover{
+        padding-bottom: 0;
+        background-color: #2e946d;
+        
+    }
+    .thumbnail-notShown-bottom:hover + .thumbnail-bottom-text{
+        display: none;
+    }
+    .thumbnail-notShown-top:hover{
+        padding-top: 0px;
+        background-color: #2e946d;
+        
+    }
+    .thumbnail-notShown-top:hover + .thumbnail-top-text{
+        display: none;
+    }
 }

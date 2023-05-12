@@ -13,7 +13,7 @@ import Topbar from '../../components/Topbar/Topbar'
 const MainInterface = () => {
   const mobileButtonMessage = {
     About: 'More info',
-    Projects: 'Switch Projects',
+    Projects: 'Switch Project',
     Stack: 'See Stack',
     Contact: 'Contact me'
   }
