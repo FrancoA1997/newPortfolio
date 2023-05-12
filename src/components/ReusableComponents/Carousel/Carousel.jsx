@@ -46,15 +46,19 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
     <div className='carousel'>
       <div onClick={goToNext} className='switch-btn arrow-next'>
         <img src={arrow} alt='' />
-        <p style={{ rotate: '90deg' }}>{english ? 'Next' : 'Siguiente'}</p>
+        <p>{english ? 'Next' : 'Siguiente'}</p>
       </div>
       <div className='images'>
-        <img
-          onClick={goToPrevious}
-          src={isFirstSlide ? projects[projectArrayLength]?.video.asset.thumbnail : projects[currentIndex - 1]?.video.asset.thumbnail}
-          alt='thumbnail-img' className={isSwitching ? 'thumbnail-notShown-top thumb-anim-top-off ' : 'thumbnail-notShown-top thumb-anim-top '}
-        />
-        <span className='thumbnail-top-text'>{english ? 'Select project' : 'Ir al proyecto'}</span>
+        <div>
+          <img
+            onClick={goToPrevious}
+            src={isFirstSlide ? projects[projectArrayLength]?.video.asset.thumbnail : projects[currentIndex - 1]?.video.asset.thumbnail}
+            alt='thumbnail-img' className={isSwitching ? 'thumbnail-notShown-top thumb-anim-top-off ' : 'thumbnail-notShown-top thumb-anim-top '}
+          />
+          {english
+            ? <span className='thumbnail-top-text'>{isFirstSlide ? projects[projectArrayLength].title : projects[currentIndex - 1]?.title}</span>
+            : <span className='thumbnail-top-text'>{isFirstSlide ? projects[projectArrayLength].titulo : projects[currentIndex - 1]?.titulo}</span>}
+        </div>
         <img
           src={projects[currentIndex]?.video.asset.thumbnail}
           alt='thumbnail-img' className={isSwitching ? 'thumbnail thumb-anim-showned-off' : 'thumbnail thumb-anim-showned'}
@@ -64,11 +68,14 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
           src={isLastSlide ? projects[0]?.video.asset.thumbnail : projects[currentIndex + 1]?.video.asset.thumbnail}
           alt='thumbnail-img' className={isSwitching ? 'thumbnail-notShown-bottom thumb-anim-bottom-off ' : 'thumbnail-notShown-bottom thumb-anim-bottom '}
         />
-        <span className='thumbnail-bottom-text'>{english ? 'Select project' : 'Ir al proyecto'}</span>
+        {english
+          ? <span className='thumbnail-bottom-text'>{isLastSlide ? projects[0]?.title : projects[currentIndex + 1]?.title}</span>
+          : <span className='thumbnail-bottom-text'>{isLastSlide ? projects[0]?.titulo : projects[currentIndex + 1]?.titulo}</span>}
+
       </div>
       <div onClick={goToPrevious} className='switch-btn arrow-prev'>
         <img src={arrow} alt='' />
-        <p style={{ rotate: '270deg' }}>{english ? 'Prev' : 'Anterior'}</p>
+        <p>{english ? 'Prev' : 'Anterior'}</p>
       </div>
     </div>
   )

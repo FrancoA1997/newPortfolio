@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    margin-right: clamp(0px, 5vw, 120px);
 }
 .arrow-next{
     position: absolute;
@@ -29,6 +30,12 @@
     margin-bottom: 5px;
     opacity: 0;
     animation:  arrow-projects-anime 2s ease .5s 1 normal forwards;
+}
+.arrow-prev p{
+    rotate: 270deg;
+}
+.arrow-next p{
+   rotate: 90deg
 }
 
 .switch-btn{
@@ -114,7 +121,7 @@ justify-content: space-evenly;
 .thumbnail-top-text{
     transition: .5s ease;
     position: absolute;
-    left: 55px;
+    left: 10px;
     top: -135px;
     display: none;
     font-weight: 500;
@@ -126,7 +133,7 @@ justify-content: space-evenly;
 .thumbnail-bottom-text{
     transition: .5s ease;
     position: absolute;
-    left: 55px;
+    left: 20px;
     bottom: -155px;
     font-weight: 600;
     font-size: 16px;
@@ -171,7 +178,7 @@ justify-content: space-evenly;
     animation: thumbnail 1s ease .5s 1 normal forwards;
 }
 
-@media (min-width: 1500px){
+@media (min-width: 645px){
     .thumbnail{
         width: 260px;
         height: 134px;
@@ -275,6 +282,9 @@ justify-content: space-evenly;
         display: flex;
         flex-direction: row;
         position: relative;
+        align-items: center;
+        justify-content: center;
+        margin-right: 0;
     }
     .thumbnail{
         width: 214px;
@@ -282,8 +292,8 @@ justify-content: space-evenly;
         object-fit: cover;
         z-index: 999;
         position: absolute;
-        bottom: -60px;
-        left: 0px;
+        bottom: 0px;
+        right: 0px;
         border-radius: 5px;
         border: 3px solid #34e3a0;
     }
@@ -315,5 +325,43 @@ justify-content: space-evenly;
         position: absolute;
         top: -120px;
     }
-
+    .images{
+        position: relative;
+        opacity: 0;
+        display: flex;
+        animation: thumbnail 1s ease .5s 1 normal forwards;
+    }
+    .arrow-next{
+        position: absolute;
+        align-self: center;
+        left: 190px;
+        bottom: -30px;
+        rotate: 180deg;
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+        transition: .5s ease;
+        opacity: 0;
+        animation:  arrow-projects-anime 2s ease .5s 1 normal forwards;
+    }
+    
+    .arrow-prev{
+        position: absolute;
+        align-self: center;
+        rotate: 0deg;
+        left: -80px;
+        top: -26px;
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+        margin-bottom: 5px;
+        opacity: 0;
+        animation:  arrow-projects-anime 2s ease .5s 1 normal forwards;
+    }
+    .arrow-prev p{
+        display: none;
+    }
+    .arrow-next p{
+        display: none;
+    }
 }
