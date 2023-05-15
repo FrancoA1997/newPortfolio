@@ -49,11 +49,11 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
         <p>{english ? 'Next' : 'Siguiente'}</p>
       </div>
       <div className='images'>
-        <div>
+        <div className={isSwitching ? 'thumb-anim-top-off' : 'thumb-anim-top '}>
           <img
             onClick={goToPrevious}
             src={isFirstSlide ? projects[projectArrayLength]?.video.asset.thumbnail : projects[currentIndex - 1]?.video.asset.thumbnail}
-            alt='thumbnail-img' className={isSwitching ? 'thumbnail-notShown-top thumb-anim-top-off ' : 'thumbnail-notShown-top thumb-anim-top '}
+            alt='thumbnail-img' className='thumbnail-notShown-top'
           />
           {english
             ? <span className='thumbnail-top-text'>{isFirstSlide ? projects[projectArrayLength].title : projects[currentIndex - 1]?.title}</span>
@@ -63,15 +63,17 @@ const Carousel = ({ isSwitching, setIsSwitching, english, projects, currentIndex
           src={projects[currentIndex]?.video.asset.thumbnail}
           alt='thumbnail-img' className={isSwitching ? 'thumbnail thumb-anim-showned-off' : 'thumbnail thumb-anim-showned'}
         />
-        <img
-          onClick={goToNext}
-          src={isLastSlide ? projects[0]?.video.asset.thumbnail : projects[currentIndex + 1]?.video.asset.thumbnail}
-          alt='thumbnail-img' className={isSwitching ? 'thumbnail-notShown-bottom thumb-anim-bottom-off ' : 'thumbnail-notShown-bottom thumb-anim-bottom '}
-        />
-        {english
-          ? <span className='thumbnail-bottom-text'>{isLastSlide ? projects[0]?.title : projects[currentIndex + 1]?.title}</span>
-          : <span className='thumbnail-bottom-text'>{isLastSlide ? projects[0]?.titulo : projects[currentIndex + 1]?.titulo}</span>}
+        <div className={isSwitching ? 'thumb-anim-bottom-off ' : ' thumb-anim-bottom '}>
+          <img
+            onClick={goToNext}
+            src={isLastSlide ? projects[0]?.video.asset.thumbnail : projects[currentIndex + 1]?.video.asset.thumbnail}
+            alt='thumbnail-img' className='thumbnail-notShown-bottom '
+          />
+          {english
+            ? <span className='thumbnail-bottom-text'>{isLastSlide ? projects[0]?.title : projects[currentIndex + 1]?.title}</span>
+            : <span className='thumbnail-bottom-text'>{isLastSlide ? projects[0]?.titulo : projects[currentIndex + 1]?.titulo}</span>}
 
+        </div>
       </div>
       <div onClick={goToPrevious} className='switch-btn arrow-prev'>
         <img src={arrow} alt='' />

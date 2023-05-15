@@ -85,6 +85,7 @@ const Projects = ({ english, projects, mobileAboutOn }) => {
 
       </div>
       <div className={mobileAboutOn ? 'unmountedProject show-container' : 'mountedProject show-container'}>
+        <h1 className='project-title-mobile'>{english ? projectDisplayed?.title : projectDisplayed?.titulo}</h1>
         <div className='video-player'>
           <div className={isSwitching ? 'animation-video-off' : 'animation-video-on'}>
             <Video key={currentIndex} video={projectDisplayed?.video?.asset} />

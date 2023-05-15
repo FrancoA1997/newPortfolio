@@ -61,6 +61,11 @@ justify-content: space-evenly;
     opacity: 1;
     transform: translateY(-5px);
 }
+.images{
+    position: relative;
+    opacity: 0;
+    animation: thumbnail 1s ease .5s 1 normal forwards;
+}
 .thumbnail{
     width: 214px;
     height: 121px;
@@ -76,7 +81,7 @@ justify-content: space-evenly;
     width: 170px;
     height: 80px;
     object-fit: cover;
-    opacity: 70%;
+    opacity: 100%;
     z-index: 998;
     position: absolute;
     border-radius: 5px;
@@ -90,7 +95,7 @@ justify-content: space-evenly;
     width: 170px;
     height: 80px;
     object-fit: cover;
-    opacity: 30%;
+    opacity: 100%;
     z-index: 998;
     transition: 0.2s ease;
     border-radius: 5px;
@@ -100,22 +105,7 @@ justify-content: space-evenly;
     position: absolute;
     top: -120px;
 }
-.thumbnail-notShown-bottom:hover{
-    padding-bottom: 30px;
-    background-color: #2e946d;
-    
-}
-.thumbnail-notShown-bottom:hover + .thumbnail-bottom-text{
-    display: block;
-}
-.thumbnail-notShown-top:hover{
-    padding-top: 30px;
-    background-color: #2e946d;
-    
-}
-.thumbnail-notShown-top:hover + .thumbnail-top-text{
-    display: block;
-}
+
 
 
 .thumbnail-top-text{
@@ -142,6 +132,8 @@ justify-content: space-evenly;
     z-index: 999;
     width: max-content;
 }
+
+/* ANIMATIONS CLASSES */
 .thumb-anim-top{
     opacity: 0;
     animation: thumbnail .3s ease 0s 1 normal forwards;
@@ -172,10 +164,25 @@ justify-content: space-evenly;
     animation: thumbnail-off .3s ease 0.2s 1 normal forwards;
     
 }
-.images{
-    position: relative;
-    opacity: 0;
-    animation: thumbnail 1s ease .5s 1 normal forwards;
+/* HOVER EFFECTS */
+.thumbnail-notShown-bottom:hover{
+    padding-bottom: 30px;
+    background-color: #2e946d;
+    
+}
+.thumbnail-notShown-bottom:hover + .thumbnail-bottom-text{
+    display: block;
+}
+.thumbnail-notShown-top:hover{
+    padding-top: 30px;
+    background-color: #2e946d;
+    
+}
+.thumbnail-notShown-top:hover + .thumbnail-top-text{
+    display: block;
+}
+.project-title-mobile{
+ display: none;       
 }
 
 @media (min-width: 645px){
@@ -194,7 +201,7 @@ justify-content: space-evenly;
         width: 210px;
         height: 110px;
         object-fit: cover;
-        opacity: 70%;
+        opacity: 100%;
         z-index: 998;
         position: absolute;
         top: 50px;
@@ -206,7 +213,7 @@ justify-content: space-evenly;
         width: 210px;
         height: 110px;
         object-fit: cover;
-        opacity: 30%;
+        opacity: 100%;
         z-index: 998;
         transition: 0.2s ease;
         border-radius: 5px;
@@ -301,12 +308,12 @@ justify-content: space-evenly;
         width: 170px;
         height: 80px;
         object-fit: cover;
-        opacity: 70%;
         z-index: 998;
         position: absolute;
         border-radius: 5px;
         border: 3px solid #2e946d;
         top: 50px;
+        opacity: 100%;
         left: 0;
         cursor: pointer;
         transition: .3s ease;
@@ -315,7 +322,7 @@ justify-content: space-evenly;
         width: 170px;
         height: 80px;
         object-fit: cover;
-        opacity: 30%;
+        opacity: 100%;
         z-index: 998;
         transition: 0.2s ease;
         border-radius: 5px;
@@ -369,15 +376,35 @@ justify-content: space-evenly;
         background-color: #2e946d;
         
     }
-    .thumbnail-notShown-bottom:hover + .thumbnail-bottom-text{
-        display: none;
+ .thumbnail-bottom-text{
+        display: block;
+        left: 1px;
+        top: 107px;    
+        background-color: #2e946d;
+        height: fit-content;
+        width: 166px;
+        opacity: 90%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
     }
     .thumbnail-notShown-top:hover{
         padding-top: 0px;
         background-color: #2e946d;
         
     }
-    .thumbnail-notShown-top:hover + .thumbnail-top-text{
-        display: none;
+     .thumbnail-top-text{
+        display: block;
+        left: 2px;
+        top: -117px;
+        opacity: 90%;
+        background-color: #2e946d;
+        height: fit-content;
+        width: 166px;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 600;
+        
     }
+  
 }

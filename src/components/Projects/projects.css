@@ -263,7 +263,7 @@ box-shadow: inset 2px 2px 0px 0px #4E9F3D;
         height: calc(100vh - 10vh - 49px); 
         flex-direction: column;
         display: flex;
-        justify-content: space-evenly;
+       
         background: rgba(20, 20, 20, 0.786);
     }
     .unmountedProject{
@@ -283,7 +283,8 @@ box-shadow: inset 2px 2px 0px 0px #4E9F3D;
         border: 2px solid #4E9F3D;
         border-radius: 5px;
         margin-left: 0px;
-        margin-top: 60px;
+        margin-top: 40px;
+        margin-bottom: clamp(10px, 2vh, 80px)
 
     }
     .carousel-container{
@@ -294,5 +295,20 @@ box-shadow: inset 2px 2px 0px 0px #4E9F3D;
         align-items: center;
         justify-content: center;
         height: 300px;
+    }
+    .project-title-mobile{
+        color: white;
+        display: flex;
+        justify-content: center;
+        border-left: 0px solid #4E9F3D;
+        border-bottom: 2px solid #4E9F3D;
+        font-size:  clamp(15px, 4.5vw, 25px);
+        font-weight: 400;
+        padding: 15px;
+        width: 90vw;
+        margin-top: 0;
+        background-color: rgba(128, 128, 128, 0.213);;
+        transition: .5s ease;
+        letter-spacing: 1px;
     }
 }
