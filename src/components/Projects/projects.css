@@ -250,6 +250,15 @@ box-shadow: inset 2px 2px 0px 0px #4E9F3D;
         max-width: 100%;
         flex: 3;
     }
+    .unmountedProject{
+        display: none;
+        opacity: 0;
+        animation: mobile-section-off .2s ease 0s 1 normal forwards;
+    }
+    .mountedProject{
+        opacity: 1;
+        animation: mobile-section-on 1s ease 0s 1 normal forwards;
+    }
     .projects{
         height: calc(100vh - 10vh - 49px);
         min-height: 500px;
@@ -263,17 +272,7 @@ box-shadow: inset 2px 2px 0px 0px #4E9F3D;
         height: calc(100vh - 10vh - 49px); 
         flex-direction: column;
         display: flex;
-       
         background: rgba(20, 20, 20, 0.786);
-    }
-    .unmountedProject{
-        display: none;
-        opacity: 0;
-        animation: mobile-section-off .2s ease 0s 1 normal forwards;
-    }
-    .mountedProject{
-        opacity: 1;
-        animation: mobile-section-on 1s ease 0s 1 normal forwards;
     }
     .video-player{
         position: relative;

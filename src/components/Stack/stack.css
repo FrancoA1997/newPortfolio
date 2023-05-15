@@ -28,7 +28,9 @@
     animation: section-animation 0.5s ease .5s 1 normal forwards;
 }
 
-
+.stack-nav{
+    display: none;
+}
 
 .stacks{
     display: flex;
@@ -340,3 +342,275 @@ div:nth-child(5){
 }
 
 
+@media (max-width: 1150px){
+    .unmountedStack{
+        display: none !important;
+        opacity: 0;
+        animation: mobile-section-off .2s ease 0s 1 normal forwards;
+    }
+    .mountedStack{
+        opacity: 1;
+        animation: mobile-section-on 1s ease 0s 1 normal forwards;
+    }
+    .Stack{
+        height: calc(100vh - 10vh - 49px);
+        min-height: 500px;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        animation: section-animation 0.5s ease 0s 1 normal forwards;
+    }
+    .stack-container{
+        background: rgba(128, 128, 128, 0.182);
+        border-radius: 5px;
+        border-top-right-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        flex: 3;
+    }
+
+    .show-stack{
+        flex: 4;
+        display: flex;
+        position: relative;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0;
+        width: 100%;
+    }
+    
+    
+    
+    .stacks{
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        margin-top: 60px;
+    }
+    .stack-nav{
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        margin-top: 60px;
+    }
+    .default-span{
+        color: rgb(44, 44, 44);
+        background-color: #4E9F3D;
+        border-radius: 5px;
+        padding: 5px;
+        font-weight: 600;
+        font-size: clamp(12px, 1.5vh, 15px);
+        transition: 1s ease;
+        border: 1px solid rgb(44, 44, 44);
+    }
+    .span-selected{
+        color: white;
+        background-color: rgb(44, 44, 44);
+        border-radius: 5px;
+        padding: 5px;
+        border: 1px solid #4E9F3D;
+        font-weight: 300;
+        font-size:  clamp(12px, 1.5vh, 15px);
+        transition: .2s ease;
+    }
+    .stacks1-container{
+        margin: 0px 10px;
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: rgba(128, 128, 128, 0.182);
+        height: fit-content;
+        padding: 5px 15px;
+        border-radius: 10px;
+        border: 1px solid #176add;
+        position: relative;
+    }
+    
+    .stacks2-container{
+        margin: 0px 10px;
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: rgba(128, 128, 128, 0.182);
+        height: fit-content;
+        padding: 5px 15px;
+        border-radius: 10px;
+        border: 1px solid #4E9F3D;
+        position: relative;
+    }
+    .stacks3-container{
+        margin: 0px 10px;
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: rgba(128, 128, 128, 0.182);
+        height: fit-content;
+        padding: 5px 15px;
+        border-radius: 10px;
+        border: 1px solid #5608a4;
+        position: relative;
+    }
+    .stacks4-container{
+        margin: 0px 10px;
+        display: none;
+        flex-direction: column;
+        flex-wrap: wrap;
+        background: rgba(128, 128, 128, 0.182);
+        height: fit-content;
+        padding: 5px 15px;
+        border-radius: 10px;
+        border: 1px solid #c8772b;
+        position: relative;
+    }
+    .stack-visible{
+        display:flex;
+    }
+    .stacks
+div:nth-child(1){
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;  
+    animation: scale-top 0.5s ease 0s 1 normal forwards; 
+}
+.stacks
+div:nth-child(2){
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;  
+    animation: scale-top 0.5s ease 0s 1 normal forwards; 
+}
+.stacks
+div:nth-child(3){
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;  
+    animation: scale-top 0.5s ease 0s 1 normal forwards; 
+}
+.stacks
+div:nth-child(4){
+    transform: scaleY(0);
+    opacity: 0;
+    transform-origin: top;  
+    animation: scale-top 0.5s ease 0s 1 normal forwards; 
+}
+/* Animations */
+/* First Stack */
+.stacks1-container
+div:nth-child(2){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease 0s 1 normal forwards;    
+}
+.stacks1-container
+div:nth-child(3){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .2s 1 normal forwards;    
+}
+.stacks1-container
+div:nth-child(4){
+    opacity: 0;
+    animation: stack-item-slide 1s ease .4s 1 normal forwards;    
+}
+.stacks1-container
+div:nth-child(5){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .6s 1 normal forwards;    
+}
+.stacks1-container
+div:nth-child(6){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .8s 1 normal forwards;    
+}
+/* Second Stack */
+
+
+.stacks2-container
+div:nth-child(2){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease 0s 1 normal forwards;    
+}
+.stacks2-container
+div:nth-child(3){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .2s 1 normal forwards;    
+}
+.stacks2-container
+div:nth-child(4){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .4s 1 normal forwards;    
+}
+.stacks2-container
+div:nth-child(5){
+    opacity: 0;
+    animation: stack-item-slide 1s ease .6s 1 normal forwards;    
+}
+.stacks2-container
+div:nth-child(6){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .8s 1 normal forwards;    
+}
+.stacks2-container
+div:nth-child(7){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease 1s 1 normal forwards;    
+}
+.stacks2-container
+div:nth-child(8){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease 1.2s 1 normal forwards;    
+}
+/* Third Stack */
+.stacks3-container
+div:nth-child(2){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease 0s 1 normal forwards;    
+}
+.stacks3-container
+div:nth-child(3){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .2s 1 normal forwards;    
+}
+.stacks3-container
+div:nth-child(4){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .4s 1 normal forwards;    
+}
+.stacks3-container
+div:nth-child(5){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .6s 1 normal forwards;    
+}
+.stacks3-container
+div:nth-child(6){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .8s 1 normal forwards;    
+}
+.stacks3-container
+div:nth-child(7){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease 1s 1 normal forwards;    
+}
+
+/* Forth Stack */
+.stacks4-container
+div:nth-child(2){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease 0s 1 normal forwards;    
+}
+.stacks4-container
+div:nth-child(3){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .2s 1 normal forwards;    
+}
+.stacks4-container
+div:nth-child(4){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .4s 1 normal forwards;    
+}
+.stacks4-container
+div:nth-child(5){
+    opacity: 0;
+    animation:  stack-item-slide 1s ease .6s 1 normal forwards;    
+}
+}

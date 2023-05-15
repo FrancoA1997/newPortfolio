@@ -17,6 +17,12 @@ const MainInterface = () => {
     Stack: 'See Stack',
     Contact: 'Contact me'
   }
+  const mobileButtonUnfoldedMessage = {
+    About: 'Go back',
+    Projects: 'Project info',
+    Stack: 'Soft skills',
+    Contact: 'Links'
+  }
   const [projects, setProjects] = useState([])
   const [stack, setStack] = useState([])
   const [profile, setProfile] = useState([])
@@ -56,12 +62,12 @@ const MainInterface = () => {
         {isFetching ? <Loader /> : null}
         {mounted === 'About' && isFetching === false ? <Profile mobileAboutOn={mobileAboutOn} profile={profile} studies={studies} english={english} /> : null}
         {mounted === 'Projects' && isFetching === false ? <Projects mobileAboutOn={mobileAboutOn} projects={projects} english={english} /> : null}
-        {mounted === 'Contact' && isFetching === false ? <Contact english={english} /> : null}
-        {mounted === 'Stack' && isFetching === false ? <Stack stack={stack} english={english} /> : null}
+        {mounted === 'Contact' && isFetching === false ? <Contact mobileAboutOn={mobileAboutOn} english={english} /> : null}
+        {mounted === 'Stack' && isFetching === false ? <Stack mobileAboutOn={mobileAboutOn} stack={stack} english={english} /> : null}
         {isFetching ? null : <NavbarMobile setMounted={setMounted} />}
         {isFetching === false &&
           <button onClick={() => setMobileAboutOn(!mobileAboutOn)} className='btn-toggle-view'>
-            {mobileAboutOn ? mobileButtonMessage[mounted] : 'Go back'}
+            {mobileAboutOn ? mobileButtonMessage[mounted] : mobileButtonUnfoldedMessage[mounted]}
             <DoubleArrowIcon fontSize='medium' style={{ color: '#4E9F3D', transition: '.5s ease', marginLeft: '10px' }} className={mobileAboutOn ? ' on' : 'off'} />
           </button>}
       </div>

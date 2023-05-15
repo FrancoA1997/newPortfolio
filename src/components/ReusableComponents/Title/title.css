@@ -321,3 +321,55 @@
     text-transform: uppercase;
     animation:  info-projects-anime 0.5s ease .5s 1 normal forwards;
 }
+
+@media (max-width: 1150px){
+    .section-stack-title{
+        color: white;
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid #4E9F3D;
+        background-color: rgba(25, 25, 25, 0.764);
+        padding-left: 0px;
+        padding: 10px;
+        margin-top: 0px;
+        width: 100%;
+        font-weight: 300;
+        font-size: clamp(25px, 3vh, 32px);
+        transition: .5 ease;
+      
+        animation: title-animation 0.5s ease 0s 1 normal forwards;
+    }
+    .stack-mainTitle{
+        color: white;
+        display: flex;
+        justify-content: center;
+        border-left: 0px solid #4E9F3D;
+        border-bottom: 2px solid #4E9F3D;
+        font-size:  clamp(15px, 4.5vw, 25px);
+        font-weight: 400;
+        padding: 15px;
+        width: 90vw;
+        margin-top: 0;
+        background-color: rgba(128, 128, 128, 0.213);;
+        transition: .5s ease;
+        letter-spacing: 1px;
+        position: relative;
+        top: 0;
+    }
+    .info-stack-title{
+        display: flex;
+        justify-content: start;
+        color: rgb(203, 203, 203);
+        font-size: clamp(15px, 2vh, 19px);
+        margin-bottom: clamp(5px, 1vh, 10px);
+        margin-top: clamp(20px, 5vh, 50px);
+        padding-left: 10px;
+        border-bottom: 2px solid #4E9F3D;
+        width: 100%;
+        font-weight: 400;
+        opacity: 0;
+        text-transform: uppercase;
+        animation:  info-projects-anime 0.5s ease .5s 1 normal forwards;
+    }
+     
+}
