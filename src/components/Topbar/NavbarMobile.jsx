@@ -4,12 +4,13 @@ import WorkHistoryIcon from '@mui/icons-material/WorkHistory'
 import LayersIcon from '@mui/icons-material/Layers'
 import ContactMailIcon from '@mui/icons-material/ContactMail'
 import './navbarmobile.css'
-const NavbarMobile = ({ setMounted }) => {
+const NavbarMobile = ({ setMounted, setMobileAboutOn }) => {
   const [highlighted, setHighlighted] = useState('About')
 
   const handleMount = (text) => {
     setMounted(text)
     setHighlighted(text)
+    setMobileAboutOn(true)
   }
   return (
     <div className='navbar'>
