@@ -21,7 +21,7 @@ const Studies = ({ date, title, text, titleStyles, dateStyles, degree, showMore 
   return (
     <div key={text} className={showMore ? 'studies studies-animation-on' : 'studies studies-animation-off'}>
       <p className={titleStyles}>{title}</p>
-      <p className={titleStyles}>{degree}</p>
+      <p className='degree'>{degree}</p>
       <span className={dateStyles}>{date}</span>
       {text.map((m, idx) => (
         <p key={idx} style={{ marginTop: '3px' }}>

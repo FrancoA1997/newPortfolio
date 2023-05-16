@@ -18,6 +18,13 @@
     animation: moreInfo-animation 1s ease 1.5s 1 normal forwards; 
     
 }
+.degree span:nth-child(1){
+color: #cbeb59;  
+font-size: clamp(10px, 2vh, 20px);
+font-weight: 300; 
+border-bottom: .5px solid #d4ff52;
+}
+
 .show-more-btn{
     font-size: clamp(5px, 1.2vw, 17px);;
     position: absolute;
@@ -166,6 +173,13 @@
     .show-more-btn{
       display: none;
     }
+    .degree span:nth-child(1){
+        color: #cbeb59;  
+        font-size: clamp(10px, 2vw, 15px);
+        font-weight: 300; 
+        border-bottom: .5px solid #d4ff52;
+        }
+        
 }
 
 

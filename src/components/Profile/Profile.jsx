@@ -62,7 +62,7 @@ const Profile = ({ english, studies, profile, mobileAboutOn }) => {
             title='Egg Coorporation Bootcamp'
             titleStyles='company-title'
             dateStyles='date-title'
-            degree={<><span style={{ fontSize: 'clamp(9px, 1.7vh, 15px)', fontWeight: '500' }}>{english ? 'Bootcamp degree:' : 'Titulo del Bootcamp'} </span><span style={{ marginLeft: '5px', fontSize: 'clamp(9px, 1.7vh, 14px)', fontWeight: '600', color: '#3E9F3D' }}>Full Stack Web Developer</span></>}
+            degree={<><span> Full Stack Web Developer</span></>}
           />
           <Studies
             text={english ? studies[0].study2 : studies[0].estudio2}
