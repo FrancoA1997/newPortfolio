@@ -366,6 +366,7 @@ div:nth-child(5){
         border-radius: 5px;
         border-top-right-radius: 0px;
         display: flex;
+        align-items: center;
         flex-direction: column;
         max-width: 100%;
         flex: 3;

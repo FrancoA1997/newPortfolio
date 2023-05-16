@@ -252,6 +252,239 @@ textarea{
     color: #4E9F3D;
     transition: .8s ease;
  }
+
+
+@media (max-width: 1150px){
+    .unmountedContact{
+        display: none !important;
+        opacity: 0;
+        animation: mobile-section-off .2s ease 0s 1 normal forwards;
+    }
+    .mountedContact{
+        opacity: 1;
+        animation: mobile-section-on 1s ease 0s 1 normal forwards;
+    }
+    .contact{
+        height: calc(100vh - 10vh - 49px);
+        min-height: fit-content;
+        display: flex;
+        flex-direction: row;
+        opacity: 0;
+        animation: section-animation 0.5s ease 0s 1 normal forwards;
+    }
+    .contact-container{
+        background: rgba(128, 128, 128, 0.182);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-self: center;
+        max-width: 100%;
+        flex: 3;
+    } 
+    .contact-info-container{
+        width: 100%;
+      
+    }
+    .info-contact-item{
+        font-size: 15px;
+        color: white;
+        border-radius: 5px;
+        padding: 8px 10px;
+        margin-left: clamp(35px, 8vw, 70px);
+        width: 80%;
+        font-weight: 300;
+        margin-bottom: clamp(10px, 3vw, 20px);
+        opacity: 0;
+        background-color: rgb(30, 30, 30);
+        animation: info-contact-anime 0.5s ease 1s 1 normal forwards;
+    }
+    .social-img-container-contact{
+        margin-right: 0px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        animation:  info-contact-anime 0.5s ease 1.2s 1 normal forwards;
+        opacity: 0;
+    }
+    
+    .social-img-contact{
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        transition: 0.1s ease;
+    }
+    .social-image{
+      padding: 5px 5px;
+      border-radius: 5px;
+      width: clamp(35px, 15vw, 70px);
+      height: clamp(35px, 15vw, 70px);
+      padding: 10px 10px;
+      box-shadow: inset -2px -2px 0px 0px #4E9F3D;
+      background-color: rgba(28, 28, 28, 0.626);
+      transition: .3s ease;
+    }
+    .social-image:hover{
+        width: clamp(35px, 25vw, 70px);
+        height: clamp(35px, 25vw, 70px);
+        padding: 10px 10px;
+        box-shadow: inset -2px -2px 0px 0px #4E9F3D;
+        background-color: rgba(28, 28, 28, 0.626) ;
+        transition: .3s ease;
+    }
+ 
+    .social-img-contact p{
+        font-size: clamp(10px, 2vh, 15px);
+        color: white;
+        margin-top: 5px;
+        text-align: center;
+    }
+    
+    .contact-download-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #4E9F3D;
+        color: rgb(51, 51, 51);
+        border-radius: 5px;
+        margin-left: 0px;
+        margin-bottom: 30px;
+        padding: 5px;
+        border: 0;
+        font-weight: 400;
+        cursor: pointer;
+        transition: .2s ease;
+        width: 150px;
+        align-self: center;
+        opacity: 0;
+        animation: info-items-animation 0.5s ease 1s 1 normal forwards;
+    }
+   
+    .contact-social{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: auto;
+       
+    }
+    .form-section{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: start;
+        
+    }
+    .contact-mainTitle{
+        margin-left: 0px;
+        padding: 10px;
+        border-bottom: 1px solid #4E9F3D;
+        width: 100%;
+        display: flex;
+        align-self: center;
+        flex-direction: row;
+        justify-content: center;
+        font-size: clamp(20px, 5vw, 40px);
+        opacity: 0;
+        animation: mainTitle-animation 0.5s ease 0.2s 1 normal forwards;    
+    }
+    .writer-text{
+        display: flex;
+        flex-direction: column;
+        opacity: 0;
+        font-size: clamp(15px, 5vw, 20px);
+        margin-top: 30px;
+        animation: mainTitle-animation 0.5s ease 0.6s 1 normal forwards; 
+    }
+    .title-success{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        border-bottom: 0px solid #4E9F3D;
+        border-right: 0px solid #4E9F3D;
+        border-bottom-right-radius: 5px;
+        font-weight: 800;
+        font-size: clamp(15px, 5vw, 30px);
+        align-self: center;
+        text-align: center;
+        width: 100%;
+        height: fit-content;
+        opacity: 0;
+        padding: 0px;
+        animation: mainTitle-animation 0.5s ease 0.3s 1 normal forwards;    
+    }
+    .contact-form{
+        display: flex;
+        flex-direction: column;
+        margin-top: clamp(10px, 6vw, 50px);
+        margin-left: 0px;
+        align-items: center;
+        width: 100%;
+        position: relative;
+    }
+    .input-form{
+        width: 70%;
+        padding: 10px 10px;
+        margin-bottom: clamp(10px, 3vh, 35px);
+        background-color: rgba(128, 128, 128, 0.182);
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        font-size: 15px;
+        opacity: 0;
+        transition: 1s ease;
+        border-bottom: 3px solid rgba(128, 128, 128, 0.182);
+        animation: info-contact-anime 0.5s ease .6s 1 normal forwards;
+    }
+    textarea{
+        width: 70%;
+        padding: 10px 10px;
+        background-color: rgba(128, 128, 128, 0.182);
+        border: 0;
+        height: clamp(200px, 35vh, 350px);
+        border-radius: 5px;
+        color: white;
+        font-size: 15px;
+        resize: none;
+        opacity: 0;
+        animation: info-contact-anime 0.5s ease .8s 1 normal forwards;
+        transition: 1s ease;
+        border-bottom: 3px solid rgba(128, 128, 128, 0.182);
+    }
+    
+    .submit-btn{
+        width: 70%;
+        padding: 5px 20px;
+        border-radius: 5px;
+        border: 2px solid rgba(128, 128, 128, 0.182);
+        background-color: #4E9F3D;
+        font-size: 17px;
+        font-weight: 500;
+        color: rgb(77, 76, 76);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: .3s ease;
+        opacity: 0;
+        animation: info-contact-anime 0.5s ease 1s 1 normal forwards;
+    }
+    
+
+}
+
+/* Keyframes Animations */
 @keyframes info-contact-anime {
 	0% {
 		opacity: 0;

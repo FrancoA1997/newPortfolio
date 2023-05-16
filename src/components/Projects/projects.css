@@ -242,16 +242,8 @@ box-shadow: inset 2px 2px 0px 0px #4E9F3D;
 	}
 }
 @media (max-width: 1150px){
-    .projects-container{
-        background: rgba(128, 128, 128, 0.182);
-        border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        max-width: 100%;
-        flex: 3;
-    }
     .unmountedProject{
-        display: none;
+        display: none !important;
         opacity: 0;
         animation: mobile-section-off .2s ease 0s 1 normal forwards;
     }
@@ -266,6 +258,14 @@ box-shadow: inset 2px 2px 0px 0px #4E9F3D;
         flex-direction: row;
         opacity: 0;
         animation: section-animation 0.5s ease 0s 1 normal forwards;
+    }
+    .projects-container{
+        background: rgba(128, 128, 128, 0.182);
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        flex: 3;
     }
     .show-container{
         width: 100%;

@@ -17,7 +17,7 @@ import CircularProgress from '@mui/material/CircularProgress'
 import { client } from '../../client'
 import './contact.css'
 
-const Contact = ({ english }) => {
+const Contact = ({ english, mobileAboutOn }) => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -65,12 +65,12 @@ const Contact = ({ english }) => {
 
   return (
     <div className='contact'>
-      <div className='contact-container'>
+   <div className={mobileAboutOn ? 'mountedContact contact-container' : 'unmountedContact contact-container'}>
         <SectionTitle
           text={english === true ? 'Contact me' : 'Contacto'}
           styles='section-contact-title'
         />
-        <div key={english} className='project-info-container'>
+        <div key={english} className='contact-info-container'>
           <Title
             styles='info-contact-title'
             text={english ? 'Email Address' : 'Direccion de correo'}
@@ -118,10 +118,11 @@ const Contact = ({ english }) => {
             </div>}
       </div>
       {isFormSubmitted
-        ? <div key={english} className='title-success'>
-       <p style={{ marginRight: '10px', color: 'white' }}>{english === true ? 'Thanks for getting in touch with me!' : 'Gracias por ponerte en contacto conmigo!'} </p>
+
+        ? <div key={english} className={mobileAboutOn ? 'unmountedContact title-success' : 'mountedContact title-success'}>
+       <p style={{ marginRight: '5px', color: 'white' }}>{english === true ? 'Thanks for getting in touch with me!' : 'Gracias por ponerte en contacto conmigo!'} </p>
         <div className='writer-text'>
-       <p style={{ marginRight: '10px', color: 'white' }}>{english === true ? "I'll write you back" : 'Te estare escribiendo'} </p>
+       <p style={{ marginRight: '5px', color: 'white' }}>{english === true ? "I'll write you back" : 'Te estare escribiendo'} </p>
        <div className='writer'>
          {english === true
            ? <Typewriter
@@ -143,7 +144,7 @@ const Contact = ({ english }) => {
         </div>
        </div>
      </div>
-        : <div key={english} className='form-section'>
+        : <div key={english} className={mobileAboutOn ? 'unmountedContact form-section' : 'mountedContact form-section'}>
         <div className='contact-mainTitle'>
           <p style={{ marginRight: '10px', color: 'white' }}>{english === true ? 'Leave me a' : 'Dejame un'} </p>
           <div className='writer'>
@@ -208,7 +209,6 @@ const Contact = ({ english }) => {
             </button>
         </form>
       </div>}
-
     </div>
 
   )

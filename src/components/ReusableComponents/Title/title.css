@@ -127,8 +127,7 @@
         margin-bottom: 10px;
         padding: 5px 10px;
         border-right: 2px solid #4E9F3D;
-        border-bottom: 2px solid #4E9F3D;
-        
+        border-bottom: 2px solid #4E9F3D;   
 }
 .info-project-title{
     color: rgb(203, 203, 203);
@@ -164,6 +163,8 @@
         margin-top: 0px;
         width: 100%;
         font-weight: 300;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         font-size: clamp(25px, 3vh, 32px);
         transition: .5 ease;
         animation: title-animation 0.5s ease 0s 1 normal forwards;
@@ -175,15 +176,12 @@
         font-weight: 500;
         text-transform: uppercase;
         background-color: rgba(23, 23, 23, 0.787); ;
-            color: rgb(203, 203, 203);
-            font-size: clamp(15px, 2vh, 20px);
-            margin-bottom: 10px;
-            padding: 5px 10px;
-            border-right: 2px solid #4E9F3D;
-            border-bottom: 2px solid #4E9F3D;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-            
+        color: rgb(203, 203, 203);
+        font-size: clamp(15px, 2vh, 20px);
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        border-right: 0px solid #4E9F3D;
+        border-bottom: 2px solid #4E9F3D;
     }
     .info-project-title{
         color: rgb(203, 203, 203);
@@ -270,6 +268,41 @@
     font-weight: 600;
     animation:  info-contact-anime 0.5s ease 0.5s 1 normal forwards;
     opacity: 0;
+}
+@media (max-width: 1150px){
+    .section-contact-title{
+        display: flex;
+        justify-content: start;
+        color: white;
+        background-color: rgba(23, 23, 23, 0.787); ;
+        border-bottom: 2px solid #4E9F3D;
+        padding-left: 0px;
+        margin-top: 0px;
+        padding: 13px;
+        justify-content: center;
+        margin-bottom:clamp(25px, 4vh, 50px);
+        width: 100%;
+        font-weight: 300;
+        font-size: clamp(25px, 3vh, 32px);
+        transition: .5 ease;
+        animation: title-animation 0.5s ease 0s 1 normal forwards;
+    
+    }
+    .info-contact-title{
+        color: rgb(203, 203, 203);
+        font-size: clamp(10px, 3vh, 17px);
+        margin-bottom: 25px;
+        margin-right: 0px;
+        margin-top: 10px;
+        padding-left: 15px;
+        display: flex;
+        justify-content: start;
+        border-bottom: 2px solid #4E9F3D;
+        width: 100%;
+        font-weight: 600;
+        animation:  info-contact-anime 0.5s ease 0.5s 1 normal forwards;
+        opacity: 0;
+    }
 }
 
 
@@ -365,14 +398,14 @@
     }
     .info-stack-title{
         display: flex;
-        justify-content: start;
+        justify-content: center;
         color: rgb(203, 203, 203);
-        font-size: clamp(15px, 2vh, 19px);
+        font-size: clamp(15px, 10vw, 19px);
         margin-bottom: clamp(5px, 1vh, 10px);
-        margin-top: clamp(20px, 5vh, 50px);
-        padding-left: 10px;
-        border-bottom: 2px solid #4E9F3D;
-        width: 100%;
+        margin-top: clamp(20px, 5vw, 50px);
+        padding-left: 0px;
+        border-bottom: 3px solid #4E9F3D;
+        width: 100vw;
         font-weight: 400;
         opacity: 0;
         text-transform: uppercase;

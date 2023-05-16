@@ -39,7 +39,7 @@ const Stack = ({ english, stack, mobileAboutOn }) => {
       </div>
       <div className={mobileAboutOn ? 'unmountedStack show-stack' : 'mountedStack show-stack'}>
         <StackTitle
-          text={english ? ['Stack and', 'technologies'] : ['Stack y', 'tecnologias']}
+          text={english ? ['Stack and', 'Technologies'] : ['Stack y', 'Tecnologias']}
           styles='stack-mainTitle'
         />
         <div className='stack-nav'>
