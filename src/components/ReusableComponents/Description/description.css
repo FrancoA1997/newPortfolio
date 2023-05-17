@@ -20,9 +20,9 @@
 }
 .degree span:nth-child(1){
 color: #cbeb59;  
-font-size: clamp(10px, 2vh, 20px);
+font-size: clamp(10px, 2vh, 18px);
 font-weight: 300; 
-border-bottom: .5px solid #d4ff52;
+
 }
 
 .show-more-btn{
