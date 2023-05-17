@@ -140,8 +140,8 @@
         display: flex;
         color: white;
         font-weight: 300;
-        font-size: clamp(12px, 20vw, 17px);
-        margin-top: clamp(5px, 1vh, 10px);
+        font-size: clamp(12px, 2vh, 17px);
+        margin-top: clamp(5px, .8vh, 10px);
         position: relative;
         border-bottom: 2px solid #3d649f;
         padding-right: 20px;

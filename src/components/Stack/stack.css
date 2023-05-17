@@ -395,7 +395,7 @@ div:nth-child(5){
         display: flex;
         justify-content: space-evenly;
         width: 100%;
-        margin-top: 60px;
+        margin-top: clamp(30px, 5vh, 60px);
     }
     .stack-nav span:nth-child(1){
         animation: section-animation 1s ease .4s 1 normal forwards;    

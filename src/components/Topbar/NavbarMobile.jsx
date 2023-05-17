@@ -3,7 +3,7 @@ import PersonIcon from '@mui/icons-material/Person'
 import WorkHistoryIcon from '@mui/icons-material/WorkHistory'
 import LayersIcon from '@mui/icons-material/Layers'
 import ContactMailIcon from '@mui/icons-material/ContactMail'
-import SettingsIcon from '@mui/icons-material/Settings'
+import TranslateIcon from '@mui/icons-material/Translate'
 import CloseIcon from '@mui/icons-material/Close'
 import './navbarmobile.css'
 const NavbarMobile = ({ setMounted, setMobileAboutOn, english, setEnglish }) => {
@@ -40,14 +40,14 @@ const NavbarMobile = ({ setMounted, setMobileAboutOn, english, setEnglish }) => 
               className={highlighted === 'About' ? 'nav-item-selected' : 'nav-item'}
             >
               <PersonIcon fontSize='medium' />
-              <span>Profile</span>
+              <span>{english ? 'Profile' : 'Perfil'}</span>
             </div>
             <div
               onClick={() => handleMount('Projects')}
               className={highlighted === 'Projects' ? 'nav-item-selected' : 'nav-item'}
             >
               <WorkHistoryIcon fontSize='medium' />
-              <span>Projects</span>
+              <span>{english ? 'Projects' : 'Proyectos'}</span>
             </div>
             <div
               onClick={() => handleMount('Stack')}
@@ -61,14 +61,14 @@ const NavbarMobile = ({ setMounted, setMobileAboutOn, english, setEnglish }) => 
               className={highlighted === 'Contact' ? 'nav-item-selected' : 'nav-item'}
             >
               <ContactMailIcon fontSize='medium' />
-              <span>Contact</span>
+              <span>{english ? 'Contact' : 'Contacto'}</span>
             </div>
             <div
               onClick={() => handleSettings()}
               className='nav-item'
             >
-              <SettingsIcon color='warning' fontSize='medium' />
-              <span>Settings</span>
+              <TranslateIcon color='warning' fontSize='medium' />
+              <span>{english ? 'Language' : 'Idioma'}</span>
             </div>
             {/* eslint-disable-next-line react/jsx-indent */}
             </>}

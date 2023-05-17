@@ -50,7 +50,8 @@
         width: 100%;
         font-weight: 300;
         font-size: clamp(25px, 3vh, 32px);
-        transition: .5 ease;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
     }
 
     .head-profile-title{
@@ -250,7 +251,8 @@
     width: 100%;
     font-weight: 300;
     font-size: clamp(25px, 3vh, 32px);
-    transition: .5 ease;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     animation: title-animation 0.5s ease 0s 1 normal forwards;
 
 }
@@ -372,8 +374,8 @@
         width: 100%;
         font-weight: 300;
         font-size: clamp(25px, 3vh, 32px);
-        transition: .5 ease;
-      
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         animation: title-animation 0.5s ease 0s 1 normal forwards;
     }
     .stack-mainTitle{
