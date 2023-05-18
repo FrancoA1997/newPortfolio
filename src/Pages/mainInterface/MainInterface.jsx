@@ -56,12 +56,12 @@ const MainInterface = () => {
         {isFetching === false &&
           <div className='section-navigation'>
             <div className={mobileAboutOn ? 'off' : 'on'}>
-              <DoubleArrowIcon onClick={() => setMobileAboutOn(!mobileAboutOn)} fontSize='small' className='go-back' />
+              <DoubleArrowIcon onClick={() => setMobileAboutOn(!mobileAboutOn)} fontSize='medium' className='go-back' />
             </div>
             <div className={mobileAboutOn ? 'btn-toggle-view' : 'btn-toggle-view-off'} />
             <div className={mobileAboutOn ? 'btn-toggle-view-off' : 'btn-toggle-view'} />
             <div className={mobileAboutOn ? 'on' : 'off'}>
-              <DoubleArrowIcon onClick={() => setMobileAboutOn(!mobileAboutOn)} fontSize='small' className='go-foward' />
+              <DoubleArrowIcon onClick={() => setMobileAboutOn(!mobileAboutOn)} fontSize='medium' className='go-foward' />
             </div>
           </div>}
       </div>
