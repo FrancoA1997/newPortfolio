@@ -11,18 +11,6 @@ import Projects from '../../components/Projects/Projects'
 import Topbar from '../../components/Topbar/Topbar'
 
 const MainInterface = () => {
-  const mobileButtonMessage = {
-    About: 'More info',
-    Projects: 'Switch Project',
-    Stack: 'See Stack',
-    Contact: 'Contact me'
-  }
-  const mobileButtonUnfoldedMessage = {
-    About: 'Go back',
-    Projects: 'Project info',
-    Stack: 'Soft skills',
-    Contact: 'Links'
-  }
   const [projects, setProjects] = useState([])
   const [stack, setStack] = useState([])
   const [profile, setProfile] = useState([])
@@ -66,10 +54,16 @@ const MainInterface = () => {
         {mounted === 'Stack' && isFetching === false ? <Stack mobileAboutOn={mobileAboutOn} stack={stack} english={english} /> : null}
         {isFetching ? null : <NavbarMobile setEnglish={setEnglish} english={english} setMobileAboutOn={setMobileAboutOn} setMounted={setMounted} />}
         {isFetching === false &&
-          <button onClick={() => setMobileAboutOn(!mobileAboutOn)} className='btn-toggle-view'>
-            {mobileAboutOn ? mobileButtonMessage[mounted] : mobileButtonUnfoldedMessage[mounted]}
-            <DoubleArrowIcon fontSize='medium' style={{ color: '#4E9F3D', transition: '.5s ease', marginLeft: '10px' }} className={mobileAboutOn ? ' on' : 'off'} />
-          </button>}
+          <div className='section-navigation'>
+            <div className={mobileAboutOn ? 'off' : 'on'}>
+              <DoubleArrowIcon onClick={() => setMobileAboutOn(!mobileAboutOn)} fontSize='small' className='go-back' />
+            </div>
+            <div className={mobileAboutOn ? 'btn-toggle-view' : 'btn-toggle-view-off'} />
+            <div className={mobileAboutOn ? 'btn-toggle-view-off' : 'btn-toggle-view'} />
+            <div className={mobileAboutOn ? 'on' : 'off'}>
+              <DoubleArrowIcon onClick={() => setMobileAboutOn(!mobileAboutOn)} fontSize='small' className='go-foward' />
+            </div>
+          </div>}
       </div>
     </div>
   )

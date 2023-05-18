@@ -384,7 +384,8 @@ textarea{
     }
     .contact-mainTitle{
         margin-left: 0px;
-        padding: 13px;
+        padding-bottom: 35px;
+        padding-top: 5px;
         border-bottom: 1px solid #4E9F3D;
         width: 100%;
         display: flex;

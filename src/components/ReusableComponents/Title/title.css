@@ -44,7 +44,8 @@
         display: flex;
         justify-content: center;
         border-bottom: 2px solid #4E9F3D;
-        padding: 10px;
+        padding-bottom: 25px;
+        padding-top: 5px;
         background-color: rgba(25, 25, 25, 0.764);
         padding-left: 0px;
         width: 100%;
@@ -61,7 +62,8 @@
         border-left: 0px solid #4E9F3D;
         border-bottom: 2px solid #4E9F3D;
         font-size:  clamp(15px, 4.5vw, 25px);
-        padding: 16px;
+        padding-bottom: 30px;
+        padding-top: 10px;
         width: 90vw;
         margin-top: 0;
         background-color: rgba(128, 128, 128, 0.213);;
@@ -159,7 +161,8 @@
         display: flex;
         justify-content: center;
         border-bottom: 2px solid #4E9F3D;
-        padding: 10px;
+        padding-bottom: 25px;
+        padding-top: 5px;
         background-color: rgba(23, 23, 23, 0.508); ;
         margin-top: 0px;
         width: 100%;
@@ -280,7 +283,8 @@
         border-bottom: 2px solid #4E9F3D;
         padding-left: 0px;
         margin-top: 0px;
-        padding: 13px;
+        padding-bottom: 25px;
+        padding-top: 5px;
         justify-content: center;
         margin-bottom:clamp(25px, 4vh, 50px);
         width: 100%;
@@ -369,7 +373,8 @@
         border-bottom: 2px solid #4E9F3D;
         background-color: rgba(25, 25, 25, 0.764);
         padding-left: 0px;
-        padding: 10px;
+        padding-bottom: 25px;
+        padding-top: 5px;
         margin-top: 0px;
         width: 100%;
         font-weight: 300;
@@ -386,7 +391,8 @@
         border-bottom: 2px solid #4E9F3D;
         font-size:  clamp(15px, 4.5vw, 25px);
         font-weight: 400;
-        padding: 15px;
+        padding-bottom: 30px;
+        padding-top: 15px;
         width: 90vw;
         margin-top: 0;
         background-color: rgba(128, 128, 128, 0.213);;
