@@ -42,26 +42,26 @@ display: none;
         position: relative;
         }
 
-        .btn-toggle-view-off{
+        .dot{
            width: 5px;
            height: 5px;
            border-radius: 50%;
            background-color: white;
            display: flex;
            margin-right: 15px;
-           outline-offset: 2px;
-           transition: .5s ease;
+           transition: 10s ease;
         }
-        .btn-toggle-view{
+        .dot-active{
             width: 5px;
             height: 5px;
             border-radius: 50%;
-            background-color: #4E9F3D;
+            background-color: white;
             display: flex;
-            outline: 1px solid #4E9F3D;
-            outline-offset: 2px;
             margin-right: 15px;
-            transition: .5s ease;
+            background-color: #4E9F3D;
+            outline: 1px solid #4E9F3D; 
+            outline-offset: 2px;
+            transition: 10s ease;
          }
         .section-navigation{
             display: flex;
@@ -73,6 +73,7 @@ display: none;
             width: 80vw;
             height: 10px;
         }
+    
         .go-back{
            margin-right: 10px;
            margin-left: 30px;
@@ -88,11 +89,18 @@ display: none;
         .on{
            opacity: 1;
            padding-top: 6px;
+           animation: title-animation-on  .8s ease 0s 1 normal forwards;
         }
         .off{
            opacity: 0;
            padding-top: 6px;
         }
+        .on-back{
+            opacity: 1;
+            padding-top: 6px;
+            animation:title-animation-on-back  .8s ease 0s 1 normal forwards;
+         }
+        
         @keyframes button-animation {
             0% {
               scale: .8;
@@ -108,6 +116,33 @@ display: none;
           
               }
         }
+        @keyframes title-animation-on {
+            0% {
+                opacity: 0;
+                scale: .5;
+                transform: translateX(-20px);
+            }
+        
+            100% {
+                opacity: 1;
+                scale: 1;
+                transform: translateX(0);
+            }
+        }
+        @keyframes title-animation-on-back {
+            0% {
+                opacity: 0;
+                scale: .5;
+                transform: translateX(20px);
+            }
+        
+            100% {
+                opacity: 1;
+                scale: 1;
+                transform: translateX(0);
+            }
+        }
+        
         
         
 }

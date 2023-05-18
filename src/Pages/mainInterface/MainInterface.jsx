@@ -54,12 +54,12 @@ const MainInterface = () => {
         {mounted === 'Stack' && isFetching === false ? <Stack mobileAboutOn={mobileAboutOn} stack={stack} english={english} /> : null}
         {isFetching ? null : <NavbarMobile setEnglish={setEnglish} english={english} setMobileAboutOn={setMobileAboutOn} setMounted={setMounted} />}
         {isFetching === false &&
-          <div className='section-navigation'>
-            <div className={mobileAboutOn ? 'off' : 'on'}>
+          <div key={mobileAboutOn} className='section-navigation'>
+            <div className={mobileAboutOn ? 'off' : 'on-back'}>
               <DoubleArrowIcon onClick={() => setMobileAboutOn(!mobileAboutOn)} fontSize='medium' className='go-back' />
             </div>
-            <div className={mobileAboutOn ? 'btn-toggle-view' : 'btn-toggle-view-off'} />
-            <div className={mobileAboutOn ? 'btn-toggle-view-off' : 'btn-toggle-view'} />
+            <div className={mobileAboutOn ? 'dot-active ' : 'dot'} />
+            <div className={mobileAboutOn ? 'dot' : 'dot-active '} />
             <div className={mobileAboutOn ? 'on' : 'off'}>
               <DoubleArrowIcon onClick={() => setMobileAboutOn(!mobileAboutOn)} fontSize='medium' className='go-foward' />
             </div>
