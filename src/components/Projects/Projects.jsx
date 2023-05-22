@@ -10,13 +10,13 @@ import LaunchIcon from '@mui/icons-material/Launch'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import Video from '../videoPlayer/Video'
 import './projects.css'
-const Projects = ({ english, projects, mobileAboutOn }) => {
+const Projects = ({ english, projects, mobileViewToggle }) => {
   const [currentIndex, setCurrentIndex] = useState(3)
   const [projectDisplayed, setProjectDisplayed] = useState(projects[currentIndex])
   const [isSwitching, setIsSwitching] = useState(false)
   return (
     <div className='projects'>
-      <div className={mobileAboutOn ? 'mountedProject projects-container' : 'unmountedProject projects-container'}>
+      <div className={mobileViewToggle ? 'unmountedProject projects-container' : 'mountedProject projects-container'}>
         <SectionTitle
           styles='section-project-title'
           text={english === true ? 'Projects' : 'Proyectos'}
@@ -84,7 +84,7 @@ const Projects = ({ english, projects, mobileAboutOn }) => {
         </div>
 
       </div>
-      <div className={mobileAboutOn ? 'unmountedProject show-container' : 'mountedProject show-container'}>
+      <div className={mobileViewToggle ? 'mountedProject show-container' : 'unmountedProject show-container'}>
         <h1 className='project-title-mobile'>{english ? projectDisplayed?.title : projectDisplayed?.titulo}</h1>
         <div className='video-player'>
           <div className={isSwitching ? 'animation-video-off' : 'animation-video-on'}>

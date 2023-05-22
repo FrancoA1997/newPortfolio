@@ -18,7 +18,7 @@ const MainInterface = () => {
   const [english, setEnglish] = useState(true)
   const [mounted, setMounted] = useState('About')
   const [isFetching, setIsFetching] = useState(true)
-  const [mobileAboutOn, setMobileAboutOn] = useState(true)
+  const [mobileViewToggle, setMobileViewToggle] = useState(true)
   useEffect(() => {
     const query = '*[_type == "stacks"]'
     client.fetch(query)
@@ -48,20 +48,20 @@ const MainInterface = () => {
       <div className={isFetching ? 'fetching' : 'interface-window'}>
         {isFetching ? null : <Topbar setMounted={setMounted} mounted={mounted} setEnglish={setEnglish} english={english} />}
         {isFetching ? <Loader /> : null}
-        {mounted === 'About' && isFetching === false ? <Profile mobileAboutOn={mobileAboutOn} profile={profile} studies={studies} english={english} /> : null}
-        {mounted === 'Projects' && isFetching === false ? <Projects mobileAboutOn={mobileAboutOn} projects={projects} english={english} /> : null}
-        {mounted === 'Contact' && isFetching === false ? <Contact mobileAboutOn={mobileAboutOn} english={english} /> : null}
-        {mounted === 'Stack' && isFetching === false ? <Stack mobileAboutOn={mobileAboutOn} stack={stack} english={english} /> : null}
-        {isFetching ? null : <NavbarMobile setEnglish={setEnglish} english={english} setMobileAboutOn={setMobileAboutOn} setMounted={setMounted} />}
+        {mounted === 'About' && isFetching === false ? <Profile mobileViewToggle={mobileViewToggle} profile={profile} studies={studies} english={english} /> : null}
+        {mounted === 'Projects' && isFetching === false ? <Projects mobileViewToggle={mobileViewToggle} projects={projects} english={english} /> : null}
+        {mounted === 'Contact' && isFetching === false ? <Contact mobileViewToggle={mobileViewToggle} english={english} /> : null}
+        {mounted === 'Stack' && isFetching === false ? <Stack mobileViewToggle={mobileViewToggle} stack={stack} english={english} /> : null}
+        {isFetching ? null : <NavbarMobile setEnglish={setEnglish} english={english} setMobileViewToggle={setMobileViewToggle} setMounted={setMounted} />}
         {isFetching === false &&
-          <div key={mobileAboutOn} className='section-navigation'>
-            <div className={mobileAboutOn ? 'off' : 'on-back'}>
-              <DoubleArrowIcon onClick={() => setMobileAboutOn(!mobileAboutOn)} fontSize='medium' className='go-back' />
+          <div key={mobileViewToggle} className='section-navigation'>
+            <div className={mobileViewToggle ? 'off' : 'on-back'}>
+              <DoubleArrowIcon onClick={() => setMobileViewToggle(!mobileViewToggle)} fontSize='medium' className='go-back' />
             </div>
-            <div className={mobileAboutOn ? 'dot-active ' : 'dot'} />
-            <div className={mobileAboutOn ? 'dot' : 'dot-active '} />
-            <div className={mobileAboutOn ? 'on' : 'off'}>
-              <DoubleArrowIcon onClick={() => setMobileAboutOn(!mobileAboutOn)} fontSize='medium' className='go-foward' />
+            <div className={mobileViewToggle ? 'dot-active ' : 'dot'} />
+            <div className={mobileViewToggle ? 'dot' : 'dot-active '} />
+            <div className={mobileViewToggle ? 'on' : 'off'}>
+              <DoubleArrowIcon onClick={() => setMobileViewToggle(!mobileViewToggle)} fontSize='medium' className='go-foward' />
             </div>
           </div>}
       </div>

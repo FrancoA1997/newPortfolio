@@ -17,7 +17,7 @@ import CircularProgress from '@mui/material/CircularProgress'
 import { client } from '../../client'
 import './contact.css'
 
-const Contact = ({ english, mobileAboutOn }) => {
+const Contact = ({ english, mobileViewToggle }) => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
   const [isFormSubmitted, setIsFormSubmitted] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -65,7 +65,7 @@ const Contact = ({ english, mobileAboutOn }) => {
 
   return (
     <div className='contact'>
-   <div className={mobileAboutOn ? 'mountedContact contact-container' : 'unmountedContact contact-container'}>
+   <div className={mobileViewToggle ? 'mountedContact contact-container' : 'unmountedContact contact-container'}>
         <SectionTitle
           text={english === true ? 'Contact me' : 'Contacto'}
           styles='section-contact-title'
@@ -119,7 +119,7 @@ const Contact = ({ english, mobileAboutOn }) => {
       </div>
       {isFormSubmitted
 
-        ? <div key={english} className={mobileAboutOn ? 'unmountedContact title-success' : 'mountedContact title-success'}>
+        ? <div key={english} className={mobileViewToggle ? 'unmountedContact title-success' : 'mountedContact title-success'}>
        <p style={{ marginRight: '5px', color: 'white' }}>{english === true ? 'Thanks for getting in touch with me!' : 'Gracias por ponerte en contacto conmigo!'} </p>
         <div className='writer-text'>
        <p style={{ marginRight: '5px', color: 'white' }}>{english === true ? "I'll write you back" : 'Te estare escribiendo'} </p>
@@ -144,7 +144,7 @@ const Contact = ({ english, mobileAboutOn }) => {
         </div>
        </div>
      </div>
-        : <div key={english} className={mobileAboutOn ? 'unmountedContact form-section' : 'mountedContact form-section'}>
+        : <div key={english} className={mobileViewToggle ? 'unmountedContact form-section' : 'mountedContact form-section'}>
         <div className='contact-mainTitle'>
           <p style={{ marginRight: '10px', color: 'white' }}>{english === true ? 'Leave me a' : 'Dejame un'} </p>
           <div className='writer'>

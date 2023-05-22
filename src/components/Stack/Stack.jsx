@@ -4,7 +4,7 @@ import { StackItem } from '../ReusableComponents/InfoItem/Infoitem'
 import { urlFor } from '../../client'
 import DoneIcon from '@mui/icons-material/Done'
 import './stack.css'
-const Stack = ({ english, stack, mobileAboutOn }) => {
+const Stack = ({ english, stack, mobileViewToggle }) => {
   const SoftSkills = ['Adaptability', 'Problem solving', 'Teamwork', 'Quick Learner', 'Communication', 'Commitment', 'Critical thinking']
   const HabilidadesBlandas = ['Adaptabilidad', 'Resolucion de problemas', 'Trabajo en equipo', 'Aprendizaje rapido', 'Buen comunicador', 'Compromiso', 'Pensamiento critico']
   const languages = ['English: FCE-B2', 'Spanish: Native']
@@ -15,7 +15,7 @@ const Stack = ({ english, stack, mobileAboutOn }) => {
   const [filter, setFilter] = useState('currentStack')
   return (
     <div className='Stack'>
-      <div className={mobileAboutOn ? 'mountedStack stack-container' : 'unmountedStack stack-container'}>
+      <div className={mobileViewToggle ? 'unmountedStack stack-container' : 'mountedStack stack-container'}>
         <SectionTitle
           styles='section-stack-title'
           text={english ? 'Stack' : 'Tecnologias'}
@@ -37,7 +37,7 @@ const Stack = ({ english, stack, mobileAboutOn }) => {
           styles='info-item-stack'
         />
       </div>
-      <div className={mobileAboutOn ? 'unmountedStack show-stack' : 'mountedStack show-stack'}>
+      <div className={mobileViewToggle ? 'mountedStack show-stack' : 'unmountedStack show-stack'}>
         <StackTitle
           text={english ? ['Stack and', 'Technologies'] : ['Stack y', 'Tecnologias']}
           styles='stack-mainTitle'

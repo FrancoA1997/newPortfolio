@@ -32,6 +32,13 @@ justify-content: center;
 .btn-toggle-view{
 display: none;
 }
+.off{
+    display: none;
+ }
+ .on{
+   display: none;
+    
+ }
 @media (max-width: 1150px){
     .interface-window{
         width: 90%;
@@ -67,7 +74,8 @@ display: none;
             display: flex;
             position: absolute;
             flex-direction: row;
-            top: 47px;
+            top: 50px;
+            margin-left: 5px;
             align-items: center;
             justify-content: center;
             width: 80vw;
@@ -90,10 +98,12 @@ display: none;
            opacity: 1;
            padding-top: 6px;
            animation: title-animation-on  .8s ease 0s 1 normal forwards;
+           display: block;
         }
         .off{
            opacity: 0;
            padding-top: 6px;
+           display: block;
         }
         .on-back{
             opacity: 1;

@@ -13,7 +13,7 @@ import Resume from '../../../public/Resume.pdf'
 import { urlFor } from '../../client'
 import './profile.css'
 
-const Profile = ({ english, studies, profile, mobileAboutOn }) => {
+const Profile = ({ english, studies, profile, mobileViewToggle }) => {
   const [showMore, setShowMore] = useState(false)
   useEffect(() => {
     setTimeout(() => {
@@ -29,7 +29,7 @@ const Profile = ({ english, studies, profile, mobileAboutOn }) => {
   return (
     <>
       <div className='profile'>
-        <div className={mobileAboutOn ? 'mountedProfile profile-container' : 'unmountedProfile profile-container'}>
+        <div className={mobileViewToggle ? 'mountedProfile profile-container' : 'unmountedProfile profile-container'}>
           <SectionTitle styles='title-profile' text={english === true ? 'About me' : 'Sobre mi'} />
           <img className='profile-img' src={urlFor(profile[0]?.image)} alt='profile_img' />
           <div className='profile-info'>
@@ -51,7 +51,7 @@ const Profile = ({ english, studies, profile, mobileAboutOn }) => {
             </div>}
         </div>
 
-        <div className={mobileAboutOn ? 'unmountedProfile description-section' : 'mountedProfile description-section'}>
+        <div className={mobileViewToggle ? 'unmountedProfile description-section' : 'mountedProfile description-section'}>
           <Title styles='head-profile-title' text={english ? profile[0]?.welcome : profile[0]?.bienvenido} />
           <Description english={english} setShowMore={setShowMore} showMore={showMore} text={english ? profile[0]?.description : profile[0]?.descripcion} styles='description' btnStyles='show-more-btn' />
 

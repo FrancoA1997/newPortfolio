@@ -6,13 +6,13 @@ import ContactMailIcon from '@mui/icons-material/ContactMail'
 import TranslateIcon from '@mui/icons-material/Translate'
 import CloseIcon from '@mui/icons-material/Close'
 import './navbarmobile.css'
-const NavbarMobile = ({ setMounted, setMobileAboutOn, english, setEnglish }) => {
+const NavbarMobile = ({ setMounted, setMobileViewToggle, english, setEnglish }) => {
   const [highlighted, setHighlighted] = useState('About')
   const [isSettings, setIsSettings] = useState(false)
   const handleMount = (text) => {
     setMounted(text)
     setHighlighted(text)
-    setMobileAboutOn(true)
+    setMobileViewToggle(true)
   }
   const handleChange = () => {
     setEnglish(!english)
