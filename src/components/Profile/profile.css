@@ -143,7 +143,7 @@ a{
 
 @media (max-width: 1150px){
     .profile{
-        height: calc(100vh - 10vh);
+        height: calc(100dvh - 10vh);
         flex-direction: row;
         position: relative;
         display: flex;

@@ -252,7 +252,7 @@ box-shadow: inset 2px 2px 0px 0px #4E9F3D;
         animation: mobile-section-on 1s ease 0s 1 normal forwards;
     }
     .projects{
-        height: calc(100vh - 10vh - 49px);
+        height: calc(100dvh - 10vh - 49px);
         min-height: 500px;
         display: flex;
         flex-direction: row;
@@ -269,7 +269,7 @@ box-shadow: inset 2px 2px 0px 0px #4E9F3D;
     }
     .show-container{
         width: 100%;
-        height: calc(100vh - 10vh - 49px); 
+        height: calc(100dvh - 10vh - 49px); 
         flex-direction: column;
         display: flex;
         background: rgba(20, 20, 20, 0.786);

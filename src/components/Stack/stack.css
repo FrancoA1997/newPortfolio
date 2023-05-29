@@ -354,7 +354,7 @@ div:nth-child(5){
         animation: mobile-section-on 1s ease 0s 1 normal forwards;
     }
     .Stack{
-        height: calc(100vh - 10vh - 49px);
+        height: calc(100dvh - 10vh - 49px);
         min-height: 500px;
         display: flex;
         flex-direction: row;
