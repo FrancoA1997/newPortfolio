@@ -42,12 +42,21 @@ display: none;
 @media (max-width: 1150px){
     .interface-window{
         width: 90%;
-        height: 90dvh;
+        height: 100dvh;
         border-radius: 10px;
         border: 2px solid #4E9F3D;
         overflow-y: hidden;
         position: relative;
         }
+        .fetching{
+            width: 90%;
+            height: 100dvh;
+            border-radius: 10px;
+            border: 2px solid #4E9F3D;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
 
         .dot{
            width: 5px;
