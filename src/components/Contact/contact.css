@@ -323,17 +323,17 @@ textarea{
     .social-image{
       padding: 5px 5px;
       border-radius: 5px;
-      width: clamp(35px, 15vw, 70px);
-      height: clamp(35px, 15vw, 70px);
-      padding: 10px 10px;
+      width: clamp(30px, 1.5vh, 70px);
+      height: clamp(30px, 1.5vh, 70px);
+      padding: 5px 5px;
       box-shadow: inset -2px -2px 0px 0px #4E9F3D;
       background-color: rgba(28, 28, 28, 0.626);
       transition: .3s ease;
     }
     .social-image:hover{
-        width: clamp(35px, 25vw, 70px);
-        height: clamp(35px, 25vw, 70px);
-        padding: 10px 10px;
+        width: clamp(35px, 1.5vw, 70px);
+        height: clamp(35px, 1.5vw, 70px);
+        padding: 5px 5px;
         box-shadow: inset -2px -2px 0px 0px #4E9F3D;
         background-color: rgba(28, 28, 28, 0.626) ;
         transition: .3s ease;
@@ -460,6 +460,8 @@ textarea{
         opacity: 0;
         animation: info-contact-anime 0.5s ease .8s 1 normal forwards;
         transition: 1s ease;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
         border-bottom: 3px solid rgba(128, 128, 128, 0.182);
     }
     
@@ -475,7 +477,9 @@ textarea{
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: .5px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
         cursor: pointer;
         transition: .3s ease;
         opacity: 0;
