@@ -265,7 +265,7 @@ textarea{
         animation: mobile-section-on 1s ease 0s 1 normal forwards;
     }
     .contact{
-        height: calc(100vh - 10vh - 49px);
+        height: calc(100dvh - 10vh - 49px);
         min-height: fit-content;
         display: flex;
         flex-direction: row;
@@ -377,7 +377,7 @@ textarea{
     .form-section{
         display: flex;
         width: 100%;
-        height: 100%;
+        height: 90dvh;
         flex-direction: column;
         justify-content: start;
         
