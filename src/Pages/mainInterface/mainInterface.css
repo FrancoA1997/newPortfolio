@@ -42,7 +42,7 @@ display: none;
 @media (max-width: 1150px){
     .interface-window{
         width: 90%;
-        height: 100dvh;
+        height: 90dvh;
         border-radius: 10px;
         border: 2px solid #4E9F3D;
         overflow-y: hidden;
@@ -50,7 +50,7 @@ display: none;
         }
         .fetching{
             width: 90%;
-            height: 100dvh;
+            height: 90dvh;
             border-radius: 10px;
             border: 2px solid #4E9F3D;
             display: flex;
