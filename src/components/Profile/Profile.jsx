@@ -2,7 +2,7 @@
 import { Title, SectionTitle } from '../ReusableComponents/Title/Title'
 import { Infoitem } from '../ReusableComponents/InfoItem/Infoitem'
 import { Description, Studies } from '../ReusableComponents/Description/Description'
-import { React, useState, useEffect } from 'react'
+import { React } from 'react'
 import FileDownloadIcon from '@mui/icons-material/FileDownload'
 import LocationOnIcon from '@mui/icons-material/LocationOn'
 import ConstructionIcon from '@mui/icons-material/Construction'
@@ -14,18 +14,6 @@ import { urlFor } from '../../client'
 import './profile.css'
 
 const Profile = ({ english, studies, profile, mobileViewToggle }) => {
-  const [showMore, setShowMore] = useState(false)
-  useEffect(() => {
-    setTimeout(() => {
-      setShowMore(true)
-    }, 2500)
-  }, [])
-  useEffect(() => {
-    setShowMore(false)
-    setTimeout(() => {
-      setShowMore(true)
-    }, 2500)
-  }, [english])
   return (
     <>
       <div className='profile'>
@@ -53,22 +41,20 @@ const Profile = ({ english, studies, profile, mobileViewToggle }) => {
 
         <div className={mobileViewToggle ? 'unmountedProfile description-section' : 'mountedProfile description-section'}>
           <Title styles='head-profile-title' text={english ? profile[0]?.welcome : profile[0]?.bienvenido} />
-          <Description english={english} setShowMore={setShowMore} showMore={showMore} text={english ? profile[0]?.description : profile[0]?.descripcion} styles='description' btnStyles='show-more-btn' />
+          <Description english={english} text={english ? profile[0]?.description : profile[0]?.descripcion} styles='description' btnStyles='show-more-btn' />
 
           <Studies
-            text={english ? studies[0].study1 : studies[0].estudio1}
+            text={english ? studies[0]?.study1 : studies[0]?.estudio1}
             date={english ? 'Duration: from Jul/2021 to Jul/2022' : 'Duracion: Desde Jul/2021 Hasta Jul/2022'}
-            showMore={showMore}
             title='Egg Coorporation Bootcamp'
             titleStyles='company-title'
             dateStyles='date-title'
             degree={<><span> Full Stack Web Developer</span></>}
           />
           <Studies
-            text={english ? studies[0].study2 : studies[0].estudio2}
+            text={english ? studies[0]?.study2 : studies[0]?.estudio2}
             date={english ? 'Duration: July/2022 till now' : 'Duracion: Desde Jul/2022 hasta la fecha'}
             title={english ? 'Self-Taught' : 'Auto-Didacta'}
-            showMore={showMore}
             titleStyles='company-title'
             dateStyles='date-title'
           />

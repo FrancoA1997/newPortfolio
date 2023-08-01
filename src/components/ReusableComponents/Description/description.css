@@ -15,7 +15,7 @@
     opacity: 0;
     z-index: 996;
     position: relative;
-    animation: moreInfo-animation 1s ease 1.5s 1 normal forwards; 
+    animation: moreInfo-animation 1s ease .5s 1 normal forwards; 
     
 }
 .degree span:nth-child(1){
@@ -69,7 +69,7 @@ font-weight: 300;
 }
 .studies-animation-on{
     opacity: 0;
-    animation: moreInfo-animation .8s ease 0s 1 normal forwards; 
+    animation: moreInfo-animation .8s ease .8s 1 normal forwards; 
 }
 .studies-animation-off{
     opacity: 1;

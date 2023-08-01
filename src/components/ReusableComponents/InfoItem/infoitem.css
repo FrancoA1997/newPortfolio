@@ -55,7 +55,7 @@
     color: white;
     font-size: clamp(12px, 2vh, 15px);
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 85%;
     font-weight: 400;
     text-transform: uppercase;

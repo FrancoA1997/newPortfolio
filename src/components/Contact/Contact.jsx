@@ -54,6 +54,7 @@ const Contact = ({ english, mobileViewToggle }) => {
       email: formData.email,
       message: formData.message
     }
+    console.log('el pepe', contact)
 
     client.create(contact)
       .then(() => {

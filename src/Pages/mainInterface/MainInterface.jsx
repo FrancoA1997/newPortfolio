@@ -41,7 +41,7 @@ const MainInterface = () => {
   }, [])
   setTimeout(() => {
     setIsFetching(false)
-  }, 4500)
+  }, 1000)
 
   return (
     <div className='main-interface-container'>
