@@ -26,7 +26,7 @@ const Profile = ({ english, studies, profile, mobileViewToggle }) => {
             <Title styles='info-title-profile' text={english ? 'Location' : 'Locacion'} />
             <Infoitem english={english} text={english ? 'Cordoba, Argentina ' : 'Cordoba, Argentina'} icon={<LocationOnIcon fontSize='medium' className='info-icon' />} styles='info-item-profile' />
             <Title styles='info-title-profile' text={english ? 'Role' : 'Rol'} />
-            <Infoitem english={english} text={english ? 'Full Stack Web Developer ' : 'Full Stack Web Developer'} icon={<ConstructionIcon fontSize='medium' className='info-icon' />} styles='info-item-profile' />
+            <Infoitem english={english} text={english ? 'Frontend Web Developer ' : 'Frontend Web Developer'} icon={<ConstructionIcon fontSize='medium' className='info-icon' />} styles='info-item-profile' />
             <Title styles='info-title-profile' text={english ? 'Time Coding' : 'Tiempo programando'} />
             <Infoitem english={english} text={english ? '2+ Years' : '2+ Años'} icon={<MoreTimeIcon fontSize='medium' className='info-icon' />} styles='info-item-profile' />
           </div>
