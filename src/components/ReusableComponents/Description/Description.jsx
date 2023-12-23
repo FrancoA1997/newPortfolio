@@ -18,7 +18,7 @@ const Studies = ({ date, title, text, titleStyles, dateStyles, degree }) => {
       <p className={titleStyles}>{title}</p>
       <p className='degree'>{degree}</p>
       <span className={dateStyles}>{date}</span>
-      {text.map((m, idx) => (
+      {text?.map((m, idx) => (
         <p key={idx} style={{ marginTop: '3px' }}>
           {m}
         </p>
